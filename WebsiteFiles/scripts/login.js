@@ -11,7 +11,7 @@ function buttonClick() {
   var password = document.getElementById("password");
 
   //this checks the user accounts for the username, and checks their password too
-  if(userAccounts[username.value]=password.value) {
+  if(userAccounts[username.value]==password.value) {
     //this sets the "currentUser" variable to who you successfully signed in as
     sessionStorage.setItem('currentUser', username.value);
     //this redirects to another page
