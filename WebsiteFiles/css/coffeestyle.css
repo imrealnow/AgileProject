@@ -1,0 +1,109 @@
+/**
+CONTENTS:
+Body, fonts, containers, buttons, images, footer
+********************************** BODY **/
+body{
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: 22px;
+ color: white;
+ background-size: 100%;
+ background-color: black;
+ background-image: url(img/coffee1.jpg);
+ background-repeat:no-repeat;
+ background-position: top;
+ background-attachment: fixed;
+ background-size: cover;
+}
+/******************************** FONTS */
+@font-face {
+    font-family: 'Cantarell';
+    src: url('fonts/Cantarell-Regular.woff2') format('woff2'),
+        url('fonts/Cantarell-Regular.woff') format('woff');
+}
+@font-face {
+    font-family: 'Kaushan';
+    src: url('fonts/Kaushan.woff2') format('woff2'),
+        url('fonts/Kaushan.woff') format('woff');
+}
+h1{
+  font-family: 'Kaushan';
+  text-align: center;
+  font-size: 60px;
+  transform: rotate(-10deg);
+}
+h2{
+  font-family: 'Kaushan';
+  font-size: 40px;
+}
+ul li {
+  display: inline;
+}
+#errors{
+  color:red;
+}
+/***************************  CONTAINERS */
+#logo{
+  display:inline-block;
+}
+header{
+  text-align: center;
+  width: 100%;
+  font: 'Cantarell';
+  margin-bottom: 5%;
+}
+.container1{
+  width:30%;
+  min-height: 0;
+  cursor: pointer;
+  margin: auto;
+  color: black;
+  text-align: center;
+  overflow: scroll;
+  background-color: white;
+  margin-top: 100px;
+}
+.login{
+  display:none;
+}
+.signup{
+  display:none;
+}
+
+/**************************** BUTTONS */
+.btn-group{
+  width: 100%;
+  display:inline-block;
+  text-align: center;
+  cursor: pointer;
+}
+.btn-group button {
+    background: none;
+    border: 1px solid white;
+    color: white;
+    padding: 10px 20px;
+    width: 180px;
+    text-align: center;
+    font-size: 22px;
+    margin: 2px;
+}
+.btn-group button:hover {
+    color: lightgray;
+    background-color:rgba(255, 255, 255, 0.8);
+}
+#btn2{
+  background-color: lightgray;
+}
+/***************************** IMAGES */
+#logo img{
+  width:50px;
+  height:50px;
+}
+header img{
+  width:8%;
+}
+/***************************** FOOTER */
+footer{
+  font-size: smaller;
+  position: fixed;
+  bottom: 0;
+}

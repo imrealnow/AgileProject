@@ -23,3 +23,9 @@ function buttonClick() {
     errors.innerHTML = "Invalid login details";
   }
 };
+
+// login/ signup toggle
+$('.btn-group a button').click(function(){
+  $('.btn-group > div').hide();
+ $('.btn-group > div').eq($(this).parent().index()).show();
+});

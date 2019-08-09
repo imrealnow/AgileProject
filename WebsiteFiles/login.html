@@ -5,20 +5,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSS stylesheet -->
-    <link href="style1.css" rel="stylesheet" type="text/css">
+    <link href="css/coffeestyle.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <script type="text/javascript" src="scripts/login.js"></script>
+
 </head>
 <body>
-    <form>
-        <label id="errors" style="color:red"></label>
-        <div>
-            <input type="text" id="username" placeholder="username"></input>
+    <!--    Logo  -->
+    <div id="logo">
+      <img src="" alt="Logo">
+      <h1>Coffee Shop</h1>
+    </div>
+
+    <!--    Header -->
+    <header>
+       <h2>Order Now</h2>
+       <img src="css/img/arrowicon.png" alt="arrow">
+    </header>
+
+    <!--    buttons  -->
+    <div class="btn-group">
+          <a href="#" onclick="return false;"><button>Login</button></a>
+          <a href="#" onclick="return false;"><button>Signup</button></a>
+    </div>
+
+    <!--    Forms  -->
+    <div class="container1">
+      <div class="btn-group">
+         <div class="login">
+             <label id="errors"></label>
+             <p><input type="text" id="username" placeholder="username"></input></p>
+             <p><input type="password" id="password" placeholder="password"></input></p>
+             <button id="btn2" type="button" onclick="buttonClick()" >Login</button>
+         </div>
+
+        <div class="signup">
+          <label id="errors"></label>
+          <p><input type="name" id="name" placeholder="name"></input></p>
+          <p><input type="text" id="username" placeholder="username"></input></p>
+          <p><input type="email" id="email" placeholder="email"></input></p>
+          <p><input type="password" id="password" placeholder="password"></input></p>
+          <button id="btn2" type="button" onclick="buttonClick()">Sign Up</button>
         </div>
-        <div>
-            <input type="password" id="password" placeholder="password"></input>
-        </div>
-        <button type="button" onclick="buttonClick()" >login</button>
-    </form>
+     </div>
+    </div>
+
+    <!--    Footer  -->
+    <footer><p>&copy; 2019</p>
+    </footer>
+
+    <!--    Javascript  -->
+    <script type="text/javascript" src="scripts/login.js"></script>
 </body>
 </html>
