@@ -1,18 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Coffee shop - Coffees</title>
+    <title>Coffee shop - Coffee</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSS stylesheet -->
-    <link href="style1.css" rel="stylesheet" type="text/css">
+    <link href="css/coffeestyle.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <script type="text/javascript" src="scripts/index.js"></script>
+    <script type="text/javascript" src="scripts/login.js"></script>
 </head>
-<body onload="setWelcome()">
-    <div>
-        <span id="welcome"></span>
-    </div>
-    <span>List of coffees</span>
+<body>
+  <img src="images/logo.png" alt="Coffee Logo">
+  <a href="thankYou.html"><img src="images/logOut.png" alt="Log-out Logo" height="65"></a>
+  <a href="cart.html"><img src="images/cart.png" alt="Cart Logo" height="65"></a>
+  <div class="menuSpan">
+    <a href="aboutUs.html"><span>About Us</span></a>
+    <a href="index.html"><span>Menu</span></a>
+    <a href="balance.html"><span>Balance</span></a>
+    <a href="topUpPage.html"><span>Top-Up</span></a>
+    <a href="orderHistory.html"><span>Order History</span></a>
+  </div>
+  <div id="coffeeSelect">
+  <h2>Select Coffee</h2>
+  <form>
+    <select name="coffeeSelect">
+      <option value="black">Black</option>
+      <option value="flatWhite">Flat White</option>
+      <option value="cappuccino">Cappuccino</option>
+      <option value="hotChocolate">Hot Chocolate</option>
+      <option value="mochaccino">Mochaccino</option>
+      <option value="latte">Latte</option>
+    </select>
+    <br>
+    <feildset>
+      <legend>Size</legend>
+      <select name="cofSize">
+        <option value="regular">Regular</option>
+        <option value="small">Small</option>
+      </select>
+      <br>
+      <label for="sugar">with Sugar</label>
+      <input id="sugar" type="radio">
+      <label for="milk">with Milk</label>
+      <input id="milk" type="radio">
+    </fieldset>
+    <br>
+    <div id="displayTotal"><!--total to go here --><div>
+    <br>
+    <input type="Submit" value="Add To Cart">
+  </form>
+
+
 </body>
 </html>
