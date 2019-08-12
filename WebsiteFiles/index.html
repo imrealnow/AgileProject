@@ -23,32 +23,38 @@
   <div id="coffeeSelect">
   <h2>Select Coffee</h2>
   <form>
-    <select name="coffeeSelect">
+    <select name="coffeeSelect" id="coffeeType" onchange="selectCoffee()">
       <option value="black">Black</option>
-      <option value="flatWhite">Flat White</option>
+      <option value="flat white">Flat White</option>
       <option value="cappuccino">Cappuccino</option>
-      <option value="hotChocolate">Hot Chocolate</option>
+      <option value="hot chocolate">Hot Chocolate</option>
       <option value="mochaccino">Mochaccino</option>
       <option value="latte">Latte</option>
     </select>
     <br>
     <feildset>
       <legend>Size</legend>
-      <select name="cofSize">
+      <select name="cofSize" id="coffeeSize" onchange="changeSize()">
         <option value="regular">Regular</option>
         <option value="small">Small</option>
       </select>
       <br>
       <label for="sugar">with Sugar</label>
-      <input id="sugar" type="radio">
+      <input id="sugar" value="true" type="radio">
       <label for="milk">with Milk</label>
-      <input id="milk" type="radio">
+      <input id="milk" value="true" type="radio">
     </fieldset>
     <br>
     <div id="displayTotal"><!--total to go here --><div>
     <br>
-    <input type="Submit" value="Add To Cart">
+    <input type="Submit" value="Add To Cart" onclick="addedToCart()">
   </form>
+
+    <!--    Javascript  -->
+    <script type="text/javascript" src="scripts/menuPage.js"></script>
+
+</body>
+</html>
 
 
 </body>
