@@ -9,19 +9,32 @@
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script type="text/javascript" src="scripts/login.js"></script>
 </head>
-<body>
-  <img src="images/logo.png" alt="Coffee Logo">
-  <a href="thankYou.html"><img src="images/logOut.png" alt="Log-out Logo" height="65"></a>
-  <a href="cart.html"><img src="images/cart.png" alt="Cart Logo" height="65"></a>
-  <div class="menuSpan">
-    <a href="aboutUs.html"><span>About Us</span></a>
-    <a href="index.html"><span>Menu</span></a>
-    <a href="balance.html"><span>Balance</span></a>
-    <a href="topUpPage.html"><span>Top-Up</span></a>
-    <a href="orderHistory.html"><span>Order History</span></a>
+<body onload="setWelcome()">
+
+  <nav>
+    <!--    Logo  -->
+    <div id="logo">
+      <h1>Coffee Shop</h1>
+    </div>
+      <img src="css/img/account.png" alt="account">
+      <img src="css/img/cart.png" alt="cart">
+  </nav>
+
+  <div id="nav">
+    <button><a href="aboutUs.html">About</a></button>
+    <button><a id="current" href="index.html">Menu</a></button>
+    <button><a href="balance.html">Balance</a></button>
+    <button><a href="topUpPage.html">Top Up</a></button>
+    <button><a href="orderHistory.html">Orders</a></button>
   </div>
-  <div id="coffeeSelect">
-  <h2>Select Coffee</h2>
+
+  <div class="container2">
+    <h3 id="welcome"></h3>
+  </div>
+    <div class="container2">
+
+    <div id="coffeeSelection">
+        <h4>Select Coffee</h4>
   <form>
     <select name="coffeeSelect" id="coffeeType" onchange="selectCoffee()">
       <option value="black">Black</option>
@@ -32,26 +45,43 @@
       <option value="latte">Latte</option>
     </select>
     <br>
-    <feildset>
-      <legend>Size</legend>
-      <select name="cofSize" id="coffeeSize" onchange="changeSize()">
-        <option value="regular">Regular</option>
-        <option value="small">Small</option>
-      </select>
-      <br>
-      <label for="sugar">with Sugar</label>
-      <input id="sugar" value="true" type="radio">
-      <label for="milk">with Milk</label>
-      <input id="milk" value="true" type="radio">
-    </fieldset>
-    <br>
-    <div id="displayTotal"><!--total to go here --><div>
-    <br>
-    <input type="Submit" value="Add To Cart" onclick="addedToCart()">
-  </form>
+
+      <fieldset>
+            <p>Size</p>
+            <select name="cofSize" id="coffeeSize" onchange="changeSize()">
+              <option value="regular">Regular</option>
+              <option value="small">Small</option>
+            </select>
+            <br>
+            <p><label for="sugar">with Sugar</label></p>
+            <input id="sugar" value="true" type="radio">
+            <p><label for="milk">with Milk</label></p>
+            <input id="milk" value="true" type="radio">
+
+              </fieldset>
+            <br>
+        </form>
+      </div>
+
+  <div id="coffeeSelection2">
+        <h4>Order</h4>
+
+        <p>Order ID</p>
+        <p>Coffees</p>
+
+    <form>
+      <div id="displayTotal"><!--total to go here -->
+        <p> Total</p>
+      </div>
+     <div class="btn-group">
+      <button id="btn3" type="Submit" onclick="addedToCart()">Add To Cart</button>
+    </div>
+    </form>
+  </div>
 
     <!--    Javascript  -->
     <script type="text/javascript" src="scripts/menuPage.js"></script>
+    <script type="text/javascript" src="scripts/index.js"></script>
 
 </body>
 </html>

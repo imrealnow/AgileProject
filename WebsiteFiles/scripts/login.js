@@ -62,3 +62,8 @@ $('.btn-group a button').click(function(){
   $('.btn-group > div').hide();
  $('.btn-group > div').eq($(this).parent().index()).show();
 });
+$('#pwd').click(function(){
+  $('.forgotpwd').show();
+ $('.login').hide();
+ $('.signup').hide();
+});
