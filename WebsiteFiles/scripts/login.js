@@ -19,7 +19,7 @@ function loginButton() {
     if(users.getUser(username.value).Password == password.value)
     {
       //this sets the "currentUser" variable to who you successfully signed in as
-      session.set("currentUser", users.getUser(username.value));
+      sessionStorage.setItem('currentUser', username.value);
       //this redirects to another page
       document.location.replace("index.html");
       errors.innerHTML = "";
@@ -61,4 +61,9 @@ function signupButton() {
 $('.btn-group a button').click(function(){
   $('.btn-group > div').hide();
  $('.btn-group > div').eq($(this).parent().index()).show();
+});
+$('#pwd').click(function(){
+  $('.forgotpwd').show();
+ $('.login').hide();
+ $('.signup').hide();
 });
