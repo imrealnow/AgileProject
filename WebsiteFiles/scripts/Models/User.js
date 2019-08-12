@@ -44,4 +44,50 @@ class User {
             }
         }
     }
+
+    updateUser(name, newUserObject)
+    {
+        const session = new Session();
+        var users = session.get("allUsers");
+        if(users == null)
+        {
+            console.log("allUsers not set");
+            return null;
+        }
+        else
+        {
+            var i;
+            for(i = 0; i < users.Users.length; i++)
+            {
+                if(users.Users[i].Name == name)
+                {
+                    users.Users[i] = newUserObject;
+                    return;
+                }
+            }
+        }
+    }
+
+    deleteUser(name)
+    {
+        const session = new Session();
+        var users = session.get("allUsers");
+        if(users == null)
+        {
+            console.log("allUsers not set");
+            return null;
+        }
+        else
+        {
+            var i;
+            for(i = 0; i < users.Users.length; i++)
+            {
+                if(users.Users[i].Name == name)
+                {
+                    users.Users.splice(index, 1);
+                    return;
+                }
+            }
+        }  
+    }
 }
