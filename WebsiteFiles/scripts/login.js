@@ -19,6 +19,7 @@ function buttonClick() {
     {
       //this sets the "currentUser" variable to who you successfully signed in as
       sessionStorage.setItem('currentUser', username.value);
+      sessionStorage.setItem("cartString", "");
       //this redirects to another page
       document.location.replace("index.html");
       errors.innerHTML = "";

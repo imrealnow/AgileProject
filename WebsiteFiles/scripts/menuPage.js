@@ -5,8 +5,8 @@ var withMilk = document.getElementById('milk').value;
 var withSugar = document.getElementById('sugar').value;
 var coffeeAdded = coffeeList.value;
 var coffeeS = document.getElementById('coffeeSize').value;
-var wSugar = " with";
-var wMilk = " with";
+var wSugar = " without";
+var wMilk = " without";
 
 //updates the selected coffe type
 function selectCoffee(){
@@ -21,13 +21,15 @@ function changeSize() {
 //displays what has been added to cart
 function addedToCart(){
   if(document.getElementById('sugar').checked == true){
-    wSugar = " without";
+    wSugar = " with";
   }
 
   if(document.getElementById('milk').checked == true){
-    wMilk = " without";
+    wMilk = " with";
   }
-
+  var cart = sessionStorage.getItem("cartString");
+  cart = cart + coffeeS + coffeeAdded + wSugar + wMilk;
+  sessionStorage.setItem("cartString", cart);
   console.log("hello");
-  alert("You have added a " + coffeeS + " " + coffeeAdded + wSugar +" milk and" + wMilk + " sugar to your cart.");
+  alert("You have added a " + coffeeS + " " + coffeeAdded + wSugar +" sugar and" + wMilk + " milk to your cart.");
 }
