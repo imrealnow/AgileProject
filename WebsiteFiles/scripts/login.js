@@ -19,7 +19,7 @@ function loginButton() {
     if(users.getUser(username.value).Password == password.value)
     {
       //this sets the "currentUser" variable to who you successfully signed in as
-      sessionStorage.setItem('currentUser', username.value);
+      session.set("currentUser", users.getUser(username.value));
       //this redirects to another page
       document.location.replace("index.html");
       errors.innerHTML = "";
