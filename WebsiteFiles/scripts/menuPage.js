@@ -28,8 +28,8 @@ function addedToCart(){
     wMilk = " with";
   }
   var cart = sessionStorage.getItem("cartString");
-  cart = cart + coffeeS + coffeeAdded + wSugar + wMilk;
-  sessionStorage.setItem("cartString", cart);
+  //cart = cart + coffeeS + coffeeAdded + wSugar + wMilk;
+  //sessionStorage.setItem("cartString", cart);
   console.log("hello");
   alert("You have added a " + coffeeS + " " + coffeeAdded + wSugar +" sugar and" + wMilk + " milk to your cart.");
 }
