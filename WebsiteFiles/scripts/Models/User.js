@@ -2,17 +2,25 @@ class User {
     createUser(name, password, email){
         const session = new Session();
         var users = session.get("allUsers");
+        var newUser = {
+            Name: name, 
+            Password: password, 
+            Email: email, 
+            Balance: 0.0, 
+            OrderHistory: []
+        };
         if(users == null)
         {
             var users = {
-                Users : [{Name: name, Password: password, Email: email, Balance: 0.0, OrderHistory: []}]
+                Users : [newUser]
             };
         }
         else
         {
-            users.Users.push({Name: name, Password: password, Email: email, Balance: 0.0, OrderHistory: []});
+            users.Users.push(newUser);
         }
         session.set("allUsers", users);
+        return newUser;
     }
 
     getUser(name)

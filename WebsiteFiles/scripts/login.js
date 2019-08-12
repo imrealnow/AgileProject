@@ -1,17 +1,18 @@
 function onLoad()
 {
-
-};
-
-function buttonClick() {
   const users = new User();
 
   users.createUser("John", "johnsPassword","john@gmail.com");
   users.createUser("Max", "maxsPassword","max123@gmail.com");
+};
 
-  var errors = document.getElementById("errors");
-  var username = document.getElementById("username");
-  var password = document.getElementById("password");
+function loginButton() {
+  const users = new User();
+  const session = new Session();
+
+  var errors = document.getElementById("l-errors");
+  var username = document.getElementById("l-username");
+  var password = document.getElementById("l-password");
 
   //this checks the user accounts for the username, and checks their password too
   if(users.getUser(username.value) != null) {
@@ -19,7 +20,6 @@ function buttonClick() {
     {
       //this sets the "currentUser" variable to who you successfully signed in as
       sessionStorage.setItem('currentUser', username.value);
-      sessionStorage.setItem("cartString", "");
       //this redirects to another page
       document.location.replace("index.html");
       errors.innerHTML = "";
@@ -33,6 +33,27 @@ function buttonClick() {
   else {
     //this sets an error message if the login failed
     errors.innerHTML = "User not found";
+  }
+};
+
+function signupButton() {
+  const users = new User();
+  const session = new Session();
+
+  var errors = document.getElementById("s-errors");
+  var username = document.getElementById("s-username");
+  var email = document.getElementById("s-email");
+  var password = document.getElementById("s-password");
+
+  //this checks the user accounts for the username, and checks their password too
+  if(users.getUser(username.value) != null) {
+    errors.innerHTML = "User already exists";
+  }
+  else {
+      var newUser = users.createUser(username.value, password.value, email.value);
+      session.set("currentUser", newUser);
+      //this redirects to another page
+      document.location.replace("index.html");
   }
 };
 
