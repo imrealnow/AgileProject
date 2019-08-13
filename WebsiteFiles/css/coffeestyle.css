@@ -6,6 +6,8 @@ body{
  font-family: Arial, Helvetica, sans-serif;
  font-size: 22px;
  color: white;
+ height:100%;
+ margin:0;
  background-size: 100%;
  background-color: black;
  background-image: url(img/coffee1.jpg);
@@ -26,8 +28,9 @@ body{
         url('fonts/Kaushan.woff') format('woff');
 }
 h1{
+  padding-left: 4%;
   font-family: 'Kaushan';
-  text-align: center;
+  text-align: left;
   font-size: 60px;
   transform: rotate(-10deg);
 }
@@ -38,14 +41,14 @@ h2{
 }
 h3{
   font-family: 'Kaushan';
-  font-size: 30px;
-  color: lightgray;
+  font-size: 35px;
+  color: white;
   text-align: center;
 }
 h4{
   font-family: 'Kaushan';
   font-size: 30px;
-    color: lightgray;
+  color: white;
 }
 ul li {
   display: inline;
@@ -66,10 +69,11 @@ a:hover{
   color: #a2abba;
 }
 nav h1{
+  color:lightgray;
   font-size: 24px;
 }
 p{
-  color:lightgray;
+  color:white;
   font-size: 18px;
 }
 #current{
@@ -86,25 +90,31 @@ p{
   font-size: 30px;
   text-align: center;
 }
+#options li{
+  color: white;
+}
 /***************************  CONTAINERS */
 #logo{
-  display:inline-block;
+  width:100%;
+  display:inline-flex;
 }
 header{
   text-align: center;
   width: 100%;
   font: 'Cantarell';
-  margin-bottom: 5%;
 }
+/** login/signup **/
 .container1{
   min-height: 0;
   padding: 2%;
   width:30%;
   cursor: pointer;
   margin: auto;
+  margin-bottom: 0;
   color: black;
   text-align: center;
 }
+/** bkground menu page **/
 .container2{
   justify-content: center;
   display: inline-flex;
@@ -112,23 +122,29 @@ header{
   cursor: pointer;
   color: black;
   text-align: center;
-  background-color: white;
+  background-image: url(img/coffee5.jpg);
+  background-repeat:no-repeat;
+  background-position: top;
+  background-attachment: fixed;
+  background-size: cover;
 }
 .login, .signup, .forgotpwd {
   padding: 5% 2% 8% 2%;
   display:none;
   background-color: white;
 }
-#nav {
+nav {
+  margin:0;
+  background-color: white;
   width: 100%;
   float left;
   display: flex;
 }
+/** select coffee options box **/
 #coffeeSelection{
   margin-top: 100px;
   width:50%;
   margin: 5%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 #coffeeSelection2{
   color:white;
@@ -138,15 +154,12 @@ header{
   margin: 5%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-fieldset{
-  border: none;
+fieldset{border: none;}
+#options{
+  text-align: center;
+  width:200px;
+  background-color: #e1e8e5;
 }
-#option{
-  display:inline-flex;
-  width:100%;
-  float:left;
-}
-
 /**************************** BUTTONS */
 .btn-group{
   width: 100%;
@@ -155,18 +168,17 @@ fieldset{
   cursor: pointer;
 }
 .btn-group button {
-    background: none;
-    border: 1px solid white;
-    color: white;
-    padding: 10px 20px;
-    width: 180px;
-    text-align: center;
-    font-size: 22px;
-    margin: 2px;
+  background: none;
+  border: 1px solid white;
+  color: white;
+  padding: 10px 20px;
+  width: 180px;
+  text-align: center;
+  font-size: 22px;
 }
 .btn-group button:hover {
-    color: lightgray;
-    background-color:rgba(255, 255, 255, 0.8);
+  color: lightgray;
+  background-color:rgba(255, 255, 255, 0.8);
 }
 #btn2{
   background-color: lightgray;
@@ -176,38 +188,51 @@ fieldset{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border:none;
   color:lightgray;
-  margin-top: 100px;
+  margin-top: 50px;
+  border-radius:1.5px;
 }
 #btn3:hover{
   color: lightgray;
 }
-#nav button{
+nav button{
   border: none;
   color: lightgray;
   padding: 1%;
   width:20%;
   background: white;
+  border-radius: 0.9;
 }
-
+/************************ DROPDOWN */
+.coffeeSelect, .coffeeSize {
+    font-size: 18px;
+    color: ;
+    padding: 2% 5% 2% 5%;
+    width: 40%;
+    background-color: #e1e8e5;
+    background-image: url('img/dropdownarrow.png');
+    background-repeat: no-repeat;
+    background-position: 80% 50%;
+    background-size: 5%;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border: 1px solid lightgray;
+}
 /***************************** IMAGES */
-#logo img{
+nav img{
   width:50px;
   height:50px;
+  padding: 2% 2%;
 }
 header img{
   width:8%;
 }
-nav img{
-  float:right;
-  width:4%;
-  padding:1% 4% 0 0;
-}
 /***************************** FOOTER */
 footer{
-  margin-top: 50px;
+  bottom: 0;
+  margin-top: 150px;
   color:lightgray;
   width: 100%;
   text-align: center;
   font-size: 14px;
-  bottom: 0;
 }

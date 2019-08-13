@@ -32,4 +32,8 @@ function addedToCart(){
   //sessionStorage.setItem("cartString", cart);
   console.log("hello");
   alert("You have added a " + coffeeS + " " + coffeeAdded + wSugar +" sugar and" + wMilk + " milk to your cart.");
+
+  // Update Order list on menu page
+  var orderItems = document.getElementById("orderItems");
+  //orderItems.innerHTML = "Order: " + sessionStorage.setItem("cartString");
 }
