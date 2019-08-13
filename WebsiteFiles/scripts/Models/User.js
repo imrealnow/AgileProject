@@ -3,10 +3,11 @@ class User {
         const session = new Session();
         var users = session.get("allUsers");
         var newUser = {
-            Name: name, 
-            Password: password, 
-            Email: email, 
-            Balance: 0.0, 
+            Name: name,
+            Password: password,
+            Email: email,
+            Balance: 0.0,
+            CoffeesBought: 0.0,
             OrderHistory: []
         };
         if(users == null)
@@ -88,6 +89,6 @@ class User {
                     return;
                 }
             }
-        }  
+        }
     }
 }
