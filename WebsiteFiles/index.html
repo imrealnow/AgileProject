@@ -8,10 +8,10 @@
     <link href="css/coffeestyle.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 </head>
-<body onload="setWelcome()">
+<body id="loggedin" onload="setWelcome()">
   <!-- Nav -->
     <nav>
-      <h1>Coffee Shop</h1>
+      <a href="aboutUs.html"><h1>Coffee Shop</h1></a>
       <button><a href="aboutUs.html">About</a></button>
       <button><a id="current" href="index.html">Menu</a></button>
       <button><a href="balance.html">Balance</a></button>
@@ -21,16 +21,16 @@
       <img src="css/img/cart_dark.png" alt="cart">
     </nav>
 
-    <!-- Welcome -->
+    <!-- Main container -->
     <div class="container2">
+          <!-- Welcome -->
       <h3 id="welcome"></h3>
     </div>
 
-    <!-- Main container -->
     <div class="container2">
-
     <!-- Choose Coffee -->
     <div id="coffeeSelection">
+
           <h4>Select Coffee</h4>
       <form>
         <!-- Type -->
@@ -75,15 +75,11 @@
          </div>
       </form>
     </div>
-
+  </div>
     <!--    Javascript  -->
     <script type="text/javascript" src="scripts/Session.js"></script>
     <script type="text/javascript" src="scripts/menuPage.js"></script>
     <script type="text/javascript" src="scripts/index.js"></script>
-
-</body>
-</html>
-
 
 </body>
 </html>
