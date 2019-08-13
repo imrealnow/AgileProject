@@ -14,7 +14,6 @@ function getInfo(){
 
   var coffeesBoughtMessage = document.getElementById('coffeesBought');
   var userCoffees = currentUser.CoffeesBought;
-
-  coffeesBoughtMessage.innerHTML = "You have bought a total of " + userCoffees
+  coffeesBoughtMessage.innerHTML = " You have bought a total of " + userCoffees
   + " coffees, buy a total of ten to get a free coffee!";
 }

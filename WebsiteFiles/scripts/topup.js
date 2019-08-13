@@ -19,6 +19,8 @@ function topupButton(){
     var current = session.set('currentUser', currentUser);
     users.updateUser(current, 'currentUser');
     console.log(session.get('currentUser'));
+    location.reload();
+    alert("thanks for topping up, your current balance is: " + ssss);
   }
   //catchs if the input isn't a valid number
   else

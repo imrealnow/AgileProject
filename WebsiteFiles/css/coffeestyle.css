@@ -140,6 +140,10 @@ header{
   color: black;
   text-align: center;
 }
+.genContent{
+  justify-content: center;
+  text-align: center;
+}
 /** bkground menu page **/
 .login, .signup, .forgotpwd {
   padding: 5% 2% 8% 2%;
@@ -252,4 +256,7 @@ footer{
   width: 100%;
   text-align: center;
   font-size: 14px;
+}
+span{
+  display: block;
 }
