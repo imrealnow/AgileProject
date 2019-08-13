@@ -8,7 +8,7 @@ class User {
             Email: email,
             Balance: 0.0,
             CoffeesBought: 0.0,
-            OrderHistory: []
+            OrderHistory: [],
         };
         if(users == null)
         {
