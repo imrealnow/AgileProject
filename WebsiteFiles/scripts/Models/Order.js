@@ -1,7 +1,7 @@
 class Order {
 
 /**
-Dependencies: Session
+Dependencies: this.session
 
 Example Order:
     currentOrder = {
@@ -28,7 +28,7 @@ Example Order:
     constructor()
     {
         this.session = new Session();
-        var currentOrder = session.get("currentOrder");
+        var currentOrder = this.session.get("currentOrder");
         if(currentOrder == null)
         {
             currentOrder = {
@@ -36,13 +36,13 @@ Example Order:
                 TotalPrice: 0.0,
                 Items: []
             };
-            session.set("currentOrder", currentOrder);
+            this.session.set("currentOrder", currentOrder);
         }
     }
 
     getTotalPrice()
     {
-        var currentOrder = session.get("currentOrder");
+        var currentOrder = this.session.get("currentOrder");
         var i;
         var totalPrice = 0.0;
         if(currentOrder.Items.length == 0)
@@ -59,27 +59,28 @@ Example Order:
         }
     }
 
-    // order.addCoffee("Black", "Regular", 4.5, ["With Sugar","With Milk"]);
-    addCoffee(type, size, price, additions)
+    // order.addCoffee("Black", "Regular", 4.5, ["With Sugar","With Milk"], 1);
+    addCoffee(type, size, price, additions, quantity)
     {
-        var currentOrder = session.get("currentOrder");
+        var currentOrder = this.session.get("currentOrder");
         var newCoffee = {
             Id: 0,
             Type: type,
             Size: size,
             Price: price,
-            Additions: additions
+            Additions: additions,
+            Quantity: quantity
         };
         newCoffee.Id = currentOrder.Items.length + 1;
         currentOrder.Items.push(newCoffee);
-        session.set("currentOrder", currentOrder);
+        this.session.set("currentOrder", currentOrder);
         return newCoffee.Id;
     }
 
     confirmOrder()
     {
-        var currentOrder = session.get("currentOrder");
-        var currentUser = session.get("currentUser");
+        var currentOrder = this.session.get("currentOrder");
+        var currentUser = this.session.get("currentUser");
         currentOrder.Date = new Date().toJSON();
         currentOrder.TotalPrice = getTotalPrice();
         currentUser.OrderHistory.push(currentOrder);
@@ -88,7 +89,35 @@ Example Order:
                 TotalPrice: 0.0,
                 Items: []
             };
-        session.set("currentUser", currentUser);
-        session.set("currentOrder", currentOrder);
+        this.session.set("currentUser", currentUser);
+        this.session.set("currentOrder", currentOrder);
+    }
+
+    getCoffeeById(id)
+    {
+        var currentOrder = this.session.get("currentOrder");
+        var i;
+        for(i = 0; i < currentOrder.Items.length; i++)
+        {
+            if(currentOrder.Items[i].Id == id)
+            {
+                return currentOrder.Items[i];
+            }
+        }
+    }
+
+    removeCoffeeById(id)
+    {
+        var currentOrder = this.session.get("currentOrder");
+        var i;
+        for(i = 0; i < currentOrder.Items.length; i++)
+        {
+            if(currentOrder.Items[i].Id == id)
+            {
+                currentOrder.Items[i] = currentOrder.Items[currentOrder.Items.length-1];
+                currentOrder.Items.pop();
+                this.session.set("currentOrder",currentOrder);
+            }
+        }
     }
 }
