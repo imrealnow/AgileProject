@@ -8,12 +8,15 @@ var priceLabel = document.getElementById('price');
 var totalCostLabel = document.getElementById('displayTotal');
 var coffeeQuantity = document.getElementById('quantity');
 var orderList = document.getElementById('orderItems');
+var userBalance = document.getElementById('userBalance');
 var price = 0.0;
 
 function pageSetup()
 {
   setWelcome();
   updateOrderList();
+  totalCostLabel.innerHTML = "$" + order.getTotalPrice();
+  userBalance.innerHTML = "$" + session.get("currentUser").Balance;
 }
 
 function setWelcome()
@@ -63,6 +66,13 @@ function addCoffeeToCart()
   var coffeeId = order.addCoffee(getSelectedCoffee(), coffeeSize.value, price, additions, coffeeQuantity.value);
   //update total price
   totalCostLabel.innerHTML = "$" + order.getTotalPrice();
+  updateOrderList();
+}
+
+function confirmOrder()
+{
+  order.confirmOrder();
+  userBalance.innerHTML = "$" + session.get("currentUser").Balance;
   updateOrderList();
 }
 

@@ -59,6 +59,25 @@ Example Order:
         }
     }
 
+    getTotalCoffees()
+    {
+        var currentOrder = this.session.get("currentOrder");
+        var i;
+        var totalCoffees = 0;
+        if(currentOrder.Items.length == 0)
+        {
+            return totalCoffees;
+        }
+        else
+        {
+            for(i = 0; i < currentOrder.Items.length; i++)
+            {
+                totalCoffees = totalCoffees + currentOrder.Items[i].Quantity;
+            }
+            return totalCoffees;
+        }
+    }
+
     // order.addCoffee("Black", "Regular", 4.5, ["With Sugar","With Milk"], 1);
     addCoffee(type, size, price, additions, quantity)
     {
@@ -81,8 +100,18 @@ Example Order:
     {
         var currentOrder = this.session.get("currentOrder");
         var currentUser = this.session.get("currentUser");
+        if(this.getTotalPrice() > currentUser.Balance)
+        {
+            alert("Not enough funds to make this purchase");
+            return;
+        }
+        else
+        {
+            currentUser.Balance = currentUser.Balance - this.getTotalPrice();
+            currentUser.CoffeesBought = currentUser.CoffesBought + this.getTotalCoffees();
+        }
         currentOrder.Date = new Date().toJSON();
-        currentOrder.TotalPrice = getTotalPrice();
+        currentOrder.TotalPrice = this.getTotalPrice();
         currentUser.OrderHistory.push(currentOrder);
         currentOrder = {
                 Date: "",

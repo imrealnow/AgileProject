@@ -226,8 +226,8 @@ nav {
     text-align:left;
     padding: 0 10%;
     font-size: 32px;
-    line-height: 40px;
-    height: 40px;
+    line-height: 60px;
+    height: 60px;
     display:block;
 }
 
@@ -304,7 +304,6 @@ nav {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border:none;
   color:lightgray;
-  margin-top: 50px;
   border-radius:1.5px;
 }
 #btn3:hover{
