@@ -7,7 +7,7 @@
     <!-- CSS stylesheet -->
     <link href="css/coffeestyle.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <script type="text/javascript" src="scripts/login.js"></script>
+    <!--<script type="text/javascript" src="scripts/login.js"></script>-->
 </head>
 <body>
   <img src="images/logo.png" alt="Coffee Logo">
@@ -24,12 +24,12 @@
   <h2>Select Coffee</h2>
   <form>
     <select name="coffeeSelect" id="coffeeType" onchange="selectCoffee()">
-      <option value="black">Black</option>
-      <option value="flat white">Flat White</option>
-      <option value="cappuccino">Cappuccino</option>
-      <option value="hot chocolate">Hot Chocolate</option>
-      <option value="mochaccino">Mochaccino</option>
-      <option value="latte">Latte</option>
+      <option value=" black">Black</option>
+      <option value=" flat white">Flat White</option>
+      <option value=" cappuccino">Cappuccino</option>
+      <option value=" hot chocolate">Hot Chocolate</option>
+      <option value=" mochaccino">Mochaccino</option>
+      <option value=" latte">Latte</option>
     </select>
     <br>
     <feildset>
@@ -45,17 +45,13 @@
       <input id="milk" value="true" type="radio">
     </fieldset>
     <br>
-    <div id="displayTotal"><!--total to go here --><div>
+
     <br>
     <input type="Submit" value="Add To Cart" onclick="addedToCart()">
   </form>
-
+<div id="displayTotal"></div>
     <!--    Javascript  -->
     <script type="text/javascript" src="scripts/menuPage.js"></script>
-
-</body>
-</html>
-
 
 </body>
 </html>

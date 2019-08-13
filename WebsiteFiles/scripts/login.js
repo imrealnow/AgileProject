@@ -52,6 +52,9 @@ function signupButton() {
   else {
       var newUser = users.createUser(username.value, password.value, email.value);
       session.set("currentUser", newUser);
+      sessionStorage("cartString", "");
+      sessionStorage("cartPrice", 0);
+
       //this redirects to another page
       document.location.replace("index.html");
   }
