@@ -27,6 +27,7 @@
       <h3 id="welcome"></h3>
     </div>
 
+<<<<<<< Updated upstream
     <div class="container2">
     <!-- Choose Coffee -->
     <div id="coffeeSelection">
@@ -59,21 +60,54 @@
         </fieldset><br>
       </form>
     </div>
-
-    <!-- Display Order Items -->
-    <div id="coffeeSelection2">
-          <h4>Order</h4>
-          <p id="orderItems"></p>
-          <p>Order ID</p>
-
-      <form>
-        <div id="displayTotal"><!--total to go here -->
-          <p> Total</p>
+=======
+    <!-- Main container -->
+    <div class="container2" style="margin-bottom: 5%">
+        <!-- Choose Coffee -->
+        <div id="coffeeSelection">
+            <h4>Coffee</h4>
+            <div id="coffeeTypes">
+                <label class="blue"><input type="radio" name="toggle" value="black"><span>Black</span></label>
+                <label class="green"><input type="radio" name="toggle" value="flat white"><span>Flat White</span></label>
+                <label class="yellow"><input type="radio" name="toggle" value="cappuccino"><span>Cappuccino</span></label>
+                <label class="pink"><input type="radio" name="toggle" value="hot chocolate"><span>Hot Chocolate</span></label>
+                <label class="purple"><input type="radio" name="toggle" value="mochaccino"><span>Mochaccino</span></label>
+                <label class="purple"><input type="radio" name="toggle" value="latte"><span>Latte</span></label>
+            </div>
         </div>
-         <div class="btn-group">
-           <button id="btn3" type="Submit" onclick="">Checkout</button>
-         </div>
-      </form>
+        <div id="coffeeSelection2">
+            <h4>Options</h4>
+            <p>Size</p>
+            <select class="coffeeSize" id="coffeeSize" onchange="changeSize()">
+                <option value="regular">Regular</option>
+                <option value="small">Small</option>
+            </select><br>
+            <p><label for="sugar">Add Sugar</label></p>
+            <input id="sugar" value="true" type="radio">
+            <p><label for="milk">Add Milk</label></p>
+            <input id="milk" value="true" type="radio">
+            <!-- Add to Cart -->
+            <div class="btn-group">
+                <button id="btn3" type="Submit" onclick="addedToCart()">Add To Cart</button>
+            </div>
+        </div>
+>>>>>>> Stashed changes
+
+        <!-- Display Order Items -->
+        <div id="coffeeSelection3">
+              <h4>Order</h4>
+              <p id="orderItems"></p>
+              <p>Order ID</p>
+
+          <form>
+            <div id="displayTotal"><!--total to go here -->
+              <p> Total</p>
+            </div>
+             <div class="btn-group">
+               <button id="btn3" type="Submit" onclick="">Checkout</button>
+             </div>
+          </form>
+        </div>
     </div>
   </div>
     <!--    Javascript  -->
