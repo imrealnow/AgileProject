@@ -19,7 +19,7 @@ function loginButton() {
     if(users.getUser(username.value).Password == password.value)
     {
       //this sets the "currentUser" variable to who you successfully signed in as
-      sessionStorage.setItem('currentUser', username.value);
+      session.set("currentUser", users.getUser(username.value));
       //this redirects to another page
       document.location.replace("index.html");
       errors.innerHTML = "";
@@ -34,6 +34,8 @@ function loginButton() {
     //this sets an error message if the login failed
     errors.innerHTML = "User not found";
   }
+  sessionStorage("cartString", "");
+  sessionStorage("cartPrice", 0);
 };
 
 function signupButton() {
@@ -52,9 +54,6 @@ function signupButton() {
   else {
       var newUser = users.createUser(username.value, password.value, email.value);
       session.set("currentUser", newUser);
-      sessionStorage("cartString", "");
-      sessionStorage("cartPrice", 0);
-
       //this redirects to another page
       document.location.replace("index.html");
   }
@@ -64,4 +63,9 @@ function signupButton() {
 $('.btn-group a button').click(function(){
   $('.btn-group > div').hide();
  $('.btn-group > div').eq($(this).parent().index()).show();
+});
+$('#pwd').click(function(){
+  $('.forgotpwd').show();
+ $('.login').hide();
+ $('.signup').hide();
 });

@@ -10,25 +10,28 @@
     <script type="text/javascript" src="scripts/login.js"></script>
 </head>
 <body>
-  <img src="images/logo.png" alt="Coffee Logo">
-  <a href="thankYou.html"><img src="images/logOut.png" alt="Log-out Logo" height="65"></a>
-  <a href="cart.html"><img src="images/cart.png" alt="Cart Logo" height="65"></a>
-  <div class="menuSpan">
-    <a href="aboutUs.html"><span>About Us</span></a>
-    <a href="index.html"><span>Menu</span></a>
-    <a href="balance.html"><span>Balance</span></a>
-    <a href="topUpPage.html"><span>Top-Up</span></a>
-    <a href="orderHistory.html"><span>Order History</span></a>
+  <nav>
+  <!--    Logo  -->
+  <div id="logo">
+    <h1>Coffee Shop</h1>
   </div>
+    <img src="css/img/account.png" alt="account">
+    <img src="css/img/cart.png" alt="cart">
+</nav>
 
-  <div>
-    <h3>Your Cart</h3>
+<div id="nav">
+  <button><a href="aboutUs.html">About</a></button>
+  <button><a id="current" href="index.html">Menu</a></button>
+  <button><a href="balance.html">Balance</a></button>
+  <button><a href="topUpPage.html">Top Up</a></button>
+  <button><a href="orderHistory.html">Orders</a></button>
+</div>
+
+<div class="container2">
+    <h3>Cart</h3>
     <h4 id="cartListDis"></h4>
     <button type="button" name="clearCartButton" onclick="clearCart()">Empty Cart</button>
-  </div>
-
-  <!--    Javascript  -->
-  <script type="text/javascript" src="scripts/cart.js"></script>
-
+</div>
+<script type="text/javascript" src="scripts/cart.js"></script>
 </body>
 </html>

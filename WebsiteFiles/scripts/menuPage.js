@@ -27,12 +27,10 @@ function addedToCart(){
   if(document.getElementById('sugar').checked == true){
     wSugar = " with sugar";
   }
-  console.log("step1");
 
   if(document.getElementById('milk').checked == true){
     wMilk = " with milk";
   }
-  console.log("step3");
 
   if(coffeeS == "regular"){
      price = (Number(price) + 450);
@@ -40,9 +38,7 @@ function addedToCart(){
  else {
       price = (Number(price) + 300);
    }
-  console.log("step3");
   sessionStorage.cartPrice = price;
-  console.log("step4");
 
   var cart = sessionStorage.getItem("cartString");
   cart = cart + "," + coffeeS + "," + coffeeAdded + "," + wSugar + "," + wMilk + "," + "ENDLINE";
@@ -51,9 +47,49 @@ function addedToCart(){
   totalDis.innerHTML = "Cart Total $" + price;
 
 
-
   alert("You have added a " + coffeeS + " " + coffeeAdded + wSugar +" and" + wMilk + " to your cart.");
 
-    console.log("jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj");
 }
   totalDis.innerHTML = "Cart Total $" + (price/100);
+
+var cart = sessionStorage.getItem("cartString");
+var displayCart = document.getElementById("orderItems");
+var cartSplit = cart.split(",")
+var line = "";
+var totalCost =  sessionStorage.getItem("cartPrice");
+//displays the order in short hand in HTML
+for (i=0; i<cartSplit.length; i++){
+
+
+      if (cartSplit[i]=="regular"){
+        line = line + "Reg ";
+      }
+      else if (cartSplit[i]=="small"){
+        line = line + "Sml ";
+      }
+      if( 2 == (i%5)){
+        line = line + cartSplit[i];
+      }
+      if (cartSplit[i]==" with sugar"){
+        line = line + " Sugar ";
+
+      }
+      if (cartSplit[i]==" without milk"){
+        line = line + " Milk";
+      }
+      console.log(cartSplit[i]);
+      if (cartSplit[i]=="ENDLINE"){
+        line = displayCart.innerHTML + "<br>" + line;
+        displayCart.innerHTML = line;
+        line = "";
+      }
+  }
+//displays price of cart items on page
+displayCart.innerHTML = displayCart.innerHTML + "<br> Price: $" + (totalCost/100);
+
+  function clearCart(){
+    sessionStorage.setItem("cartString", "");
+    sessionStorage.setItem("cartPrice", 0);
+    displayCart.innerHTML = "";
+
+  }
