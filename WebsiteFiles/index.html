@@ -9,74 +9,72 @@
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 </head>
 <body onload="setWelcome()">
-
-  <nav>
-    <!--    Logo  -->
-    <div id="logo">
+  <!-- Nav -->
+    <nav>
       <h1>Coffee Shop</h1>
+      <button><a href="aboutUs.html">About</a></button>
+      <button><a id="current" href="index.html">Menu</a></button>
+      <button><a href="balance.html">Balance</a></button>
+      <button><a href="topUpPage.html">Top Up</a></button>
+      <button><a href="orderHistory.html">Orders</a></button>
+      <img src="css/img/account_dark.png" alt="account">
+      <img src="css/img/cart_dark.png" alt="cart">
+    </nav>
+
+    <!-- Welcome -->
+    <div class="container2">
+      <h3 id="welcome"></h3>
     </div>
-      <img src="css/img/account.png" alt="account">
-      <img src="css/img/cart.png" alt="cart">
-  </nav>
 
-  <div id="nav">
-    <button><a href="aboutUs.html">About</a></button>
-    <button><a id="current" href="index.html">Menu</a></button>
-    <button><a href="balance.html">Balance</a></button>
-    <button><a href="topUpPage.html">Top Up</a></button>
-    <button><a href="orderHistory.html">Orders</a></button>
-  </div>
-
-  <div class="container2">
-    <h3 id="welcome"></h3>
-  </div>
+    <!-- Main container -->
     <div class="container2">
 
+    <!-- Choose Coffee -->
     <div id="coffeeSelection">
-        <h4>Select Coffee</h4>
-  <form>
-    <select name="coffeeSelect" id="coffeeType" onchange="selectCoffee()">
-      <option value="black">Black</option>
-      <option value="flat white">Flat White</option>
-      <option value="cappuccino">Cappuccino</option>
-      <option value="hot chocolate">Hot Chocolate</option>
-      <option value="mochaccino">Mochaccino</option>
-      <option value="latte">Latte</option>
-    </select>
-    <br>
-
-      <fieldset>
-            <p>Size</p>
-            <select name="cofSize" id="coffeeSize" onchange="changeSize()">
-              <option value="regular">Regular</option>
-              <option value="small">Small</option>
-            </select>
-            <br>
-            <p><label for="sugar">with Sugar</label></p>
-            <input id="sugar" value="true" type="radio">
-            <p><label for="milk">with Milk</label></p>
-            <input id="milk" value="true" type="radio">
-
-              </fieldset>
-            <br>
-        </form>
-      </div>
-
-  <div id="coffeeSelection2">
-        <h4>Order</h4>
-
-        <p>Order ID</p>
-        <p>Coffees</p>
-
-    <form>
-      <div id="displayTotal"><!--total to go here -->
-        <p> Total</p>
-      </div>
-     <div class="btn-group">
-      <button id="btn3" type="Submit" onclick="addedToCart()">Add To Cart</button>
+          <h4>Select Coffee</h4>
+      <form>
+        <!-- Type -->
+        <select class="coffeeSelect" id="coffeeType" onchange="selectCoffee()">
+          <li><option value="black">Black</option></li>
+          <option value="flat white">Flat White</option>
+          <option value="cappuccino">Cappuccino</option>
+          <option value="hot chocolate">Hot Chocolate</option>
+          <option value="mochaccino">Mochaccino</option>
+          <option value="latte">Latte</option>
+        </select><br>
+        <fieldset>
+          <p>Size</p>
+          <select class="coffeeSize" id="coffeeSize" onchange="changeSize()">
+            <option value="regular">Regular</option>
+            <option value="small">Small</option>
+          </select><br>
+          <p><label for="sugar">Add Sugar</label></p>
+          <input id="sugar" value="true" type="radio">
+          <p><label for="milk">Add Milk</label></p>
+          <input id="milk" value="true" type="radio">
+          <!-- Add to Cart -->
+          <div class="btn-group">
+            <button id="btn3" type="Submit" onclick="addedToCart()">Add To Cart</button>
+          </div>
+        </fieldset><br>
+      </form>
     </div>
-    </form>
-  </div>
+
+    <!-- Display Order Items -->
+    <div id="coffeeSelection2">
+          <h4>Order</h4>
+          <p id="orderItems"></p>
+          <p>Order ID</p>
+
+      <form>
+        <div id="displayTotal"><!--total to go here -->
+          <p> Total</p>
+        </div>
+         <div class="btn-group">
+           <button id="btn3" type="Submit" onclick="">Checkout</button>
+         </div>
+      </form>
+    </div>
 
     <!--    Javascript  -->
     <script type="text/javascript" src="scripts/Session.js"></script>
