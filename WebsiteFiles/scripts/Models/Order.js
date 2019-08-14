@@ -108,7 +108,7 @@ Example Order:
         else
         {
             currentUser.Balance = currentUser.Balance - this.getTotalPrice();
-            currentUser.CoffeesBought = currentUser.CoffesBought + this.getTotalCoffees();
+            currentUser.CoffeesBought = +currentUser.CoffeesBought + +this.getTotalCoffees();
         }
         currentOrder.Date = new Date().toJSON();
         currentOrder.TotalPrice = this.getTotalPrice();

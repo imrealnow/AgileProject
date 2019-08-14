@@ -85,7 +85,6 @@ nav h1:hover{
   color:#a2abba;
 }
 p{
-  color: white;
   font-size: 18px;
 }
 #current{
@@ -147,6 +146,7 @@ header{
 .genContent{
   justify-content: center;
   text-align: center;
+  color: black;
 }
 /** bkground menu page **/
 .login, .signup, .forgotpwd {
@@ -180,7 +180,7 @@ header{
 }
 nav {
   margin:0;
-  background-color: white;
+  background-color: #e6c59a;
   width: 100%;
   float left;
   display: flex;

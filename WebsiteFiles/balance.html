@@ -13,7 +13,6 @@
   <!-- Nav -->
     <nav>
       <a href="aboutUs.html"><h1>Coffee Shop</h1></a>
-      <button><a href="aboutUs.html">About</a></button>
       <button><a id="current" href="index.html">Menu</a></button>
       <button><a href="balance.html">Balance</a></button>
       <button><a href="topUpPage.html">Top Up</a></button>
@@ -22,15 +21,21 @@
       <img src="css/img/cart_dark.png" alt="cart">
     </nav>
 
-  <div class="container2">
-      <h3>Balance</h3>
-    </div>
-   <div class="genContent">
-    <p style="font-size: 22px;" id="userName"></p>
-    <p id="balance"></p>
-    <p id="coffeesBought"></p>
+<div class="container2">
+    <h3>Balance</h3>
   </div>
 
+  <!-- Main container -->
+  <div class="container2">
+    <!-- Top Up -->
+    <div id="coffeeSelection" style="padding: 30px">
+      <div class="genContent" style="color: black;">
+        <p style="font-size: 22px;" id="userName"></p>
+        <p id="balance"></p>
+        <p id="coffeesBought"></p>
+      </div>
+    </div>
+  </div>
   <script type="text/javascript" src="scripts/Session.js"></script>
   <script type="text/javascript" src="scripts/balance.js"></script>
 
