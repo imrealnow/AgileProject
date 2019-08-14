@@ -9,7 +9,7 @@
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script type="text/javascript" src="scripts/login.js"></script>
 </head>
-<body id="loggedin">
+<body id="loggedin" onload="createOrderHistoryList()">
   <!-- Nav -->
     <nav>
       <a href="aboutUs.html"><h1>Coffee Shop</h1></a>
@@ -25,6 +25,25 @@
     <h3>Order History</h3>
   </div>
 
+  <div style="width:60%; margin: 0 auto">
+    <div id="coffeeSelection" style="width: 100%">
+      <div id="orderHistory">
+        <table id="historyList">
+          <tr>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Items</th>
+            <th>Total Price</th>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+    <!--    Javascript  -->
+    <script type="text/javascript" src="scripts/Session.js"></script>
+    <script type="text/javascript" src="scripts/Models/Order.js"></script>
+    <script type="text/javascript" src="scripts/orderHistory.js"></script>
 
 </body>
 </html>

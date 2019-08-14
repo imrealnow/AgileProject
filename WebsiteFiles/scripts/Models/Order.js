@@ -110,7 +110,9 @@ Example Order:
             currentUser.Balance = currentUser.Balance - this.getTotalPrice();
             currentUser.CoffeesBought = +currentUser.CoffeesBought + +this.getTotalCoffees();
         }
-        currentOrder.Date = new Date().toJSON();
+        var date = new Date();
+        var dateString = date.getDate() +"/" + date.getMonth() + "/" + date.getFullYear() +"-" + date.getHours() +":" + date.getMinutes();
+        currentOrder.Date = dateString;
         currentOrder.TotalPrice = this.getTotalPrice();
         currentUser.OrderHistory.push(currentOrder);
         currentOrder = {
