@@ -33,7 +33,17 @@
       <form>
         <div class="btn-group">
         <input type="number" id="topupAmount" placeholder="topup amount"></input><br><br>
-        <button id="btn3" type="button" onclick="topupButton()">Confirm</button>
+        <h3 style="color: black; font-size: 90%">Choose your bank:</h3>
+        <form id="bankChoice">
+          <input type="radio" id="b1" value="Kiwibank" name="Bank">KiwiBank
+          <input type="radio" id="b2" value="ANZ" name="Bank">ANZ
+          <input type="radio" id="b3" value="BNZ" name="Bank">BNZ
+          <input type="radio" id="b4" value="ASB" name="Bank">ASB
+        </form><p style="color:black;">bank account details: </p>
+        <input type="text" id="bankDetails" placeholder="0000-0000-0000-0000" maxlength="16"></input><br>
+        <input type="date" name="expiry"><br>
+        <input type="text" id="bankCCV" placeholder="CCV" maxlength="3" style="width:11%"></input><br><p></p>
+        <button id="btn3" type="button" onclick="checkDetails()">Confirm</button>
         </div>
       </form>
     </div>
