@@ -311,6 +311,14 @@ nav {
 #btn3:hover{
   color: lightgray;
 }
+#special{
+    background-color: #FFFF33;
+    padding-bottom: 55px;
+    margin-bottom: 20px;
+}
+#specialSpan{
+  font-size: 21px;
+}
 nav button{
   border: none;
   color: lightgray;

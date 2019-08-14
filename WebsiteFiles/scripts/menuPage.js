@@ -10,6 +10,30 @@ var coffeeQuantity = document.getElementById('quantity');
 var orderList = document.getElementById('orderItems');
 var userBalance = document.getElementById('userBalance');
 var price = 0.0;
+var currentSpecial = "Free cookie with every 99 coffees purchased today only"
+var specialSpan = document.getElementById('specialSpan');
+var elem = document.getElementById("specialSpan");
+var mediaSize = window.innerWidth;
+
+
+specialSpan.innerHTML = currentSpecial;
+//console.log(elem);
+//console.log(mediaSize);
+function movingSpecial() {
+  //console.log("got here");
+  elem.style.position = "absolute";
+  var pos = 0;
+  var id = setInterval(frame, 15);
+   function frame() {
+       pos++;
+       elem.style.left = pos + "px";
+       if (pos + (currentSpecial.length * 10) + 40 > mediaSize){
+         pos=0;
+       }
+     }
+
+  }
+
 
 function pageSetup()
 {
@@ -17,6 +41,8 @@ function pageSetup()
   updateOrderList();
   totalCostLabel.innerHTML = "$" + order.getTotalPrice();
   userBalance.innerHTML = "$" + session.get("currentUser").Balance;
+  movingSpecial();
+  console.log(elem);
 }
 
 function setWelcome()
@@ -33,7 +59,7 @@ function setWelcome()
 function getSelectedCoffee()
 {
   var coffeeSelections = document.getElementsByName('toggle');
-  for(i = 0; i < coffeeSelections.length; i++) { 
+  for(i = 0; i < coffeeSelections.length; i++) {
       if(coffeeSelections[i].checked)
         return coffeeSelections[i].value;
   }
@@ -110,4 +136,8 @@ function updateOrderList()
     el.appendChild(button);
     orderList.appendChild(el);
   }
+}
+
+function specialAnchor(){
+  alert('You have trigger the special logic.')
 }
