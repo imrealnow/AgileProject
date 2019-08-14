@@ -58,9 +58,6 @@ h4{
   margin: 10px 0px;
   color: white;
 }
-ul li {
-  display: inline;
-}
 #errors{
   color:red;
 }
@@ -77,8 +74,9 @@ a:hover{
   color: #a2abba;
 }
 nav h1{
-  color: lightgray;
-  font-size: 24px;
+  color: black;
+  font-size: 20px;
+  line-height: 20px;
 }
 nav h1:hover{
   color:#a2abba;
@@ -88,7 +86,7 @@ p{
   font-size: 18px;
 }
 #current{
-  color: #a2abba;
+  color: black;
 }
 #coffeeSelection2 p, #coffeeSelection3 p {
   text-align: left;
@@ -108,7 +106,9 @@ p{
   text-align: center;
 }
 nav a{
+  color: black;
   padding-left: 4%;
+  font-size: 25px;
 }
 
 /***************************  CONTAINERS */
@@ -178,7 +178,6 @@ header{
 }
 nav {
   margin:0;
-  background-color: white;
   width: 100%;
   float left;
   display: flex;
@@ -206,7 +205,7 @@ nav {
   color: #303030;
   background-color:#e1e8e5;
   margin-top: 100px;
-  width:28%;
+  width:34%;
   margin: 0px 4%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding-bottom: 30px;
@@ -311,10 +310,10 @@ nav {
 }
 nav button{
   border: none;
-  color: lightgray;
+  color: black;
   padding: 1%;
   width:20%;
-  background: white;
+  background: #e6c59a;
   border-radius: 0.9;
 }
 /************************ DROPDOWN */
@@ -333,9 +332,9 @@ nav button{
 }
 /***************************** IMAGES */
 nav img{
-  width:50px;
-  height:50px;
-  padding: 2% 2%;
+  width:25px;
+  height:25px;
+  margin: auto 2%;
 }
 nav img:hover{
   opacity:0.6;
@@ -355,4 +354,28 @@ footer{
 }
 span{
   display: block;
+}
+/**************************** Tables */
+#orderHistory{
+  margin: 0 2%;
+  padding: 2% 0;
+}
+table {
+  padding: 5%;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  border-radius: 3px;
+  width: 100%;
+}
+th {
+  color: white;
+  background-color: darkgrey;
+}
+td {
+  background-color: white;
+}
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
 }
