@@ -23,7 +23,11 @@ function setWelcome()
 {
     //this just sets the welcome span in the index to show that the current user was correctly set
     var welcomeMessage = document.getElementById("welcome");
-    welcomeMessage.innerHTML = "Welcome, " + session.get("currentUser").Name;
+    var currentUser = session.get("currentUser");
+    if(currentUser != null)
+    {
+      welcomeMessage.innerHTML = "Welcome, " + session.get("currentUser").Name;
+    }
 }
 
 function getSelectedCoffee()
