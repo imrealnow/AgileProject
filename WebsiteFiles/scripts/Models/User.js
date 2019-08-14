@@ -85,7 +85,7 @@ class User {
             {
                 if(users.Users[i].Name == name)
                 {
-                    users.Users.splice(index, 1);
+                    users.Users.splice(i, 1);
                     return;
                 }
             }

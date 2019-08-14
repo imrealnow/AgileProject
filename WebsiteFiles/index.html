@@ -8,7 +8,7 @@
     <link href="css/coffeestyle.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 </head>
-<body id="loggedin" onload="setWelcome()">
+<body id="loggedin" onload="pageSetup()">
   <!-- Nav -->
     <nav>
       <a href="aboutUs.html"><h1>Coffee Shop</h1></a>
@@ -26,60 +26,81 @@
           <!-- Welcome -->
       <h3 id="welcome"></h3>
     </div>
-    
+
     <!-- Main container -->
-    <div class="container2" style="margin-bottom: 5%">
-        <!-- Choose Coffee -->
-        <div id="coffeeSelection">
-            <h4>Coffee</h4>
-            <div id="coffeeTypes">
-                <label class="blue"><input type="radio" name="toggle" value="black"><span>Black</span></label>
-                <label class="green"><input type="radio" name="toggle" value="flat white"><span>Flat White</span></label>
-                <label class="yellow"><input type="radio" name="toggle" value="cappuccino"><span>Cappuccino</span></label>
-                <label class="pink"><input type="radio" name="toggle" value="hot chocolate"><span>Hot Chocolate</span></label>
-                <label class="purple"><input type="radio" name="toggle" value="mochaccino"><span>Mochaccino</span></label>
-                <label class="purple"><input type="radio" name="toggle" value="latte"><span>Latte</span></label>
-            </div>
-        </div>
-        <div id="coffeeSelection2">
-            <h4>Options</h4>
-            <p>Size</p>
-            <select class="coffeeSize" id="coffeeSize" onchange="changeSize()">
-                <option value="regular">Regular</option>
-                <option value="small">Small</option>
-            </select><br>
-            <p><label for="sugar">Add Sugar</label></p>
-            <input id="sugar" value="true" type="radio">
-            <p><label for="milk">Add Milk</label></p>
-            <input id="milk" value="true" type="radio">
-            <!-- Add to Cart -->
-            <div class="btn-group">
-                <button id="btn3" type="Submit" onclick="addedToCart()">Add To Cart</button>
-            </div>
-        </div>
+    <div style="width:70%; margin: 0 auto">
+	    <div class="container2">
+	        <!-- Choose Coffee -->
+	        <div id="coffeeSelection">
+	            <h4>Coffee</h4>
+	            <div id="coffeeTypes">
+	                <label><input type="radio" name="toggle" value="Black Coffee"><span>Black Coffee</span></label>
+	                <label><input type="radio" name="toggle" value="Flat White"><span>Flat White</span></label>
+	                <label><input type="radio" name="toggle" value="Cappuccino"><span>Cappuccino</span></label>
+	                <label><input type="radio" name="toggle" value="Hot Chocolate"><span>Hot Chocolate</span></label>
+	                <label><input type="radio" name="toggle" value="Mochaccino"><span>Mochaccino</span></label>
+	                <label><input type="radio" name="toggle" value="Latte"><span>Latte</span></label>
+	            </div>
+	        </div>
+	        <div id="coffeeSelection2">
+	            <h4>Options</h4>
+	            <div class="coffeeAdditions">
+		            <label>Add Sugar</label>
+		            <input id="sugar" value="true" type="checkbox">
+		        </div>
+		        <div class="coffeeAdditions">
+		            <label>Add Milk</label>
+		            <input id="milk" value="true" type="checkbox">
+		        </div>
+		        <div class="coffeeAdditions">
+			        <select class="coffeeSize" id="coffeeSize" style="margin-left: -3px" onchange="updatePrice()">
+			        	<option value="" disabled selected>Size</option>
+		                <option value="Regular">Regular - $4.5</option>
+		                <option value="Small">Small - $3.0</option>
+		            </select>
+		        </div>
+		        <div class="coffeeAdditions">
+		            <label>Quantity</label>
+		            <input id="quantity" value="1" type="Number" min="1" step="1" onchange="updatePrice()">
+		        </div>
+		        <div class="coffeeAdditions">
+		            <label>Cost</label>
+		            <label id="price" style="float: right; text-align: right">$0.0</label>
+		        </div>
+	            <!-- Add to Cart -->
+	            <div class="btn-group">
+	                <button id="btn3" type="Submit" onclick="addCoffeeToCart()">Add To Cart</button>
+	            </div>
+	        </div>
 
-        <!-- Display Order Items -->
-        <div id="coffeeSelection3">
-              <h4>Order</h4>
-              <p id="orderItems"></p>
-              <p>Order ID</p>
-
-          <form>
-            <div id="displayTotal"><!--total to go here -->
-              <p> Total</p>
-            </div>
-             <div class="btn-group">
-               <button id="btn3" type="Submit" onclick="">Checkout</button>
-             </div>
-          </form>
-        </div>
-    </div>
+	        <!-- Display Order Items -->
+	        <div id="coffeeSelection3">
+	            <h4>Order</h4>
+	            <div id="orderItems">
+	            	<div class="orderItem">Flat white <button>X</button></div>
+	            	<div class="orderItem">Flat white <button>X</button></div>
+	            	<div class="orderItem">Flat white <button>X</button></div>
+	            </div>
+		        <div class="coffeeAdditions">
+		            <label>Order Total</label>
+			        <label id="displayTotal"style="float: right; text-align: right">$0.0</label>
+			    </div>
+			    <div class="coffeeAdditions">
+		            <label>Remaining Balance</label>
+			        <label id="userBalance"style="float: right; text-align: right">$0.0</label>
+			    </div>
+		        <div class="btn-group">
+		            <button id="btn3" type="Submit" onclick="confirmOrder()">Confirm Order</button>
+		        </div>
+	        </div>
+	    </div>
+	</div>
   </div>
 
     <!--    Javascript  -->
     <script type="text/javascript" src="scripts/Session.js"></script>
+    <script type="text/javascript" src="scripts/Models/Order.js"></script>
     <script type="text/javascript" src="scripts/menuPage.js"></script>
-    <script type="text/javascript" src="scripts/index.js"></script>
 
 </body>
 </html>

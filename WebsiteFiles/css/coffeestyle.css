@@ -137,9 +137,8 @@ header{
 .container2{
   justify-content: center;
   display: inline-flex;
-  width:100%;
+  width: 100%;
   max-height: 5%;
-  cursor: pointer;
   color: black;
   text-align: center;
 }
@@ -152,6 +151,30 @@ header{
   padding: 5% 2% 8% 2%;
   display:none;
   background-color: white;
+}
+.coffeeAdditions{
+  padding: 0px 10%;
+  margin: 20px 0px;
+  text-align: left;
+}
+.coffeeAdditions input[type=checkbox]{
+  float: right;
+  width: 18px;
+  height: 18px;
+}
+.coffeeAdditions input[type=number]{
+  float: right;
+  width: 50px;
+  height: 18px;
+  text-align: center;
+}
+.coffeeAdditions select{
+  background-color: white;
+  text-align: left;
+  width: 102%;
+  font-size: 18px;
+  padding: 2% 5% 2% 5%;
+  border: 1px solid lightgray;
 }
 nav {
   margin:0;
@@ -174,7 +197,7 @@ nav {
   color: #303030;
   background-color:#e1e8e5;
   margin-top: 100px;
-  width:28%;
+  width: 28%;
   margin: 0px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding-bottom: 30px;
@@ -200,10 +223,11 @@ nav {
     overflow:none;
 }
 #coffeeTypes label span {
-    text-align:center;
+    text-align:left;
+    padding: 0 10%;
     font-size: 32px;
-    line-height: 80px;
-    height: 80px;
+    line-height: 60px;
+    height: 60px;
     display:block;
 }
 
@@ -220,6 +244,37 @@ nav {
   text-align: center;
   width:200px;
   background-color: #e1e8e5;
+}
+#orderItems{
+  display: flexbox;
+  margin: 0 7.5%;
+  background-color: lightgrey;
+  border: 1px solid darkgrey;
+  border-radius: 2px;
+  overflow-y: scroll;
+  width: 85%;
+  height: 200px;
+}
+.orderItem{
+  background-color: darkgrey;
+  font-size: 10px;
+  text-align: left;
+  box-sizing: border-box;
+  padding-left: 10px;
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  margin: 5px 0;
+}
+.orderItem button{
+  float: right;
+  margin: 3.5px;
+  width: 28px;
+  height: 28px;
+  background-color: #eb4034;
+  color: #362a29;
+  border-radius: 50%;
+  border: 2px solid #362a29;
 }
 /**************************** BUTTONS */
 .btn-group{
@@ -249,7 +304,6 @@ nav {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border:none;
   color:lightgray;
-  margin-top: 50px;
   border-radius:1.5px;
 }
 #btn3:hover{
@@ -264,15 +318,13 @@ nav button{
   border-radius: 0.9;
 }
 /************************ DROPDOWN */
-.coffeeSelect, .coffeeSize {
+.coffeeSize {
     font-size: 18px;
-    color: ;
     padding: 2% 5% 2% 5%;
-    width: 40%;
     background-color: #e1e8e5;
     background-image: url('img/dropdownarrow.png');
     background-repeat: no-repeat;
-    background-position: 80% 50%;
+    background-position: 94% 50%;
     background-size: 5%;
     -moz-appearance: none;
     -webkit-appearance: none;
