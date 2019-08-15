@@ -109,7 +109,10 @@ nav a{
   padding-left: 4%;
   font-size: 25px;
 }
-
+#special h3{
+  font-size: 26px;
+  margin: 0px 0px;
+}
 /***************************  CONTAINERS */
 
 #logo{
@@ -310,16 +313,14 @@ nav {
   color: lightgray;
 }
 #special{
-    background-color: #FFFF33;
-    padding-bottom: 55px;
-    margin-bottom: 20px;
-}
-#specialHead{
-  color: black;
+  text-align: center;
+  background-color: #040812;
+  padding: 0.2% 0 0.2% 0;
+  margin-bottom: 20px;
+  opacity:0.8;
 }
 #specialSpan{
   font-size: 21px;
-  color: black;
 }
 nav button{
   border: none;
