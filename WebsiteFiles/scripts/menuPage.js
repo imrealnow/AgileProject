@@ -34,7 +34,11 @@ function movingSpecial() {
 
   }
 
-
+function validateQuantity(quantityElement)
+{
+  quantityElement.value = Math.round(quantityElement.value);
+  updatePrice();
+}
 function pageSetup()
 {
   setWelcome();
