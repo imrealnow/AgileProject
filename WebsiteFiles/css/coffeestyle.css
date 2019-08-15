@@ -109,7 +109,10 @@ nav a{
   padding-left: 4%;
   font-size: 25px;
 }
-
+#special h3{
+  font-size: 25px;
+  margin: 0px;
+}
 /***************************  CONTAINERS */
 
 #logo{
@@ -310,16 +313,15 @@ nav {
   color: lightgray;
 }
 #special{
-    background-color: #FFFF33;
-    padding-bottom: 55px;
-    margin-bottom: 20px;
-}
-#specialHead{
-  color: black;
+  width:100%;
+  text-align: center;
+  background-color: #040812;
+  padding: 1% 0 4% 0;
+  margin-bottom: 25px;
+  opacity:0.7;
 }
 #specialSpan{
   font-size: 21px;
-  color: black;
 }
 nav button{
   border: none;
@@ -391,4 +393,29 @@ td, th {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
+}
+/*************************** Loyalty */
+#loyaltyDiv
+{
+  width: 90%; 
+  height: 30px; 
+  margin: 5px auto; 
+  display: inline-flex;
+  justify-content: center;
+}
+#loyaltySquare
+{
+  width: 20px;
+  height: 20px;
+  margin: 5px 0 5px auto;
+  border-radius: 2px;
+}
+.filled
+{
+  background-color: black;
+}
+.empty
+{
+  border: 2px solid black;
+  box-sizing: border-box;
 }
