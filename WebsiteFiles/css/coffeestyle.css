@@ -10,19 +10,33 @@ body{
  margin:0;
  background-size: 100%;
  background-color: black;
- background-image: url(img/coffee5.jpg);
- background-repeat:no-repeat;
- background-position: top;
- background-attachment: fixed;
- background-size: cover;
 }
 #loggedin{
-background-image: url(img/coffee5.jpg);
+background-image: url(img/coffee1.png);
 background-repeat:no-repeat;
 background-position: top;
 background-attachment: fixed;
 background-size: cover;
 }
+#orderh{
+  width:100%;
+  background-color: #F4DECB;
+}
+#orderh img{
+  width:20%;
+}
+/* Video */
+#video {
+  opacity: 0.7;
+  position:fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -2;
+  background-size: cover;
+}
+
 /******************************** FONTS */
 @font-face {
     font-family: 'Cantarell';
@@ -34,6 +48,14 @@ background-size: cover;
     src: url('fonts/Kaushan.woff2') format('woff2'),
         url('fonts/Kaushan.woff') format('woff');
 }
+@font-face {
+    font-family: 'omega_sansregular';
+    src: url('fonts/omegasansregular-webfont.woff2') format('woff2'),
+         url('fonts/omegasansregular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
 h1{
   font-family: 'Kaushan';
   text-align: left;
@@ -41,7 +63,7 @@ h1{
   transform: rotate(-10deg);
 }
 h2{
-  font-family: 'Kaushan';
+  font-family: 'omega_sansregular';
   font-size: 40px;
   color: white;
 }
@@ -53,8 +75,8 @@ h3{
   text-align: center;
 }
 h4{
-  font-family: 'Kaushan';
-  font-size: 30px;
+  font-family: 'omega_sansregular';
+  font-size: 26px;
   margin: 10px 0px;
   color: white;
 }
@@ -73,16 +95,22 @@ a{
 a:hover{
   color: #a2abba;
 }
-nav h1{
+#containernav h1{
   color: black;
   font-size: 20px;
   line-height: 20px;
 }
-nav h1:hover{
+#containernav h1:hover{
   color:#a2abba;
+}
+#containernav a{
+  color: white;
+  padding-left: 4%;
+  font-size: 25px;
 }
 p{
   font-size: 18px;
+  font-family: 'omega_sansregular';
 }
 #current{
   color: black;
@@ -104,17 +132,21 @@ p{
 #coffeeSelection2 h3{
   text-align: center;
 }
-nav a{
-  color: black;
-  padding-left: 4%;
-  font-size: 25px;
+
+footer p{
+  padding:5%;
 }
-#special h3{
-  font-size: 25px;
-  margin: 0px;
+nav h3{
+  font-size: 18px;
+  font-family: 'omega_sansregular';
 }
 /***************************  CONTAINERS */
-
+nav{
+  justify-content: center;
+  width: 100%;
+  display: inline-flex;
+  margin:auto;
+}
 #logo{
   width:100%;
   display:inline-flex;
@@ -122,20 +154,31 @@ nav a{
 header{
   text-align: center;
   width: 100%;
-  font: 'Cantarell';
 }
-/** login/signup **/
-.container1{
-  min-height: 0;
+.container{
+  min-height: 200px;
   padding: 2%;
-  width:30%;
+  width:100%;
   cursor: pointer;
   margin: auto;
   margin-bottom: 0;
   color: black;
   text-align: center;
 }
-/** bkground menu page **/
+/** login/signup **/
+.container1{
+  opacity:0.8;
+  min-height: 400px;
+  padding: 2%;
+  width:100%;
+  cursor: pointer;
+  margin: auto;
+  margin-bottom: 0;
+  color: black;
+  text-align: center;
+}
+/** bkground menu page
+background-color: #0A152E;**/
 .container2{
   justify-content: center;
   display: inline-flex;
@@ -153,7 +196,7 @@ header{
 .login, .signup, .forgotpwd {
   padding: 5% 2% 8% 2%;
   display:none;
-  background-color: white;
+  background-color: none;
 }
 .coffeeAdditions{
   padding: 0px 10%;
@@ -179,38 +222,52 @@ header{
   padding: 2% 5% 2% 5%;
   border: 1px solid lightgray;
 }
-nav {
-  margin:0;
-  background-color: #e6c59a;
-  width: 100%;
+#main{
+  padding-top: 5%;
+  width: 80%;
+  margin:auto;
+  }
+/*** NAV background-color: #e6c59a;*/
+#containernav{
+  justify-content: center;
+  width:100%;
+  margin:auto;
+  top: 0;
+  z-index: 4;
   float left;
   display: flex;
+  background-color: rgba(177, 149, 132, 0.6);
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(177, 149, 132, 1);
+}
+.sticky + #containernav {
 }
 /** select coffee options box **/
 #coffeeSelection{
   color: #303030;
-  background-color:#e1e8e5;
-  margin-top: 100px;
+  background-color: rgba(177, 149, 132, 0.6);
   width:28%;
-  margin: 0px 4%;
+  margin: 5% 4%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding-bottom: 30px;
 }
 #coffeeSelection2{
   color: #303030;
-  background-color:#e1e8e5;
-  margin-top: 100px;
+  background-color: rgba(177, 149, 132, 0.6);
   width: 28%;
-  margin: 0px;
+  margin-top: 5%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding-bottom: 30px;
 }
 #coffeeSelection3{
   color: #303030;
-  background-color:#e1e8e5;
-  margin-top: 100px;
+  background-color: rgba(255, 255, 255, 0.7);
   width:34%;
-  margin: 0px 4%;
+  margin: 5% 4%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding-bottom: 30px;
 }
@@ -228,7 +285,7 @@ nav {
 #coffeeTypes label span {
     text-align:left;
     padding: 0 10%;
-    font-size: 32px;
+    font-size: 25px;
     line-height: 60px;
     height: 60px;
     display:block;
@@ -312,23 +369,13 @@ nav {
 #btn3:hover{
   color: lightgray;
 }
-#special{
-  width:100%;
-  text-align: center;
-  background-color: #040812;
-  padding: 1% 0 4% 0;
-  margin-bottom: 25px;
-  opacity:0.7;
-}
-#specialSpan{
-  font-size: 21px;
-}
-nav button{
+/**  background: #e6c59a;**/
+#containernav button{
   border: none;
   color: black;
   padding: 1%;
   width:20%;
-  background: #e6c59a;
+  background: none;
   border-radius: 0.9;
 }
 /************************ DROPDOWN */
@@ -346,26 +393,41 @@ nav button{
     border: 1px solid lightgray;
 }
 /***************************** IMAGES */
-nav img{
-  width:25px;
-  height:25px;
-  margin: auto 2%;
-}
-nav img:hover{
-  opacity:0.6;
-  cursor:pointer;
-}
 header img{
   width:8%;
 }
+#logo img{
+  padding: 2% 0 0 4%;
+  height: 120px;
+}
+#logo img:hover{
+  opacity:0.6;
+  cursor:pointer;
+}
+#icons{
+  padding:2% 2%;
+  width:20%;
+}
+#icons img{
+  padding-right: 1%;
+  width:35px;
+  height:35px;
+  margin: auto 2%;
+  float: right;
+}
 /***************************** FOOTER */
 footer{
-  bottom: 0;
-  margin-top: 150px;
+  position:relative;
+  height:auto;
+  min-height:100px;
+  margin-top: 200px;
+  margin-bottom: 0;
+  bottom:0;
+  background-color: #010A13;
   color:lightgray;
   width: 100%;
   text-align: center;
-  font-size: 14px;
+  font-size: 12px;
 }
 span{
   display: block;
@@ -393,91 +455,4 @@ td, th {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
-}
-/*************************** Loyalty */
-#loyaltyDiv
-{
-  width: 90%;
-  height: 30px;
-  margin: 5px auto;
-  display: inline-flex;
-  justify-content: center;
-}
-#loyaltySquare
-{
-  width: 20px;
-  height: 20px;
-  margin: 5px 0 5px auto;
-  border-radius: 2px;
-}
-.filled
-{
-  background-color: black;
-}
-.empty
-{
-  border: 2px solid black;
-  box-sizing: border-box;
-}
-
-#loginbutton{
-  border:none;
-  color: black;
-
-}
-
-@media only screen and (max-width: 1100px) {
-  .btn-group button {
-    width: 135px;
-    font-size: 20px;
-  }
-  #coffeeTypes label span {
-    font-size: 16px;
-    line-height: 55px;
-    height: 55px;
-  }
-  #special{
-    padding: 1% 0 7% 0;
-  }
-}
-
-@media only screen and (max-width: 750px) {
-  #coffeeTypes label span {
-    font-size: 14px;
-    line-height: 50px;
-    height: 50px;
-  }
-  .coffeeAdditions label{
-    font-size: 14px;
-  }
-  .btn-group button {
-    width: 105px;
-    font-size: 18px;
-  }
-  #special{
-    padding: 1% 0 8% 0;
-  }
-}
-@media only screen and (max-width: 590px) {
-  #coffeeTypes label span {
-    font-size: 10px;
-    line-height: 40px;
-    height: 40px;
-  }
-  .coffeeAdditions label{
-    font-size: 10px;
-  }
-  .btn-group button {
-    width: 70px;
-    font-size: 14px;
-  }
-  .coffeeAdditions h4{
-    font-size: 10px;
-    margin: 5px 0px;
-  }
-  #special{
-    padding: 1% 0 18% 0;
-  }
-
-
 }
