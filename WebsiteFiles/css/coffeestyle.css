@@ -397,8 +397,8 @@ td, th {
 /*************************** Loyalty */
 #loyaltyDiv
 {
-  width: 90%;
-  height: 30px;
+  width: 90%; 
+  height: 30px; 
   margin: 5px auto;
   display: inline-flex;
   justify-content: center;
@@ -481,3 +481,6 @@ td, th {
 
 
 }
+
+}
+
