@@ -314,8 +314,12 @@ nav {
     padding-bottom: 55px;
     margin-bottom: 20px;
 }
+#specialHead{
+  color: black;
+}
 #specialSpan{
   font-size: 21px;
+  color: black;
 }
 nav button{
   border: none;
