@@ -54,7 +54,6 @@ background-size: cover;
          url('fonts/omegasansregular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 h1{
   font-family: 'Kaushan';
@@ -68,7 +67,7 @@ h2{
   color: white;
 }
 h3{
-  font-family: 'Kaushan';
+  font-family: 'omega_sansregular';
   font-size: 35px;
   margin: 10px 0px;
   color: white;
@@ -80,7 +79,9 @@ h4{
   margin: 10px 0px;
   color: white;
 }
-
+#thankyou{
+  padding:20%;
+}
 #errors{
   color:red;
 }
@@ -250,11 +251,11 @@ background-color: #0A152E;**/
 }
 #welcome{
   float:left;
-  padding:2%;
+  padding:4% 0 2% 0;
   width:20%;
 }
 /** select coffee options box **/
-#coffeeSelection{
+#coffeeSelection, #coffeeSelection2{
   color: #303030;
   background-color: rgba(177, 149, 132, 0.6);
   width:28%;
@@ -262,14 +263,7 @@ background-color: #0A152E;**/
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding-bottom: 30px;
 }
-#coffeeSelection2{
-  color: #303030;
-  background-color: rgba(177, 149, 132, 0.6);
-  width: 28%;
-  margin-top: 5%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  padding-bottom: 30px;
-}
+
 #coffeeSelection3{
   color: #303030;
   background-color: rgba(255, 255, 255, 0.7);
@@ -421,6 +415,9 @@ header img{
   height:35px;
   margin: auto 2%;
   float: right;
+}
+#icons img:hover{
+  opacity:0.8;
 }
 /***************************** FOOTER */
 footer{
