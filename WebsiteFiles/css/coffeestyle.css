@@ -12,7 +12,7 @@ body{
  background-color: black;
 }
 #loggedin{
-background-image: url(img/coffee10.jpg);
+background-image: url(img/coffeetable.png);
 background-repeat:no-repeat;
 background-position: top;
 background-attachment: fixed;
@@ -99,10 +99,23 @@ h4{
 a{
   cursor: pointer;
   text-decoration: none;
-  color: lightgray;
+  color: white;
+  position: relative;
 }
-a:hover{
-  color: #a2abba;
+#containernav a:after {
+  background: none;
+  content: "";
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: lightgray;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+  display: block;
+}
+#containernav a:hover:after {
+  width: 100%;
+  left: 0;
 }
 #containernav h1{
   color: black;
@@ -113,16 +126,15 @@ a:hover{
   color:#a2abba;
 }
 #containernav a{
-  color: white;
-  padding-left: 4%;
-  font-size: 25px;
+  padding-left: 1%;
+  font-size: 20px;
 }
 p{
   font-size: 18px;
   font-family: 'omega_sansregular';
 }
 #current{
-  color: black;
+  color: lightgray;
 }
 #coffeeSelection2 p, #coffeeSelection3 p {
   text-align: left;
@@ -146,7 +158,7 @@ footer p{
   padding:5%;
 }
 nav h3{
-  font-size: 18px;
+  font-size: 20px;
   font-family: 'omega_sansregular';
 }
 
@@ -246,7 +258,7 @@ background-color: #0A152E;**/
   margin:auto;
   }
 /*** NAV
-*/
+  background-color: rgba(177, 149, 132, 0.4);*/
 #containernav{
   justify-content: center;
   width:100%;
@@ -255,7 +267,7 @@ background-color: #0A152E;**/
   z-index: 4;
   float left;
   display: flex;
-  background-color: rgba(177, 149, 132, 0.4);
+
 }
 .sticky {
   position: fixed;
@@ -271,23 +283,52 @@ background-color: #0A152E;**/
   width:40%;
 }
 /** select coffee options box **/
-#coffeeSelection, #coffeeSelection2{
+#coffeeSelection, #coffeeSelection2, #coffeeSelection3{
   color: #303030;
-  background-color: rgba(177, 149, 132, 0.7);
+  background-color: rgba(177, 149, 132, 0.75);
   width:28%;
   margin: 5% 4%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding-bottom: 30px;
+  -webkit-animation: fadein 1.5s; /* Safari, Chrome and Opera > 12.1 */
+     -moz-animation: fadein 1.5s; /* Firefox < 16 */
+      -ms-animation: fadein 1.5s; /* Internet Explorer */
+       -o-animation: fadein 1.5s; /* Opera < 12.1 */
+          animation: fadein 1.5s;
 }
 
 #coffeeSelection3{
-  color: #303030;
   background-color: rgba(255, 255, 255, 0.7);
-  width:34%;
-  margin: 5% 4%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  padding-bottom: 30px;
 }
+
+  @keyframes fadein {
+      from { opacity: 0.1; }
+      to   { opacity: 1; }
+  }
+
+  /* Firefox < 16 */
+  @-moz-keyframes fadein {
+      from { opacity: 0.1; }
+      to   { opacity: 1; }
+  }
+
+  /* Safari, Chrome and Opera > 12.1 */
+  @-webkit-keyframes fadein {
+      from { opacity: 0.1; }
+      to   { opacity: 1; }
+  }
+
+  /* Internet Explorer */
+  @-ms-keyframes fadein {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+  }
+
+  /* Opera < 12.1 */
+  @-o-keyframes fadein {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+  }
 #coffeeTypes{
   margin: 0px;
   float:left;
@@ -295,17 +336,20 @@ background-color: #0A152E;**/
 #coffeeTypes label {
     float:left;
     width:100%;
-    margin: 2px 0px;
-    background-color:#EFEFEF;
+    margin: 0px;
     overflow:none;
 }
 #coffeeTypes label span {
     text-align:left;
     padding: 0 10%;
-    font-size: 25px;
+    font-size: 22px;
     line-height: 60px;
     height: 60px;
     display:block;
+}
+#coffeeTypes label span:hover {
+  cursor: pointer;
+  color: white;
 }
 
 #coffeeTypes label input {
@@ -391,7 +435,7 @@ background-color: #0A152E;**/
   border: none;
   color: black;
   padding: 1%;
-  width:18%;
+  width:10%;
   background: none;
   border-radius: 0.9;
 }
@@ -438,7 +482,7 @@ footer{
   position:relative;
   height:auto;
   min-height:100px;
-  margin-top: 200px;
+  margin-top: 300px;
   margin-bottom: 0;
   bottom:0;
   background-color: #010A13;
