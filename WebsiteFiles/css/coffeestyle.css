@@ -392,3 +392,28 @@ td, th {
   text-align: left;
   padding: 8px;
 }
+/*************************** Loyalty */
+#loyaltyDiv
+{
+  width: 90%; 
+  height: 30px; 
+  margin: 5px auto; 
+  display: inline-flex;
+  justify-content: center;
+}
+#loyaltySquare
+{
+  width: 20px;
+  height: 20px;
+  margin: 5px 0 5px auto;
+  border-radius: 2px;
+}
+.filled
+{
+  background-color: black;
+}
+.empty
+{
+  border: 2px solid black;
+  box-sizing: border-box;
+}
