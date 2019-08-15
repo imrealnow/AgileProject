@@ -18,6 +18,13 @@ background-position: top;
 background-attachment: fixed;
 background-size: cover;
 }
+#loggedout{
+  background-image: url(img/coffee1.png);
+  background-repeat:no-repeat;
+  background-position: top;
+  background-attachment: fixed;
+  background-size: cover;
+}
 #orderh{
   width:100%;
   background-color: #F4DECB;
