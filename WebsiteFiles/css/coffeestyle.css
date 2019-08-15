@@ -80,6 +80,7 @@ h4{
   margin: 10px 0px;
   color: white;
 }
+
 #errors{
   color:red;
 }
@@ -140,6 +141,7 @@ nav h3{
   font-size: 18px;
   font-family: 'omega_sansregular';
 }
+
 /***************************  CONTAINERS */
 nav{
   justify-content: center;
@@ -236,7 +238,7 @@ background-color: #0A152E;**/
   z-index: 4;
   float left;
   display: flex;
-  background-color: rgba(177, 149, 132, 0.6);
+  background-color: rgba(177, 149, 132, 0.4);
 }
 .sticky {
   position: fixed;
@@ -245,6 +247,11 @@ background-color: #0A152E;**/
   background-color: rgba(177, 149, 132, 1);
 }
 .sticky + #containernav {
+}
+#welcome{
+  float:left;
+  padding:2%;
+  width:20%;
 }
 /** select coffee options box **/
 #coffeeSelection{
@@ -540,6 +547,5 @@ td, th {
   #special{
     padding: 1% 0 18% 0;
   }
-
 
 }
