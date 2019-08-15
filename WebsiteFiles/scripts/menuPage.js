@@ -105,14 +105,26 @@ function addCoffeeToCart()
 
 function confirmOrder()
 {
-
   var currentOrder = session.get('currentOrder');
   var coffeeOrderNum = 0;
   var waitTime = 10;
   order.confirmOrder();
   userBalance.innerHTML = "$" + session.get("currentUser").Balance;
-
   var orderString = "";
+
+  // Make sure order only if coffee in cart/ enough funds
+  if(currentOrder.Items.length < 1)
+  {
+    alert("Cart Empty");
+    return;
+  }
+  if(this.getTotalPrice() > currentUser.Balance)
+  {
+      alert("Not enough funds to make this purchase");
+      return;
+  }
+  else{
+
   for(i = 0; i < currentOrder.Items.length; i++)
   {
     var el = document.createElement("div");
@@ -127,15 +139,14 @@ function confirmOrder()
       additions = " with " + currentOrder.Items[i].Additions[0];
     }
     coffeeOrderNum = Number(coffeeOrderNum) + Number(currentOrder.Items[i].Quantity);
-    orderString = orderString + currentOrder.Items[i].Quantity +"x " + currentOrder.Items[i].Size + " " + currentOrder.Items[i].Type + additions + "\n";
+    orderString = orderString + currentOrder.Items[i].Quantity +" x " + currentOrder.Items[i].Size + " " + currentOrder.Items[i].Type + additions + "\n";
+    }
+    if(coffeeOrderNum>10) {
+      waitTime = 15;
+    }
+    alert("You have ordered:\n" + orderString + "\nWait time:" + waitTime + " minutes");
+    updateOrderList();
   }
-  if(coffeeOrderNum>10) {
-    waitTime = 15;
-  }
-
-
-  alert("You have ordered:\n" + orderString + "\nWait time:" + waitTime + " minutes");
-  updateOrderList();
 }
 
 function updateOrderList()
