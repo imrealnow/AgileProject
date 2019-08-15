@@ -12,7 +12,7 @@ body{
  background-color: black;
 }
 #loggedin{
-background-image: url(img/coffee1.png);
+background-image: url(img/coffee10.jpg);
 background-repeat:no-repeat;
 background-position: top;
 background-attachment: fixed;
@@ -239,7 +239,7 @@ background-color: #0A152E;**/
   margin:auto;
   }
 /*** NAV
-background-color: rgba(177, 149, 132, 0.3);*/
+*/
 #containernav{
   justify-content: center;
   width:100%;
@@ -248,6 +248,7 @@ background-color: rgba(177, 149, 132, 0.3);*/
   z-index: 4;
   float left;
   display: flex;
+  background-color: rgba(177, 149, 132, 0.4);
 }
 .sticky {
   position: fixed;
