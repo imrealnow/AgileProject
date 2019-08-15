@@ -494,6 +494,11 @@ td, th {
   border:none;
   color: black;
 }
+.orderItem{
+  height: 50px;
+  line-height: normal;
+  padding: 5px;
+}
 
 @media only screen and (max-width: 1100px) {
   .btn-group button {
@@ -545,7 +550,7 @@ td, th {
     margin: 5px 0px;
   }
   #special{
-    padding: 1% 0 18% 0;
+    padding: 1% 0 15% 0;
   }
 
 }

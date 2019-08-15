@@ -105,8 +105,36 @@ function addCoffeeToCart()
 
 function confirmOrder()
 {
+
+  var currentOrder = session.get('currentOrder');
+  var coffeeOrderNum = 0;
+  var waitTime = 10;
   order.confirmOrder();
   userBalance.innerHTML = "$" + session.get("currentUser").Balance;
+
+  var orderString = "";
+  for(i = 0; i < currentOrder.Items.length; i++)
+  {
+    var el = document.createElement("div");
+    var button = document.createElement("button");
+    var additions = "";
+    if(currentOrder.Items[i].Additions.length > 1)
+    {
+      additions = " with " + currentOrder.Items[i].Additions[0] + " and " + currentOrder.Items[i].Additions[1];
+    }
+    else if(currentOrder.Items[i].Additions.length > 0)
+    {
+      additions = " with " + currentOrder.Items[i].Additions[0];
+    }
+    coffeeOrderNum = Number(coffeeOrderNum) + Number(currentOrder.Items[i].Quantity);
+    orderString = orderString + currentOrder.Items[i].Quantity +"x " + currentOrder.Items[i].Size + " " + currentOrder.Items[i].Type + additions + "\n";
+  }
+  if(coffeeOrderNum>10) {
+    waitTime = 15;
+  }
+
+
+  alert("You have ordered:\n" + orderString + "\nWait time:" + waitTime + " minutes");
   updateOrderList();
 }
 
@@ -123,11 +151,11 @@ function updateOrderList()
     var additions = "";
     if(currentOrder.Items[i].Additions.length > 1)
     {
-      additions = " with " + currentOrder.Items[i].Additions[0] + " and " + currentOrder.Items[i].Additions[1];
+      additions = "<br>with " + currentOrder.Items[i].Additions[0] + " and " + currentOrder.Items[i].Additions[1];
     }
     else if(currentOrder.Items[i].Additions.length > 0)
     {
-      additions = " with " + currentOrder.Items[i].Additions[0];
+      additions = "<br>with" + currentOrder.Items[i].Additions[0];
     }
     el.innerHTML = currentOrder.Items[i].Quantity +"x " + currentOrder.Items[i].Size + " " + currentOrder.Items[i].Type + additions;
     button.innerHTML = "X";
