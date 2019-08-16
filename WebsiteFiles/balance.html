@@ -10,54 +10,66 @@
     <script type="text/javascript" src="scripts/login.js"></script>
 </head>
 <body  id="loggedin" onload="getInfo()">
+
   <!-- Logo/ Icons -->
   <nav>
-    <div id="logo">
-      <a href="index.html"><img src="css/img/logo_agile2.png" alt="Logo"></a>
-    </div>
-    <h3 id="welcome"></h3>
-    <div id="icons">
-      <a href="thankYou.html"><img src="css/img/logouticon.png" alt="Log-out"></a>
-    </div>
+      <div id="logo">
+        <a href="index.html"><img src="css/img/logo_agile2.png" alt="Logo"></a>
+      </div>
+
+      <h3 id="welcome"></h3>
+
+      <div id="icons">
+        <a href="thankYou.html"> <p class="logout">Logout</p>
+        <img src="css/img/logouticon.png" alt="Log-out"></a>
+      </div>
   </nav>
 
+  <!-- Nav -->
   <div id="containernav">
         <button><a id="current" href="index.html">Menu</a></button>
         <button><a href="balance.html">Balance</a></button>
         <button><a href="topUpPage.html">Top Up</a></button>
         <button><a href="orderHistory.html">Orders</a></button>
   </div>
-<div class="container2">
-    <h3>Balance</h3>
-  </div>
 
   <!-- Main container -->
   <div class="container2">
-    <!-- Top Up -->
-    <div id="coffeeSelection" style="padding: 30px">
-      <div class="genContent" style="color: black;">
-        <p style="font-size: 22px;" id="userName"></p>
-        <p id="balance"></p>
-        <p id="coffeesBought"></p>
-        <div id="loyaltyDiv">
-          <div id="loyaltySquare" class="filled"></div>
-          <div id="loyaltySquare" class="filled"></div>
-          <div id="loyaltySquare" class="filled"></div>
-          <div id="loyaltySquare" class="filled"></div>
-          <div id="loyaltySquare" class="filled"></div>
-          <div id="loyaltySquare" class="filled"></div>
-          <div id="loyaltySquare" class="filled"></div>
-          <div id="loyaltySquare" class="empty"></div>
-          <div id="loyaltySquare" class="empty"></div>
-          <div id="loyaltySquare" class="empty"></div>
-        </div>
-        <p id="freeCoffees"></p>
-      </div>
-    </div>
+    <h3>Balance</h3>
   </div>
+  <div class="container2">
+      <!-- Top Up -->
+      <div id="coffeeSelection" style="padding: 30px">
+        <div class="genContent" style="color: black;">
+          <p style="font-size: 22px;" id="userName"></p>
+          <p id="balance"></p>
+          <p id="coffeesBought"></p>
+          <div id="loyaltyDiv">
+            <div id="loyaltySquare" class="filled"></div>
+            <div id="loyaltySquare" class="filled"></div>
+            <div id="loyaltySquare" class="filled"></div>
+            <div id="loyaltySquare" class="filled"></div>
+            <div id="loyaltySquare" class="filled"></div>
+            <div id="loyaltySquare" class="filled"></div>
+            <div id="loyaltySquare" class="filled"></div>
+            <div id="loyaltySquare" class="empty"></div>
+            <div id="loyaltySquare" class="empty"></div>
+            <div id="loyaltySquare" class="empty"></div>
+          </div>
+          <p id="freeCoffees"></p>
+        </div>
+      </div>
+  </div>
+
+  <!--    Footer  -->
+  <div class="container2">
+    <footer>
+    <p>&copy; Café Loja 2019 <br><br><br>
+    </footer>
+  </div>
+    <!--    Javacsript  -->
   <script type="text/javascript" src="scripts/Session.js"></script>
   <script type="text/javascript" src="scripts/balance.js"></script>
-
 
 </body>
 </html>
