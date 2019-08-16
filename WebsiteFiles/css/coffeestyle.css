@@ -155,15 +155,36 @@ p{
 }
 
 footer p{
-  padding:5%;
+  padding:2%;
 }
 nav h3{
   font-size: 20px;
   font-family: 'omega_sansregular';
 }
+#icons .logout {
+  visibility: hidden;
+  width: 100px;
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
 
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+#icons:hover .logout {
+  visibility: visible;
+}
+#icons:hover img {
+  visibility: hidden;
+}
 /***************************  CONTAINERS */
-nav{
+#icons{
+  width:100px;
+  height:50px;
+  cursor: pointer;
+}
+  nav{
   justify-content: center;
   width: 100%;
   display: inline-flex;
@@ -479,13 +500,13 @@ header img{
 }
 /***************************** FOOTER */
 footer{
-  position:relative;
+  position: relative;
+  width: 100%;
   height:auto;
-  min-height:100px;
   margin-top: 300px;
   margin-bottom: 0;
   bottom:0;
-  background-color: #010A13;
+  background-color: #010a12;
   color:lightgray;
   width: 100%;
   text-align: center;
