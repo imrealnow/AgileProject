@@ -4,6 +4,7 @@ function onLoad()
 
   users.createUser("John", "johnsPassword","john@gmail.com");
   users.createUser("Max", "maxsPassword","max123@gmail.com");
+  users.createUser("Manager", "managersPassword","manager@gmail.com");
 };
 
 function loginButton() {
@@ -15,7 +16,11 @@ function loginButton() {
   var password = document.getElementById("l-password");
 
   //this checks the user accounts for the username, and checks their password too
-  if(users.getUser(username.value) != null) {
+  if(users.getUser(username.value).Name  == "Manager"){
+
+      document.location.replace("Manager.html");
+  }
+  else if(users.getUser(username.value) != null) {
     if(users.getUser(username.value).Password == password.value)
     {
       //this sets the "currentUser" variable to who you successfully signed in as
