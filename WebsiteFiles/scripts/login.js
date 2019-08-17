@@ -80,3 +80,9 @@ function openMenu() {
 function closeMenu() {
   document.getElementById("viewMenu").style.width = "0";
 }
+
+function orderNow(){
+    document.getElementById("ordernow").style.visibility = "visible";
+    document.getElementById("line").style.visibility = "hidden";
+    document.getElementById("on").style.color = "lightgray";
+}
