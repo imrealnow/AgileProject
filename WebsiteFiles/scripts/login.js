@@ -67,3 +67,11 @@ $('#pwd').click(function(){
  $('.login').hide();
  $('.signup').hide();
 });
+
+function openMenu() {
+  document.getElementById("viewMenu").style.width = "100%";
+}
+
+function closeMenu() {
+  document.getElementById("viewMenu").style.width = "0";
+}

@@ -25,6 +25,7 @@ background-size: cover;
   background-attachment: fixed;
   background-size: cover;
 }
+
 #orderh{
   width:100%;
   background-color: #F4DECB;
@@ -179,6 +180,24 @@ nav h3{
   visibility: hidden;
 }
 /***************************  CONTAINERS */
+#viewMenu {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  background-image: url(img/coffeetable9.png);
+  background-repeat:no-repeat;
+  background-position: top;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+
 #icons{
   width:100px;
   height:50px;
@@ -242,9 +261,10 @@ background-color: #0A152E;**/
   background-color: none;
 }
 .coffeeAdditions{
-  padding: 0px 10%;
-  margin: 20px 0px;
+  padding: 0px 5%;
+  margin: 10px 0px;
   text-align: left;
+  font-family: 'Cantarell';
 }
 .coffeeAdditions input[type=checkbox]{
   float: right;
@@ -260,14 +280,17 @@ background-color: #0A152E;**/
 .coffeeAdditions select{
   background-color: white;
   text-align: left;
-  width: 102%;
+  width: 100%;
   font-size: 18px;
   padding: 2% 5% 2% 5%;
   border: 1px solid lightgray;
 }
+
 .signup input[type=text], input[type=password], input[type=email]{
   width: 250px;
   height: 35px;
+  background-color: none;
+
 }
 .login input[type=text], input[type=password]{
   width: 250px;
@@ -311,11 +334,11 @@ background-color: #0A152E;**/
   margin: 5% 4%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding-bottom: 30px;
-  -webkit-animation: fadein 1.5s; /* Safari, Chrome and Opera > 12.1 */
-     -moz-animation: fadein 1.5s; /* Firefox < 16 */
-      -ms-animation: fadein 1.5s; /* Internet Explorer */
-       -o-animation: fadein 1.5s; /* Opera < 12.1 */
-          animation: fadein 1.5s;
+  -webkit-animation: fadein 1.2s; /* Safari, Chrome and Opera > 12.1 */
+     -moz-animation: fadein 1.2s; /* Firefox < 16 */
+      -ms-animation: fadein 1.2s; /* Internet Explorer */
+       -o-animation: fadein 1.2s; /* Opera < 12.1 */
+          animation: fadein 1.2s;
 }
 
 #coffeeSelection3{
@@ -390,7 +413,6 @@ background-color: #0A152E;**/
 #orderItems{
   display: flexbox;
   margin: 0 7.5%;
-  background-color: lightgrey;
   border: 1px solid darkgrey;
   border-radius: 2px;
   overflow-y: scroll;
@@ -398,7 +420,7 @@ background-color: #0A152E;**/
   height: 200px;
 }
 .orderItem{
-  background-color: darkgrey;
+  background-color: none;
   font-size: 10px;
   text-align: left;
   box-sizing: border-box;
@@ -408,17 +430,17 @@ background-color: #0A152E;**/
   line-height: 35px;
   margin: 5px 0;
 }
+/**************************** BUTTONS */
 .orderItem button{
   float: right;
-  margin: 3.5px;
+  margin: 0 1% 0 1%;
   width: 28px;
   height: 28px;
-  background-color: #eb4034;
-  color: #362a29;
-  border-radius: 50%;
-  border: 2px solid #362a29;
+  color: black;
+  background: none;
+  border:none;
+  cursor:pointer;
 }
-/**************************** BUTTONS */
 .btn-group{
   width: 100%;
   display:inline-block;
@@ -575,6 +597,8 @@ td, th {
   line-height: normal;
   padding: 5px;
 }
+
+
 
 @media only screen and (max-width: 1100px) {
   .btn-group button {
