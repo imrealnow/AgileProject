@@ -31,19 +31,16 @@
         <button><a href="topUpPage.html">Top Up</a></button>
         <button><a href="orderHistory.html">Orders</a></button>
   </div>
+  <!-- White line-->
+  <hr style="border: 0.4px solid lightgray; width: 70%; opacity:0.8;" />
 
     <!-- Main container -->
-    <div id="main">
-      <br>
-	    <div class="container2">
-        <br>
+    <div id="main"><br>
+	    <div class="container2"><br>
 	        <!-- Choose Coffee -->
 	        <div id="coffeeSelection">
 	            <h4>Coffee</h4>
-              <!-- White line-->
-              <hr style="border: 0.4px solid lightgray; width: 100%; opacity:0.8;" />
-
-	            <div id="coffeeTypes">
+               <div id="coffeeTypes">
 	                <label><input type="radio" name="toggle" value="Black Coffee"><span>Black Coffee</span></label>
 	                <label><input type="radio" name="toggle" value="Flat White"><span>Flat White</span></label>
 	                <label><input type="radio" name="toggle" value="Cappuccino"><span>Cappuccino</span></label>
@@ -57,37 +54,35 @@
 	            <h4>Options</h4>
               <!-- White line-->
                 <hr style="border: 0.4px solid lightgray; width: 100%; opacity:0.8;" />
-
 	            <div class="coffeeAdditions">
 		            <label>Add Sugar</label>
 		            <input id="sugar" value="true" type="checkbox">
-		        </div>
-		        <div class="coffeeAdditions">
-		            <label>Add Milk</label>
-		            <input id="milk" value="true" type="checkbox">
-		        </div>
-		        <div class="coffeeAdditions">
+  		        </div>
+  		        <div class="coffeeAdditions">
+  		            <label>Add Milk</label>
+  		            <input id="milk" value="true" type="checkbox">
+  		        </div><br>
+  		        <div class="coffeeAdditions">
 			        <select class="coffeeSize" id="coffeeSize" style="margin-left: -3px" onchange="updatePrice()">
-			        	<option value="" disabled selected>Size</option>
-		                <option value="Regular">Regular - $4.5</option>
-		                <option value="Small">Small - $3.0</option>
-		            </select>
-		        </div>
-
-
-		        <div class="coffeeAdditions">
-		            <label>Quantity</label>
-		            <input id="quantity" value="1" type="Number" min="1" step="1" onchange="updatePrice()">
+                  <option value="" disabled selected><p>Size</p></option>
+	                <option value="Regular">Regular - $4.5</option>
+	                <option value="Small">Small - $3.0</option>
+	            </select>
 		        </div><br>
-            <!-- White line-->
-              <hr style="border: 0.3px solid lightgray; width: 80%;" />
+
+
 		        <div class="coffeeAdditions">
-		            <label>Cost</label>
-		            <label id="price" style="float: right; text-align: right">$0.0</label>
-		        </div>
+	            <label>Quantity:</label>
+	            <input id="quantity" value="1" type="Number" min="1" step="1" placeholder="0" onchange="updatePrice()">
+	          </div><br>
+            <!-- White line-->
+              <hr style="border: 0.3px solid lightgray; width: 100%;" />
+		        <div class="coffeeAdditions">
+	            <label>Cost</label>
+	            <label id="price" style="float: right; text-align: right">$0.0</label>
+	        </div><br>
 	            <!-- Add to Cart -->
 	            <div class="btn-group">
-                  <br><br>
 	                <button type="Submit" onclick="addCoffeeToCart()">Add To Cart</button>
 	            </div>
 	        </div>
@@ -95,29 +90,30 @@
 	        <!-- Display Order Items -->
 	        <div id="coffeeSelection3">
 	            <h4>Order</h4>
-	            <div id="orderItems">
-	            </div>
-		        <div class="coffeeAdditions">
-		            <label>Order Total</label>
-			        <label id="displayTotal"style="float: right; text-align: right">$0.0</label>
-			    </div>
-			    <div class="coffeeAdditions">
-		            <label>Remaining Balance</label>
-			        <label id="userBalance"style="float: right; text-align: right">$0.0</label>
-			    </div>
-		        <div class="btn-group">
-                <br><br>
-		            <button type="Submit" onclick="confirmOrder()">Confirm Order</button>
-		        </div>
-	        </div>
+            <div id="orderItems">
+  	        </div><br>
+  		      <div class="coffeeAdditions">
+  		            <label>Order Total</label>
+  			        <label id="displayTotal"style="float: right; text-align: right">$0.0</label>
+  			    </div>
+  			    <div class="coffeeAdditions">
+  		          <label>Remaining Balance</label>
+  			        <label id="userBalance"style="float: right; text-align: right">$0.0</label>
+  			    </div><br>
+  		      <div class="btn-group">
+  		            <button type="Submit" onclick="confirmOrder()">Confirm Order</button>
+  		      </div>
+  	      </div>
 	    </div>
 	</div>
    <div class="container2">
    </div>
-  <!-- Specials -->
-      <a onclick="specialAnchor()"><div id="special">
-        <h4 id="specialSpan"></h4>
-      </div><a>
+
+    <!-- Specials -->
+        <a onclick="specialAnchor()"><div id="special">
+          <h4 id="specialSpan"></h4>
+        </div><a>
+
 
   <!--    Footer  -->
   <div class="container2">

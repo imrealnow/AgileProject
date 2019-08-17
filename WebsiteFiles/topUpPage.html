@@ -16,9 +16,7 @@
       <div id="logo">
         <a href="index.html"><img src="css/img/logo_agile2.png" alt="Logo"></a>
       </div>
-
       <h3 id="welcome"></h3>
-
       <div id="icons">
         <a href="thankYou.html"> <p class="logout">Logout</p>
         <img src="css/img/logouticon.png" alt="Log-out"></a>
@@ -26,40 +24,46 @@
   </nav>
 
   <div id="containernav">
-        <button><a id="current" href="index.html">Menu</a></button>
-        <button><a href="balance.html">Balance</a></button>
-        <button><a href="topUpPage.html">Top Up</a></button>
-        <button><a href="orderHistory.html">Orders</a></button>
+    <button><a id="current" href="index.html">Menu</a></button>
+    <button><a href="balance.html">Balance</a></button>
+    <button><a href="topUpPage.html">Top Up</a></button>
+    <button><a href="orderHistory.html">Orders</a></button>
   </div>
 
   <!-- Main container -->
   <div class="container2">
     <!-- Top Up -->
-    <div id="coffeeSelection" style="padding-top: 30px">
+    <div id="coffeeSelection">
       <form>
         <div class="btn-group">
-        <input type="number" id="topupAmount" placeholder="topup amount"></input><br><br>
-        <h3 style="color: black; font-size: 90%">Choose your bank:</h3>
-        <form id="bankChoice">
-          <input type="radio" id="b1" value="Kiwibank" name="Bank">KiwiBank
-          <input type="radio" id="b2" value="ANZ" name="Bank">ANZ
-          <input type="radio" id="b3" value="BNZ" name="Bank">BNZ
-          <input type="radio" id="b4" value="ASB" name="Bank">ASB
-        </form><p style="color:black;">bank account details: </p>
-        <input type="text" id="bankDetails" placeholder="0000-0000-0000-0000" maxlength="16"></input><br>
-        <input type="date" name="expiry" placeholder="MM-YYYY"><br>
-        <input type="text" id="bankCCV" placeholder="CCV" maxlength="3" style="width:11%"></input><br><p></p>
-        <button id="btn3" type="button" onclick="checkDetails()">Confirm</button>
+            <h5>Amount:&nbsp;&nbsp;
+            <input type="number" id="topupAmount" placeholder="$0"></input></h5>
+            <h5>Choose your bank:<br><br>
+          <form id="bankChoice">
+            <input type="radio" id="b1" value="Kiwibank" name="Bank"> KiwiBank</input>&nbsp;
+            <input type="radio" id="b2" value="ANZ" name="Bank"> ANZ</input>&nbsp;
+            <input type="radio" id="b3" value="BNZ" name="Bank"> BNZ</input>&nbsp;
+            <input type="radio" id="b4" value="ASB" name="Bank"> ASB</input>&nbsp;
+          </form></h5>
+          <h5>Bank account details:<br><br>
+            <input type="text" id="bankDetails" placeholder="0000-0000-0000-0000" maxlength="16"></input><br><br>
+            <input type="date" name="expiry" placeholder="MM-YYYY">
+            <input type="text" id="bankCCV" placeholder="CCV" maxlength="3" style="width:11%"></input></h5><br>
+
+            <div class="btn-group">
+                <button type="button" onclick="checkDetails()">Confirm</button>
+            </div>
         </div>
       </form>
     </div>
   </div>
-  <!--    Footer  -->
-  <div class="container2">
-    <footer>
-    <p>&copy; Café Loja 2019 <br><br><br>
-    </footer>
-  </div>
+
+    <!--    Footer  -->
+    <div class="container2">
+      <footer>
+      <p>&copy; Café Loja 2019 <br><br><br>
+      </footer>
+    </div>
 
       <script type="text/javascript" src="scripts/Session.js"></script>
       <script type="text/javascript" src="scripts/Models/User.js"></script>
