@@ -25,7 +25,6 @@ background-size: cover;
   background-attachment: fixed;
   background-size: cover;
 }
-
 #orderh{
   width:100%;
   background-color: #F4DECB;
@@ -87,6 +86,11 @@ h4{
   margin: 10px 0px;
   color: white;
 }
+h5{
+  font-family: 'omega_sansregular';
+  font-size: 22px;
+  margin-right: 20px;
+}
 #thankyou{
   padding:20%;
 }
@@ -113,6 +117,7 @@ a{
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
   display: block;
+  cursor: pointer;
 }
 #containernav a:hover:after {
   width: 100%;
@@ -141,7 +146,7 @@ p{
   text-align: left;
   color: #303030;
   font-size: 25px;
-  padding-left: 50px;
+  padding-left: 5px;
 }
 #coffeeSelection h4, #coffeeSelection2 h4, #coffeeSelection3 h4{
   color: #303030;
@@ -154,7 +159,6 @@ p{
 #coffeeSelection2 h3{
   text-align: center;
 }
-
 footer p{
   padding:2%;
 }
@@ -168,7 +172,6 @@ nav h3{
   color: #fff;
   text-align: left;
   border-radius: 6px;
-
   /* Position the tooltip */
   position: absolute;
   z-index: 1;
@@ -178,6 +181,28 @@ nav h3{
 }
 #icons:hover img {
   visibility: hidden;
+}
+#close{
+  opacity:0.95;
+  margin:4% 4% 0 4%;
+  width:25px;
+}
+#close:hover {
+    -moz-transform: rotate(-95deg);
+    -webkit-transform: rotate(-55deg);
+    -o-transform: rotate(-55deg);
+    -ms-transform: rotate(-55deg);
+    -webkit-transform: rotate(-55deg);
+    transform: rotate(-55deg);
+    -webkit-transition: transform 0.3s ease-in-out;
+    -moz-transition:transform 0.3s ease-in-out;
+    -ms-transition:transform 0.3s ease-in-out;
+}
+.login, .signup, .forgotpwd input{
+  color: white;
+}
+.login, .signup, .forgotpwd label{
+  font-family: 'omega_sansregular';
 }
 /***************************  CONTAINERS */
 #viewMenu {
@@ -258,15 +283,27 @@ background-color: #0A152E;**/
   text-align: center;
   color: black;
 }
-/** bkground menu page **/
+/** SIGNUP/ LOGIN **/
 .login, .signup, .forgotpwd {
   padding: 1% 2% 8% 2%;
   display:none;
   background-color: none;
 }
+.signup input[type=text], input[type=password], input[type=email]{
+  width: 300px;
+  height: 35px;
+  background: none;
+
+}
+.login input[type=text], input[type=password]{
+  width: 300px;
+  height: 35px;
+  background: none;
+  color: white;
+}
 .coffeeAdditions{
   padding: 0px 5%;
-  margin: 10px 0px;
+  margin: 5px 0px;
   text-align: left;
   font-family: 'Cantarell';
 }
@@ -280,25 +317,22 @@ background-color: #0A152E;**/
   width: 50px;
   height: 18px;
   text-align: center;
+  border-radius: 5px;
+  padding:2%;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.coffeeAdditions input[type=number]::-webkit-inner-spin-button,
+.coffeeAdditions input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 .coffeeAdditions select{
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.7);
   text-align: left;
   width: 100%;
   font-size: 18px;
-  padding: 2% 5% 2% 5%;
+  padding: 3% 5% 3% 5%;
   border: 1px solid lightgray;
-}
-
-.signup input[type=text], input[type=password], input[type=email]{
-  width: 250px;
-  height: 35px;
-  background-color: none;
-
-}
-.login input[type=text], input[type=password]{
-  width: 250px;
-  height: 35px;
 }
 #main{
   padding-top: 5%;
@@ -315,7 +349,6 @@ background-color: #0A152E;**/
   z-index: 4;
   float left;
   display: flex;
-
 }
 .sticky {
   position: fixed;
@@ -327,51 +360,45 @@ background-color: #0A152E;**/
 }
 #welcome{
   float:right;
-  padding:2% 0 2% 0;
-  width:40%;
+  padding:2.5% 0 2% 0;
+  width:15%;
 }
-/** select coffee options box **/
+/** select coffee options box
+background-color: rgba(177, 149, 132, 0.7);**/
 #coffeeSelection, #coffeeSelection2, #coffeeSelection3{
   color: #303030;
-  background-color: rgba(177, 149, 132, 0.75);
-  width:28%;
-  margin: 5% 4%;
+  background-color: rgba(177, 148, 132, 0.65);
+  width:35%;
+  margin: 8% 2.5%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  padding-bottom: 30px;
   -webkit-animation: fadein 1.2s; /* Safari, Chrome and Opera > 12.1 */
      -moz-animation: fadein 1.2s; /* Firefox < 16 */
       -ms-animation: fadein 1.2s; /* Internet Explorer */
        -o-animation: fadein 1.2s; /* Opera < 12.1 */
           animation: fadein 1.2s;
 }
-
 #coffeeSelection3{
   background-color: rgba(255, 255, 255, 0.7);
 }
-
   @keyframes fadein {
       from { opacity: 0.1; }
       to   { opacity: 1; }
   }
-
   /* Firefox < 16 */
   @-moz-keyframes fadein {
       from { opacity: 0.1; }
       to   { opacity: 1; }
   }
-
   /* Safari, Chrome and Opera > 12.1 */
   @-webkit-keyframes fadein {
       from { opacity: 0.1; }
       to   { opacity: 1; }
   }
-
   /* Internet Explorer */
   @-ms-keyframes fadein {
       from { opacity: 0; }
       to   { opacity: 1; }
   }
-
   /* Opera < 12.1 */
   @-o-keyframes fadein {
       from { opacity: 0; }
@@ -380,6 +407,7 @@ background-color: #0A152E;**/
 #coffeeTypes{
   margin: 0px;
   float:left;
+  font-family: 'Cantarell';
 }
 #coffeeTypes label {
     float:left;
@@ -388,23 +416,24 @@ background-color: #0A152E;**/
     overflow:none;
 }
 #coffeeTypes label span {
-    text-align:left;
+    text-align:center;
     padding: 0 10%;
     font-size: 22px;
-    line-height: 60px;
-    height: 60px;
+    line-height: 65px;
+    height: 65px;
     display:block;
+    margin-bottom: 1%;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 #coffeeTypes label span:hover {
   cursor: pointer;
   color: white;
+  background-color: rgba(255, 255, 255, 0.2);
 }
-
 #coffeeTypes label input {
     position:absolute;
     top:-20px;
 }
-
 #coffeeTypes input:checked + span {
     background-color:#404040;
     color:#F7F7F7;
@@ -421,7 +450,7 @@ background-color: #0A152E;**/
   border-radius: 2px;
   overflow-y: scroll;
   width: 85%;
-  height: 200px;
+  height: 210px;
 }
 .orderItem{
   background-color: none;
@@ -434,6 +463,23 @@ background-color: #0A152E;**/
   line-height: 35px;
   margin: 5px 0;
 }
+#coffeeSelection input[type="date"], input[type="number"]{
+  height: 15px;
+  text-align: left;
+  border-radius: 1px;
+  padding:2%;
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 80px;
+}
+#coffeeSelection input[type="text"]{
+  height: 15px;
+  text-align: left;
+  border-radius: 1px;
+  padding:2%;
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 200px;
+}
+
 /**************************** BUTTONS */
 .orderItem button{
   float: right;
@@ -450,6 +496,7 @@ background-color: #0A152E;**/
   display:inline-block;
   text-align: center;
   cursor: pointer;
+  margin-bottom: 10px;
 }
 .btn-group button {
   background: none;
@@ -459,6 +506,7 @@ background-color: #0A152E;**/
   width: 180px;
   text-align: center;
   font-size: 22px;
+  cursor: pointer;
 }
 .btn-group button:hover {
   color: lightgray;
@@ -485,6 +533,7 @@ background-color: #0A152E;**/
   width:10%;
   background: none;
   border-radius: 0.9;
+  cursor: pointer;
 }
 #loginbutton{
   border:none;
@@ -569,7 +618,6 @@ td, th {
   text-align: left;
   padding: 8px;
 }
-
 /*************************** Loyalty */
 #loyaltyDiv
 {
@@ -600,7 +648,6 @@ td, th {
   line-height: normal;
   padding: 5px;
 }
-
 /***** MEDIA QUERIES ****/
 @media only screen and (max-width: 1100px) {
   .btn-group button {
@@ -616,7 +663,6 @@ td, th {
     padding: 1% 0 7% 0;
   }
 }
-
 @media only screen and (max-width: 750px) {
   #coffeeTypes label span {
     font-size: 14px;
@@ -654,5 +700,4 @@ td, th {
   #special{
     padding: 1% 0 15% 0;
   }
-
 }

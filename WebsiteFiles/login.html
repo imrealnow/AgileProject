@@ -18,13 +18,13 @@
 
     <!-- Menu -->
     <div id="viewMenu">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()"><h3>&times;</h3></a>
+      <!-- Close -->
+      <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">
+        <img id="close" src="css/img/closebtn1.png"></a>
       <h3>Menu</h3>
           <!-- Main container -->
-          <div id="main">
-            <br>
-            <div class="container2">
-              <br>
+          <div id="main"><br>
+            <div class="container2"><br>
                 <!-- Choose Coffee -->
                 <div id="coffeeSelection">
                     <h4>Coffee</h4>
@@ -45,7 +45,6 @@
                     <h4>Options</h4>
                     <!-- White line-->
                     <hr style="border: 0.4px solid lightgray; width: 100%; opacity:0.8;" />
-
                     <div class="coffeeAdditions">
                         <p>Extras:</p>
                         <label>Add Sugar</label>
@@ -67,31 +66,24 @@
               <!-- Specials to be added back in <a onclick="specialAnchor()"><div id="special">
                   <h4 id="specialSpan"></h5>
                 </div></a>-->
-
           </div>
         </div><br><br>
     </div>
     <!-- End of Menu -->
 
-
+  <!-- Order Now -->
     <!--    Logo  -->
     <div id="logo">
       <img src="css/img/logo_agile2.png" alt="Logo">
     </div>
 
     <!--    Header -->
-    <header>
-      <!--    first container -->
-  <div id="container">
-
-  </div>
-  <br>
+    <header><br>
       <!--    View Menu/Order Now  -->
        <a onclick="openMenu()"><h2>View Menu</h2></a>
        <a onclick="orderNow()"><h2 id="on">Order Now</h2></a>
        <!-- White line-->
        <hr id="line" style="border: 0.4px solid lightgray; width: 10%; opacity:0.8;" />
-
       <!--      <img src="css/img/arrowicon.png" alt="arrow"> -->
     </header>
 
@@ -110,7 +102,7 @@
                <p><input type="text" id="l-username" placeholder="username"></input></p>
                <p><input type="password" id="l-password" placeholder="password"></input></p>
                <button id="btn2" type="button" onclick="loginButton()">Login</button>
-                 <br><label id="pwd"><a>Forgot Password?</a></label>
+                <br><label id="pwd"><a>Forgot Password?</a></label>
            </div>
            <!--    Signup  -->
           <div class="signup">
