@@ -16,6 +16,63 @@
       <source src="css/vids/Coffee-Vid.mp4" type="video/mp4" alt="CoffeeVideo">
     </video>
 
+    <!-- Menu -->
+    <div id="viewMenu">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()"><h3>&times;</h3></a>
+      <h3>Menu</h3>
+          <!-- Main container -->
+          <div id="main">
+            <br>
+            <div class="container2">
+              <br>
+                <!-- Choose Coffee -->
+                <div id="coffeeSelection">
+                    <h4>Coffee</h4>
+                    <!-- White line-->
+                    <hr style="border: 0.4px solid lightgray; width: 100%; opacity:0.8;" />
+
+                    <div id="coffeeTypes">
+                        <label><span>Black Coffee</span></label>
+                        <label><span>Flat White</span></label>
+                        <label><span>Cappuccino</span></label>
+                        <label><span>Hot Chocolate</span></label>
+                        <label><span>Mochaccino</span></label>
+                        <label><span>Latte</span></label>
+                    </div>
+                </div>
+
+                <div id="coffeeSelection2">
+                    <h4>Options</h4>
+                    <!-- White line-->
+                    <hr style="border: 0.4px solid lightgray; width: 100%; opacity:0.8;" />
+
+                    <div class="coffeeAdditions">
+                        <p>Extras:</p>
+                        <label>Add Sugar</label>
+                    </div>
+                    <div class="coffeeAdditions">
+                        <label>Add Milk</label>
+                    </div>
+                    <div class="coffeeAdditions">
+                      <div class="coffeeAdditions">
+                            <p>Prices:</p>
+                            <label>Regular  &nbsp&nbsp&nbsp&nbsp $4.5</label><br>
+                            <label value="Small">Small  &nbsp&nbsp&nbsp&nbsp $3.0</label>
+                        </div>
+                    </div><br><br>
+                    <div class="btn-group">
+                        <a id="loginbutton" href="login.html"><button>Sign Up/Login</button></a>
+                   </div>
+                </div>
+              <!-- Specials to be added back in <a onclick="specialAnchor()"><div id="special">
+                  <h4 id="specialSpan"></h5>
+                </div></a>-->
+
+          </div>
+        </div><br><br>
+    </div>
+    <!-- End of Menu -->
+
 
     <!--    Logo  -->
     <div id="logo">
@@ -29,13 +86,11 @@
 
   </div>
   <br><br>
-       <a id="current" href="index.html"><h2>View Menu</h2></a>
+
+       <a onclick="openMenu()"><h2>View Menu</h2></a>
        <h2>Order Now</h2>
-       <img src="css/img/arrowicon.png" alt="arrow">
+      <!--      <img src="css/img/arrowicon.png" alt="arrow"> -->
     </header>
-
-
-
 
     <!--    Forms  -->
     <div class="container1">
@@ -72,9 +127,11 @@
     </div>
 
     <!--    Footer  -->
-    <footer>
-      <p>&copy; Cafe Loja 2019</p>
-    </footer>
+    <div class="container2">
+      <footer>
+      <p>&copy; Café Loja 2019 <br><br><br>
+      </footer>
+    </div>
 
     <!--    Javascript  -->
     <script type="text/javascript" src="scripts/Session.js"></script>
