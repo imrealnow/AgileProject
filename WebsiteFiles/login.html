@@ -85,43 +85,48 @@
   <div id="container">
 
   </div>
-  <br><br>
-
+  <br>
+      <!--    View Menu/Order Now  -->
        <a onclick="openMenu()"><h2>View Menu</h2></a>
-       <h2>Order Now</h2>
+       <a onclick="orderNow()"><h2 id="on">Order Now</h2></a>
+       <!-- White line-->
+       <hr id="line" style="border: 0.4px solid lightgray; width: 10%; opacity:0.8;" />
+
       <!--      <img src="css/img/arrowicon.png" alt="arrow"> -->
     </header>
 
     <!--    Forms  -->
-    <div class="container1">
-      <!--    buttons  -->
-      <div class="btn-group">
-            <a href="#" onclick="return false;"><button>Login</button></a>
-            <a href="#" onclick="return false;"><button>Signup</button></a>
-      </div>
-
-      <div class="btn-group">
-         <div class="login">
-             <label id="l-errors"></label>
-             <p><input type="text" id="l-username" placeholder="username"></input></p>
-             <p><input type="password" id="l-password" placeholder="password"></input></p>
-             <button id="btn2" type="button" onclick="loginButton()">Login</button>
-               <br><label id="pwd"><a>Forgot Password?</a></label>
-         </div>
-
-        <div class="signup">
-          <label id="s-errors"></label>
-          <p><input type="text" id="s-username" placeholder="username"></input></p>
-          <p><input type="email" id="s-email" placeholder="email"></input></p>
-          <p><input type="password" id="s-password" placeholder="password"></input></p>
-          <button id="btn2" type="button" onclick="signupButton()">Sign Up</button>
+    <div id="ordernow">
+      <div class="container1">
+        <!--    buttons  -->
+        <div class="btn-group">
+              <a href="#" onclick="return false;"><button>Login</button></a>
+              <a href="#" onclick="return false;"><button>Signup</button></a>
         </div>
-
-        <div class="forgotpwd">
-            <label id="errors"></label>
-            <p><input type="email" id="email" placeholder="email"></input></p>
-            <button id="btn2" type="button" onclick="buttonClick()">Reset</button>
-             <br><br>
+        <!--    Login  -->
+        <div class="btn-group">
+           <div class="login">
+               <label id="l-errors"></label>
+               <p><input type="text" id="l-username" placeholder="username"></input></p>
+               <p><input type="password" id="l-password" placeholder="password"></input></p>
+               <button id="btn2" type="button" onclick="loginButton()">Login</button>
+                 <br><label id="pwd"><a>Forgot Password?</a></label>
+           </div>
+           <!--    Signup  -->
+          <div class="signup">
+            <label id="s-errors"></label>
+            <p><input type="text" id="s-username" placeholder="username"></input></p>
+            <p><input type="email" id="s-email" placeholder="email"></input></p>
+            <p><input type="password" id="s-password" placeholder="password"></input></p>
+            <button id="btn2" type="button" onclick="signupButton()">Sign Up</button>
+          </div>
+          <!--    Forgot Password  -->
+          <div class="forgotpwd">
+              <label id="errors"></label>
+              <p><input type="email" id="email" placeholder="email"></input></p>
+              <button id="btn2" type="button" onclick="buttonClick()">Reset</button>
+               <br><br>
+          </div>
         </div>
       </div>
     </div>
