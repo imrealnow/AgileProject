@@ -7,21 +7,27 @@
     <!-- CSS stylesheet -->
     <link href="css/coffeestyle.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-
 </head>
 <body onload="onLoad()">
 
+
     <!--    Video  -->
-    <video autoplay muted loop id="video">
+    <video autoplay muted loop id="video" preload="metadata" poster="css/img/CoffeeVid.jpg">
       <source src="css/vids/Coffee-Vid.mp4" type="video/mp4" alt="CoffeeVideo">
     </video>
 
     <!-- Menu -->
     <div id="viewMenu">
+      <!-- Specials -->
+        <div id="special"><a id="close" href="javascript:void(0)" class="closebtn" onclick="closeSpecials()">
+            <img src="css/img/arrowspecials.png"></a><a onclick="specialAnchor()">
+            <h4 id="specialSpan"></h4></a>
+        </div><br>
       <!-- Close -->
       <a id="close" href="javascript:void(0)" onclick="closeMenu()">
         <img  src="css/img/closebtn1.png"></a>
-        <h3>Menu</h3>
+
+        <h3>Menu</h3><br><br>
           <!-- Main container -->
           <div id="main">
             <div class="container2">
@@ -75,7 +81,7 @@
     <!--    Header -->
     <header><br>
       <!--    View Menu/Order Now  -->
-       <a onclick="openMenu()"><h2 id="vmenu">View Menu</h2></a>
+       <a onclick="openMenu()"><h2 id="vmenu" onclick="movingSpecial()">View Menu</h2></a>
        <a onclick="orderNow()"><h2 id="on">Order Now</h2></a>
        <!-- White line-->
        <hr id="line" style="border: 0.4px solid lightgray; width: 10%; opacity:0.8;" />
@@ -131,5 +137,7 @@
     <script type="text/javascript" src="scripts/Session.js"></script>
     <script type="text/javascript" src="scripts/Models/User.js"></script>
     <script type="text/javascript" src="scripts/login.js"></script>
+    <script type="text/javascript" src="scripts/Models/Order.js"></script>
+    <script type="text/javascript" src="scripts/menuPage.js"></script>
 </body>
 </html>
