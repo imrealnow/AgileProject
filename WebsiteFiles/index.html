@@ -9,7 +9,12 @@
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 </head>
 <body id="loggedin" onload="pageSetup()">
-
+  <!-- Specials -->
+    <div id="special"><a onclick="specialAnchor()">
+        <h4 id="specialSpan"></h4></a>
+        <a id="close" href="javascript:void(0)" class="closebtn" onclick="closeSpecials()">
+          <img src="css/img/closebtn1.png"></a>
+    </div>
   <!-- Logo/ Icons -->
   <nav>
       <div id="logo">
@@ -31,12 +36,14 @@
         <button><a href="topUpPage.html">Top Up</a></button>
         <button><a href="orderHistory.html">Orders</a></button>
   </div>
-  <!-- White line-->
-  <hr style="border: 0.4px solid lightgray; width: 70%; opacity:0.8;" />
 
+  <!-- White line-->
+  <hr style="border: 0.4px solid lightgray; width: 80%; opacity:0.8;" />
+
+    <br><h3>Menu</h3><br><br>
     <!-- Main container -->
-    <div id="main"><br>
-	    <div class="container2"><br>
+    <div id="main">
+	    <div class="container2">
 	        <!-- Choose Coffee -->
 	        <div id="coffeeSelection">
 	            <h4>Coffee</h4>
@@ -83,7 +90,7 @@
 	        </div><br>
 	            <!-- Add to Cart -->
 	            <div class="btn-group">
-	                <button type="Submit" onclick="addCoffeeToCart()">Add To Cart</button>
+	                <button type="Submit" onclick="addCoffeeToCart()">Add To Order</button>
 	            </div>
 	        </div>
 
@@ -108,12 +115,6 @@
 	</div>
    <div class="container2">
    </div>
-
-    <!-- Specials -->
-        <a onclick="specialAnchor()"><div id="special">
-          <h4 id="specialSpan"></h4>
-        </div><a>
-
 
   <!--    Footer  -->
   <div class="container2">

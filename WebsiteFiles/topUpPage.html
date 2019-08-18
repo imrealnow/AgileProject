@@ -24,29 +24,35 @@
   </nav>
 
   <div id="containernav">
-    <button><a id="current" href="index.html">Menu</a></button>
+    <button><a href="index.html">Menu</a></button>
     <button><a href="balance.html">Balance</a></button>
-    <button><a href="topUpPage.html">Top Up</a></button>
+    <button><a id="current" href="topUpPage.html">Top Up</a></button>
     <button><a href="orderHistory.html">Orders</a></button>
+  </div>
+  <!-- White line-->
+  <hr style="border: 0.4px solid lightgray; width: 50%; opacity:0.8;" />
+
+  <div class="container2">
+  <br><br><h3>Top Up</h3><br>
   </div>
 
   <!-- Main container -->
   <div class="container2">
     <!-- Top Up -->
-    <div id="coffeeSelection">
+    <div id="coffeeSelection"><br>
       <form>
         <div class="btn-group">
-            <h5>Amount:&nbsp;&nbsp;
-            <input type="number" id="topupAmount" placeholder="$0"></input></h5>
-            <h5>Choose your bank:<br><br>
-          <form id="bankChoice">
+            <h4>Amount:&nbsp;&nbsp;
+            <input type="number" id="topupAmount" placeholder="$0"></input></h4><br>
+            <h4>Choose your bank:<h4>
+          <form id="bankChoice"><h5>
             <input type="radio" id="b1" value="Kiwibank" name="Bank"> KiwiBank</input>&nbsp;
             <input type="radio" id="b2" value="ANZ" name="Bank"> ANZ</input>&nbsp;
             <input type="radio" id="b3" value="BNZ" name="Bank"> BNZ</input>&nbsp;
             <input type="radio" id="b4" value="ASB" name="Bank"> ASB</input>&nbsp;
           </form></h5>
-          <h5>Bank account details:<br><br>
-            <input type="text" id="bankDetails" placeholder="0000-0000-0000-0000" maxlength="16"></input><br><br>
+          <h4>Bank account details:</h4>
+          <h5><input type="text" id="bankDetails" placeholder="0000-0000-0000-0000" maxlength="16"></input><br><br>
             <input type="date" name="expiry" placeholder="MM-YYYY">
             <input type="text" id="bankCCV" placeholder="CCV" maxlength="3" style="width:11%"></input></h5><br>
 
