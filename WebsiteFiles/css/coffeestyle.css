@@ -306,10 +306,12 @@ background-color: #0A152E;**/
 .signup input[type=text], input[type=password], input[type=email]{
   width: 300px;
   height: 35px;
+  background-color: rgba(255, 255, 255, 0.7);
 }
 .login input[type=text], input[type=password]{
   width: 300px;
   height: 35px;
+  background-color: rgba(255, 255, 255, 0.7);
 }
 .coffeeAdditions{
   padding: 0px 5%;
@@ -477,7 +479,7 @@ background-color: rgba(177, 149, 132, 0.7);**/
   text-align: left;
   border-radius: 1px;
   padding:2%;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.7h);
   width: 80px;
 }
 #coffeeSelection input[type="text"]{
@@ -519,6 +521,10 @@ background-color: rgba(177, 149, 132, 0.7);**/
 .btn-group button:hover {
   color: lightgray;
   background-color:rgba(255, 255, 255, 0.8);
+}
+#btn2{
+  width:130px;
+  color: white;
 }
 #btn2{
   width:200px;
