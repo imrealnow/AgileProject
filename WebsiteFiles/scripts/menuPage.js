@@ -175,6 +175,12 @@ function updateOrderList()
   }
 }
 
+// Specials
 function specialAnchor(){
   alert('You have trigger the special logic.')
+}
+// Close Specials
+function closeSpecials() {
+  var sp = document.getElementById("special");
+  sp.remove();
 }

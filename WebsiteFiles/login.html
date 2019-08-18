@@ -19,53 +19,48 @@
     <!-- Menu -->
     <div id="viewMenu">
       <!-- Close -->
-      <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">
-        <img id="close" src="css/img/closebtn1.png"></a>
-      <h3>Menu</h3>
+      <a id="close" href="javascript:void(0)" onclick="closeMenu()">
+        <img  src="css/img/closebtn1.png"></a>
+        <h3>Menu</h3>
           <!-- Main container -->
-          <div id="main"><br>
-            <div class="container2"><br>
-                <!-- Choose Coffee -->
-                <div id="coffeeSelection">
-                    <h4>Coffee</h4>
-                    <!-- White line-->
-                    <hr style="border: 0.4px solid lightgray; width: 100%; opacity:0.8;" />
-
-                    <div id="coffeeTypes">
-                        <label><span>Black Coffee</span></label>
-                        <label><span>Flat White</span></label>
-                        <label><span>Cappuccino</span></label>
-                        <label><span>Hot Chocolate</span></label>
-                        <label><span>Mochaccino</span></label>
-                        <label><span>Latte</span></label>
-                    </div>
+          <div id="main">
+            <div class="container2">
+      	        <div id="coffeeSelection">
+    	            <h4>Coffee</h4>
+                  <div id="coffeeTypes">
+    	                <label><input type="radio" name="toggle" value="Black Coffee"><span>Black Coffee</span></label>
+    	                <label><input type="radio" name="toggle" value="Flat White"><span>Flat White</span></label>
+    	                <label><input type="radio" name="toggle" value="Cappuccino"><span>Cappuccino</span></label>
+    	                <label><input type="radio" name="toggle" value="Hot Chocolate"><span>Hot Chocolate</span></label>
+    	                <label><input type="radio" name="toggle" value="Mochaccino"><span>Mochaccino</span></label>
+    	                <label><input type="radio" name="toggle" value="Latte"><span>Latte</span></label>
+    	            </div>
                 </div>
-
                 <div id="coffeeSelection2">
                     <h4>Options</h4>
                     <!-- White line-->
                     <hr style="border: 0.4px solid lightgray; width: 100%; opacity:0.8;" />
                     <div class="coffeeAdditions">
-                        <p>Extras:</p>
-                        <label>Add Sugar</label>
+                        <p>&nbsp Extras:</p>
+                        <label>&nbsp Add Sugar</label>
                     </div>
                     <div class="coffeeAdditions">
-                        <label>Add Milk</label>
+                        <label>&nbsp Add Milk</label>
                     </div>
                     <div class="coffeeAdditions">
                       <div class="coffeeAdditions">
                             <p>Prices:</p>
-                            <label>Regular  &nbsp&nbsp&nbsp&nbsp $4.5</label><br>
-                            <label value="Small">Small  &nbsp&nbsp&nbsp&nbsp $3.0</label>
+                            <label>Regular: $4.5</label><br>
+                            <label value="Small">Small: $3.0</label>
                         </div>
                     </div><br><br>
                     <div class="btn-group">
                         <a id="loginbutton" href="login.html"><button>Sign Up/Login</button></a>
                    </div>
                 </div>
-              <!-- Specials to be added back in <a onclick="specialAnchor()"><div id="special">
+                <a onclick="specialAnchor()"><div id="special">
                   <h4 id="specialSpan"></h5>
-                </div></a>-->
+                </div></a>
           </div>
         </div><br><br>
     </div>
@@ -80,7 +75,7 @@
     <!--    Header -->
     <header><br>
       <!--    View Menu/Order Now  -->
-       <a onclick="openMenu()"><h2>View Menu</h2></a>
+       <a onclick="openMenu()"><h2 id="vmenu">View Menu</h2></a>
        <a onclick="orderNow()"><h2 id="on">Order Now</h2></a>
        <!-- White line-->
        <hr id="line" style="border: 0.4px solid lightgray; width: 10%; opacity:0.8;" />
@@ -91,35 +86,37 @@
     <div id="ordernow">
       <div class="container1">
         <!--    buttons  -->
-        <div class="btn-group">
-              <a href="#" onclick="return false;"><button>Login</button></a>
-              <a href="#" onclick="return false;"><button>Signup</button></a>
+        <div class="btn-group" id="btn1">
+          <a href="#" onclick="return false;"><button>Login</button></a>
+          <a href="#" onclick="return false;"><button>Signup</button></a>
         </div>
+
         <!--    Login  -->
         <div class="btn-group">
-           <div class="login">
-               <label id="l-errors"></label>
-               <p><input type="text" id="l-username" placeholder="username"></input></p>
-               <p><input type="password" id="l-password" placeholder="password"></input></p>
-               <button id="btn2" type="button" onclick="loginButton()">Login</button>
-                <br><label id="pwd"><a>Forgot Password?</a></label>
-           </div>
+            <div class="login">
+              <label id="l-errors"></label>
+              <p><input type="text" id="l-username" placeholder="username"></input></p>
+              <p><input type="password" id="l-password" placeholder="password"></input></p>
+              <button id="btn2" type="button" onclick="loginButton()">Enter</button>
+              <br><label id="pwd"><a>Forgot Password?</a></label>
+            </div>
            <!--    Signup  -->
           <div class="signup">
             <label id="s-errors"></label>
             <p><input type="text" id="s-username" placeholder="username"></input></p>
             <p><input type="email" id="s-email" placeholder="email"></input></p>
             <p><input type="password" id="s-password" placeholder="password"></input></p>
-            <button id="btn2" type="button" onclick="signupButton()">Sign Up</button>
+            <button id="btn2" id="sign" type="button" onclick="signupButton()">Create Account</button>
           </div>
           <!--    Forgot Password  -->
           <div class="forgotpwd">
               <label id="errors"></label>
               <p><input type="email" id="email" placeholder="email"></input></p>
               <button id="btn2" type="button" onclick="buttonClick()">Reset</button>
-               <br><br>
+              <br><br>
           </div>
         </div>
+
       </div>
     </div>
 

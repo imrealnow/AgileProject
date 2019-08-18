@@ -67,21 +67,25 @@ $('.btn-group a button').click(function(){
   $('.btn-group > div').hide();
  $('.btn-group > div').eq($(this).parent().index()).show();
 });
+
 $('#pwd').click(function(){
   $('.forgotpwd').show();
  $('.login').hide();
  $('.signup').hide();
 });
 
+
+// View Menu
 function openMenu() {
   document.getElementById("viewMenu").style.width = "100%";
 }
-
+// Close Menu
 function closeMenu() {
   document.getElementById("viewMenu").style.width = "0";
 }
-
+// Order Now
 function orderNow(){
+    document.getElementById("on").remove();
     document.getElementById("ordernow").style.visibility = "visible";
     document.getElementById("line").style.visibility = "hidden";
     document.getElementById("on").style.color = "lightgray";
