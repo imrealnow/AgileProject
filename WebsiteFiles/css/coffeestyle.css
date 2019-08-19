@@ -142,11 +142,11 @@ p{
   font-family: 'omega_sansregular';
 }
 #current{
-  color: lightgray;
+
 }
 #coffeeSelection2 p, #coffeeSelection3 p {
   text-align: left;
-  color: #303030;
+  color: black;
   font-size: 25px;
   padding-left: 5px;
 }
@@ -189,6 +189,10 @@ nav h3{
   margin:1% 4% 0 4%;
   width:18px;
 }
+#arrow img{
+  margin: 2% 0 0 2%;
+  width:25px;
+}
 #close img:hover {
     opacity:0.80;
     -moz-transform: rotate(-95deg);
@@ -218,7 +222,6 @@ nav h3{
 .signup input[type=text]::placeholder, input[type=email]::placeholder, input[type=password]::placeholder{
   color:#010a12;
 }
-
 /***************************  CONTAINERS */
 #viewMenu {
   height: 100%;
@@ -247,7 +250,7 @@ nav h3{
   height:50px;
   cursor: pointer;
 }
-  nav{
+nav{
   justify-content: center;
   width: 100%;
   display: inline-flex;
@@ -378,7 +381,7 @@ background-color: #0A152E;**/
 background-color: rgba(177, 149, 132, 0.7);**/
 #coffeeSelection, #coffeeSelection2, #coffeeSelection3{
   color: #303030;
-  background-color: rgba(177, 148, 132, 0.65);
+  background-color: rgba(177, 148, 132, 0.8);
   width:35%;
   margin: 3% 2.5%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -636,19 +639,13 @@ td, th {
 }
 #special{
   width:100%;
-  min-height: 50px;
+  min-height: 85px;
   background-color: #010a12;
-  opacity:0.85;
+  opacity:0.8;
 }
 #special h4{
-  font-size: 20px;
-}
-#specials{
-  width:100%;
-  min-height: 50px;
-}
-#specials h4{
-  font-size: 22px;
+  padding-top: 1.5%;
+  font-size: 24px;
 }
 /*************************** Loyalty */
 #loyaltyDiv
