@@ -6,7 +6,7 @@ class User {
             Name: name,
             Password: password,
             Email: email,
-            Balance: 0.0,
+            Balance: 20.0,
             CoffeesBought: 0.0,
             OrderHistory: [],
         };
