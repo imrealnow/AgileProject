@@ -18,10 +18,46 @@ class User {
         }
         else
         {
-            users.Users.push(newUser);
+            if(this.getUser(name) == null)
+                users.Users.push(newUser);
         }
         session.set("allUsers", users);
         return newUser;
+    }
+
+    addUser(user)
+    {
+        const session = new Session();
+        var users = session.get("allUsers");
+        var existingUserIndex = -1;
+        if(users == null)
+        {
+            console.log("allUsers not set");
+            return null;
+        }
+        else
+        {
+            var i;
+            for(i = 0; i < users.Users.length; i++)
+            {
+                if(users.Users[i].Name == user.Name)
+                {
+                    existingUserIndex = i;
+                }
+            }
+        }
+
+        if(existingUserIndex == -1)
+        {
+            users.Users.Push(user);
+        }
+        else
+        {
+            console.log("cui: "+existingUserIndex);
+            console.log(users.Users[existingUserIndex]);
+            users.Users[existingUserIndex] = user;
+        }
+        session.set("allUsers", users);
     }
 
     getUser(name)
@@ -67,6 +103,7 @@ class User {
                 }
             }
         }
+        var users = session.get("allUsers");
     }
 
     deleteUser(name)
@@ -90,5 +127,6 @@ class User {
                 }
             }
         }
+        var users = session.get("allUsers");
     }
 }
