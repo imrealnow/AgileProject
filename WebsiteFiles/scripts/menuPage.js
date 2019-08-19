@@ -77,6 +77,7 @@ function updatePrice()
   else if(coffeeSize.value == "Small")
     price = 3.0 * coffeeQuantity.value;
   priceLabel.innerHTML = "$" + price;
+  totalCostLabel.innerHTML = "$" + order.getTotalPrice();
 }
 
 function addCoffeeToCart()
@@ -102,6 +103,18 @@ function addCoffeeToCart()
   //update total price
   totalCostLabel.innerHTML = "$" + order.getTotalPrice();
   updateOrderList();
+}
+
+function cancelOrder()
+{
+  var blankOrder = {
+                Date: "",
+                TotalPrice: 0.0,
+                Items: []
+            };
+  session.set('currentOrder', blankOrder);
+  updateOrderList();
+  updatePrice();
 }
 
 function confirmOrder()
