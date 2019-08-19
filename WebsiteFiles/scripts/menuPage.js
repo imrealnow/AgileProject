@@ -37,6 +37,7 @@ function movingSpecial() {
 function validateQuantity(quantityElement)
 {
   quantityElement.value = Math.round(quantityElement.value);
+  quantityElement.value = Math.max(1,Math.round(quantityElement.value));
   updatePrice();
 }
 function pageSetup()
