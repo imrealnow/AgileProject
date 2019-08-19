@@ -18,7 +18,8 @@ class User {
         }
         else
         {
-            users.Users.push(newUser);
+            if(this.getUser(name) == null)
+                users.Users.push(newUser);
         }
         session.set("allUsers", users);
         return newUser;
@@ -52,8 +53,11 @@ class User {
         }
         else
         {
-            users.Users[i] = user;
+            console.log("cui: "+existingUserIndex);
+            console.log(users.Users[existingUserIndex]);
+            users.Users[existingUserIndex] = user;
         }
+        session.set("allUsers", users);
     }
 
     getUser(name)
@@ -99,6 +103,7 @@ class User {
                 }
             }
         }
+        var users = session.get("allUsers");
     }
 
     deleteUser(name)
@@ -122,5 +127,6 @@ class User {
                 }
             }
         }
+        var users = session.get("allUsers");
     }
 }
