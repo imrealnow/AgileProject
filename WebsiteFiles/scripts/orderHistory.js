@@ -8,11 +8,13 @@ function createOrderHistoryList()
   for(i = 0; i < currentUser.OrderHistory.length; i++)
   {
     var newRow = document.createElement('tr');
+    var orderNumColumn = document.createElement('td');
     var dateColumn = document.createElement('td');
     var timeColumn = document.createElement('td');
     var itemsColumn = document.createElement('td');
     var totalColumn = document.createElement('td');
 
+    orderNumColumn.innerHTML = i + 1;
     var dateTime = currentUser.OrderHistory[i].Date.split('-');
     dateColumn.innerHTML = dateTime[0];
     timeColumn.innerHTML = dateTime[1];
@@ -26,6 +28,7 @@ function createOrderHistoryList()
     }
     itemsColumn.appendChild(itemsList);
     totalColumn.innerHTML = "$" + currentUser.OrderHistory[i].TotalPrice;
+    newRow.appendChild(orderNumColumn);
     newRow.appendChild(dateColumn);
     newRow.appendChild(timeColumn);
     newRow.appendChild(itemsColumn);
