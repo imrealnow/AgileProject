@@ -24,6 +24,38 @@ class User {
         return newUser;
     }
 
+    addUser(user)
+    {
+        const session = new Session();
+        var users = session.get("allUsers");
+        var existingUserIndex = -1;
+        if(users == null)
+        {
+            console.log("allUsers not set");
+            return null;
+        }
+        else
+        {
+            var i;
+            for(i = 0; i < users.Users.length; i++)
+            {
+                if(users.Users[i].Name == user.Name)
+                {
+                    existingUserIndex = i;
+                }
+            }
+        }
+
+        if(existingUserIndex == -1)
+        {
+            users.Users.Push(user);
+        }
+        else
+        {
+            users.Users[i] = user;
+        }
+    }
+
     getUser(name)
     {
         const session = new Session();
