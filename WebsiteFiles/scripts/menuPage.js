@@ -123,7 +123,6 @@ function cancelOrder()
 
 function switchToDonuts(){
   var donut1 = document.getElementById("donutSelection");
-  var donut2 = document.getElementById("donutSelection2");
   var coffee1 = document.getElementById("coffeeSelection");
   var coffee2 = document.getElementById("coffeeSelection2");
   if (donut1.style.display === "block"){
@@ -132,7 +131,6 @@ function switchToDonuts(){
   if (donut1.style.display === "none")
   {
   donut1.style.display = "block";
-  donut2.style.display = "block";
   coffee1.style.display = "none";
   coffee2.style.display = "none";
   }
