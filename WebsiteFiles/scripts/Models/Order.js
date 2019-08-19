@@ -111,6 +111,9 @@ Example Order:
             currentUser.CoffeesBought = +currentUser.CoffeesBought + +this.getTotalCoffees();
         }
         var date = new Date();
+        var minutes = date.getMinutes();
+        if(minutes.length == 1)
+            minutes = "0" + minutes;
         var dateString = date.getDate() +"/" + date.getMonth() + "/" + date.getFullYear() +"-" + date.getHours() +":" + date.getMinutes();
         currentOrder.Date = dateString;
         currentOrder.TotalPrice = this.getTotalPrice();
