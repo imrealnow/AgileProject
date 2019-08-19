@@ -108,7 +108,7 @@ function confirmOrder()
 {
   var currentOrder = session.get('currentOrder');
   var coffeeOrderNum = 0;
-  var waitTime = 10;
+  var waitTime = 15;
   order.confirmOrder();
   userBalance.innerHTML = "$" + session.get("currentUser").Balance;
   var orderString = "";
@@ -136,9 +136,11 @@ function confirmOrder()
     orderString = orderString + currentOrder.Items[i].Quantity +" x " + currentOrder.Items[i].Size + " " + currentOrder.Items[i].Type + additions + "\n";
 
     if(coffeeOrderNum>10) {
-      waitTime = 15;
+      waitTime = 20;
     }
-    alert("You have ordered:\n" + orderString + "\nWait time:" + waitTime + " minutes");
+    if (session.get("currentUser").Balance>= price ){
+      alert("You have ordered:\n" + orderString + "\nWait time:" + waitTime + " minutes");
+    }
     updateOrderList();
     location.replace("orderHistory.html");
   }
