@@ -22,7 +22,11 @@ specialSpan.innerHTML = currentSpecial;
 function movingSpecial() {
   //console.log("got here");
   elem.style.position = "absolute";
+  elem.style.left = 40 + "px";
   var pos = 0;
+  if (id != null){
+    clearInerval('id');
+  }
   var id = setInterval(frame, 15);
    function frame() {
        pos++;
@@ -93,9 +97,9 @@ function addCoffeeToCart()
   }
   var additions = [];
   if(withMilk.checked)
-    additions.push("milk");
+    additions.push(" milk");
   if(withSugar.checked)
-    additions.push("sugar");
+    additions.push(" sugar");
 
   // add the coffee to the order and save its id
   var coffeeId = order.addCoffee(getSelectedCoffee(), coffeeSize.value, price, additions, coffeeQuantity.value);
@@ -106,7 +110,9 @@ function addCoffeeToCart()
 
 function confirmOrder()
 {
+
   var currentOrder = session.get('currentOrder');
+  var cost = order.getTotalPrice();
   var coffeeOrderNum = 0;
   var waitTime = 15;
   order.confirmOrder();
@@ -138,11 +144,14 @@ function confirmOrder()
     if(coffeeOrderNum>10) {
       waitTime = 20;
     }
-    if (session.get("currentUser").Balance>= price ){
-      alert("You have ordered:\n" + orderString + "\nWait time:" + waitTime + " minutes");
-    }
+
     updateOrderList();
-    location.replace("orderHistory.html");
+    if (session.get("currentUser").Balance>= cost){
+      location.replace("orderHistory.html");
+    }
+  }
+  if (session.get("currentUser").Balance>= cost){
+    alert("You have ordered:\n" + orderString + "\nWait time:" + waitTime + " minutes");
   }
 }
 
