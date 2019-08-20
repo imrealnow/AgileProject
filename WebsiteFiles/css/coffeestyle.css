@@ -562,6 +562,9 @@ background-color: rgba(177, 149, 132, 0.7);**/
   border:none;
   color: black;
 }
+#addMore{
+  visibility: hidden;
+}
 /************************ DROPDOWN */
 .coffeeSize {
     font-size: 18px;

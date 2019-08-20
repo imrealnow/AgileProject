@@ -121,7 +121,9 @@ function cancelOrder()
   updatePrice();
 }
 
+// Donut Selection
 function switchToDonuts(){
+  var addMoreBtn = document.getElementById("addMore");
   var donut1 = document.getElementById("donutSelection");
   var coffee1 = document.getElementById("coffeeSelection");
   var coffee2 = document.getElementById("coffeeSelection2");
@@ -130,12 +132,20 @@ function switchToDonuts(){
   }
   if (donut1.style.display === "none")
   {
+
+  addMoreBtn.style.visibility = "visible";
   donut1.style.display = "block";
   coffee1.style.display = "none";
   coffee2.style.display = "none";
   }
-
 }
+
+// Add More coffee
+$('#addMore').click(function(){
+ $('#donutSelection').hide();
+ $('#coffeeSelection').show();
+ $('#coffeeSelection2').show();
+});
 
 function confirmOrder()
 {
