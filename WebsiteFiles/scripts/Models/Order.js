@@ -7,6 +7,7 @@ Example Order:
     currentOrder = {
         Date: "13-08-19 13:17",
         TotalPrice: 7.5,
+        Completed: false,
         Items: [
             {
                 Id: 1,
@@ -34,6 +35,7 @@ Example Order:
             currentOrder = {
                 Date: "",
                 TotalPrice: 0.0,
+                Completed: false,
                 Items: []
             };
             this.session.set("currentOrder", currentOrder);
@@ -112,15 +114,20 @@ Example Order:
         }
         var date = new Date();
         var minutes = date.getMinutes();
-        if(minutes.length == 1)
-            minutes = "0" + minutes;
-        var dateString = date.getDate() +"/" + date.getMonth() + "/" + date.getFullYear() +"-" + date.getHours() +":" + date.getMinutes();
+        if(datMins<10){
+          datMinsString = "0"+ datMins;
+        }
+        else{
+          datMinsString = date.getMinutes();
+        }
+        var dateString = date.getDate() +"/" + date.getMonth() + "/" + date.getFullYear() +"-" + date.getHours() +":" + datMinsString;
         currentOrder.Date = dateString;
         currentOrder.TotalPrice = this.getTotalPrice();
         currentUser.OrderHistory.push(currentOrder);
         currentOrder = {
                 Date: "",
                 TotalPrice: 0.0,
+                Completed: false,
                 Items: []
             };
         this.session.set("currentUser", currentUser);
