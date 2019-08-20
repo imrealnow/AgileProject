@@ -9,13 +9,17 @@
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 </head>
 <body id="bk2" onload="pageSetup()">
+
   <!-- Specials -->
+  <a id="arrow" href="javascript:void(0)" class="closebtn">
+  <img src="css/img/arrowspecials.png"></a>
   <div id="anchor">
-    <div id="special"><a id="arrow" href="javascript:void(0)" class="closebtn" onclick="closeSpecials()">
-      <img src="css/img/arrowspecials.png"></a>
+    <div id="special">
       <h4 id="specialSpan"></h4>
-    </div>
+      </div>
   </div>
+
+
   <!-- Logo/ Icons -->
   <nav>
       <div id="logo">
@@ -23,7 +27,6 @@
       </div>
 
       <h3 id="welcome"></h3>
-
       <div id="icons">
         <a href="thankYou.html"> <p class="logout">Logout</p>
         <img src="css/img/logouticon.png" alt="Log-out"></a>
@@ -36,6 +39,7 @@
         <button><a href="balance.html">Balance</a></button>
         <button><a href="topUpPage.html">Top Up</a></button>
         <button><a href="orderHistory.html">Orders</a></button>
+        <button id="specialsOpen"><a href="#">Specials</a></button>
   </div>
 
   <!-- White line-->
