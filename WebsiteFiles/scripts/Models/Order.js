@@ -2,7 +2,6 @@ class Order {
 
 /**
 Dependencies: this.session
-
 Example Order:
     currentOrder = {
         Date: "13-08-19 13:17",
