@@ -240,7 +240,7 @@ function confirmOrder()
     }
     updateOrderList();
     alert("You have ordered:\n" + orderString + "\nWait time:" + waitTime + " minutes");
-    location.replace("orderHistory.html");
+    //location.replace("orderHistory.html");
   }
 }
 
