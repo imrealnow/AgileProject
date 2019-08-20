@@ -206,11 +206,7 @@ nav h3{
     -moz-transition:transform 0.2s ease-in-out;
     -ms-transition:transform 0.2s ease-in-out;
 }
-.closebtn{
-  float:right;
-  padding: 1% 1%;
-  overflow:hidden;
-}
+
 .login, .signup, .forgotpwd input{
   color: white;
 }
@@ -366,14 +362,7 @@ background-color: #0A152E;**/
   float left;
   display: flex;
 }
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: rgba(177, 149, 132, 1);
-}
-.sticky + #containernav {
-}
+
 #welcome{
   float:right;
   padding:2.5% 0 2% 0;
@@ -549,6 +538,11 @@ background-color: rgba(177, 149, 132, 0.7);**/
 .btn-group button:hover {
   color: gray;
   background-color:rgba(255, 255, 255, 0.8);
+}
+.closebtn{
+  float:right;
+  padding: 1% 1%;
+  overflow:hidden;
 }
 
 #btn2{
@@ -734,6 +728,13 @@ td, th {
     width: 180px;
     font-size: 20px;
   }
+  #containernav a{
+    padding-left: 4%;
+    font-size: 18px;
+  }
+  #containernav button{
+    width:18%;
+  }
   #coffeeTypes label span {
       padding-bottom:5%;
       margin-bottom: 1%;
@@ -742,7 +743,12 @@ td, th {
       height: 50px;
   }
   #special{
-    padding: 1% 0 4% 0;
+    padding: 1% 2% 2% 2%;
+    font-size: 16px;
+    display:flex;
+    flex:wrap;
+    height:auto;
+    overflow: auto;
   }
   .btn-group.menu-page{
     position:relative;
@@ -758,8 +764,29 @@ td, th {
   #donuts{
     margin-bottom:50px;
   }
+  table {
+    padding: 2%;
+    display:flex;
+    flex-wrap: wrap;
+    width:auto;
+  }
+  td, th {
+    flex-wrap: wrap;
+  }
+  h3{
+    font-size: 28px;
+  }
+  h4{
+    font-size: 26px;
+    margin: 5px 0px;
+  }
+  p{
+    font-size: 18px;
+  }
+  .btn-group{
+    width:90%;
+  }
 }
-
 @media only screen and (max-width: 750px) {
 
   .coffeeAdditions label{
@@ -768,16 +795,12 @@ td, th {
   .btn-group button {
     font-size: 18px;
   }
-  #special{
-    padding: 1% 0 8% 0;
-  }
   #orderItems{
   }
   .orderItem{
     height: 100px;
     line-height: 20px;
   }
-
 
 }
 @media only screen and (max-width: 590px) {
@@ -787,8 +810,8 @@ td, th {
   .btn-group button {
     font-size: 14px;
   }
-  .coffeeAdditions h4{
-    font-size: 10px;
-    margin: 5px 0px;
+  table {
+    padding: 1%;
+    font-size: 18px;
   }
 }
