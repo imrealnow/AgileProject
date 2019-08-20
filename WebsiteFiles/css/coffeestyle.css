@@ -450,7 +450,7 @@ background-color: rgba(177, 149, 132, 0.7);**/
 }
 #coffeeTypes label input {
     position:absolute;
-    top:-20px;
+    top:-1000px;
 }
 #coffeeTypes input:checked + span {
     background-color:#404040;
@@ -520,6 +520,7 @@ background-color: rgba(177, 149, 132, 0.7);**/
   position: absolute;
   left: 0; 
   bottom: 20px; 
+  margin-top: 50px;
   margin: 0 auto;
 }
 .btn-group button {
