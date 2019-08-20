@@ -6,6 +6,7 @@ Example Order:
     currentOrder = {
         Date: "13-08-19 13:17",
         TotalPrice: 7.5,
+        Completed: false,
         Items: [
             {
                 Id: 1,
@@ -112,8 +113,10 @@ Example Order:
             var date = new Date();
             var minutes = date.getMinutes();
             if(minutes.length == 1)
+            {
                 minutes = "0" + minutes;
-            var dateString = date.getDate() +"/" + date.getMonth() + "/" + date.getFullYear() +"-" + date.getHours() +":" + date.getMinutes();
+              }
+            var dateString = date.getDate() +"/" + date.getMonth() + "/" + date.getFullYear() +"-" + date.getHours() +":" + minutes;
             currentOrder.Date = dateString;
             currentOrder.TotalPrice = this.getTotalPrice();
             currentUser.OrderHistory.push(currentOrder);

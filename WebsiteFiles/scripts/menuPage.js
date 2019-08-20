@@ -161,6 +161,7 @@ function cancelOrder()
   var blankOrder = {
                 Date: "",
                 TotalPrice: 0.0,
+                Completed: false,
                 Items: []
             };
   session.set('currentOrder', blankOrder);
