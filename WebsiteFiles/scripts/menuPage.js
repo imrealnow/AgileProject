@@ -81,6 +81,7 @@ function setWelcome()
 function getSelectedCoffee()
 {
   var coffeeSelections = document.getElementsByName('coffees');
+  var i;
   for(i = 0; i < coffeeSelections.length; i++) {
       if(coffeeSelections[i].checked)
         return coffeeSelections[i].value;
@@ -90,6 +91,7 @@ function getSelectedCoffee()
 function getSelectedDonut()
 {
   var donutSelections = document.getElementsByName('donuts');
+  var i;
   for(i = 0; i < donutSelections.length; i++) {
       if(donutSelections[i].checked)
         return donutSelections[i].value;
@@ -107,7 +109,7 @@ function updateCoffeePrice()
 
 function updateDonutPrice()
 {
-  if(getSelectedDonut="Plain donut")
+  if(getSelectedDonut()=="Plain donut")
     donutPrice = 2.5 * donutQuantity.value;
   else
     donutPrice = 3.5 * donutQuantity.value;
@@ -139,14 +141,14 @@ function addCoffeeToCart()
   }
   else // ordering donuts
   {
-    if(getSelectedDonut == null)
+    if(getSelectedDonut() == null)
     {
       alert("Please select a donut");
       return;
     }
 
     // add the donut to the order and save its id
-    var donutId = order.addCoffee(getSelectedDonut, "", donutPrice, [], donutQuantity.value);
+    var donutId = order.addCoffee(getSelectedDonut(), "", donutPrice, [], donutQuantity.value);
   }
 
   //update total price
