@@ -34,6 +34,7 @@ Example Order:
             currentOrder = {
                 Date: "",
                 TotalPrice: 0.0,
+                Completed: false,
                 Items: []
             };
             this.session.set("currentOrder", currentOrder);
@@ -121,6 +122,7 @@ Example Order:
         currentOrder = {
                 Date: "",
                 TotalPrice: 0.0,
+                Completed: false,
                 Items: []
             };
         this.session.set("currentUser", currentUser);
