@@ -16,8 +16,7 @@ function loginButton() {
   var password = document.getElementById("l-password");
 
   //this checks the user accounts for the username, and checks their password too
-  if(users.getUser(username.value).Name  == "Manager"){
-
+  if(users.getUser(username.value).Name  == "Manager" && users.getUser(username.value).Password == password.value){
       document.location.replace("Manager.html");
   }
   else if(users.getUser(username.value) != null) {

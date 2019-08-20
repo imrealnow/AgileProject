@@ -29,11 +29,7 @@ function createOrderHistoryList()
   nowString2Split= nowString2.split(":");
 
 
-  var users = session.get("allUsers
-  alert(users);
-  for (k=0; k < users.length; k++){
-    alert(users[k]);
-  }
+
 
 
 
@@ -59,7 +55,7 @@ function createOrderHistoryList()
     var dateTime = currentUser.OrderHistory[i].Date.split('-');
     dateColumn.innerHTML = dateTime[0];
     timeColumn.innerHTML = dateTime[1];
-    orderNumColumn.innerHTML = currentUser.OrderHistory[i].Items.Id;
+    orderNumColumn.innerHTML = i + 1;
     var j;
     var itemsList = document.createElement('ul');
 
@@ -72,7 +68,7 @@ function createOrderHistoryList()
     }
     if(currentUser.OrderHistory[i].Complete){
       //alert("enter the complete if statement");
-      completeOrder.innerHTML = "Competed";
+      completeOrder.innerHTML = "Completed";
     }
     else{
       completeOrder.innerHTML = "<button type='Submit' onclick='completeOrder(" + i + ")''>Order Finished</button>"

@@ -113,8 +113,10 @@ Example Order:
             var date = new Date();
             var minutes = date.getMinutes();
             if(minutes.length == 1)
+            {
                 minutes = "0" + minutes;
-            var dateString = date.getDate() +"/" + date.getMonth() + "/" + date.getFullYear() +"-" + date.getHours() +":" + date.getMinutes();
+              }
+            var dateString = date.getDate() +"/" + date.getMonth() + "/" + date.getFullYear() +"-" + date.getHours() +":" + minutes;
             currentOrder.Date = dateString;
             currentOrder.TotalPrice = this.getTotalPrice();
             currentUser.OrderHistory.push(currentOrder);

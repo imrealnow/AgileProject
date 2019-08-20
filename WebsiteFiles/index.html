@@ -10,10 +10,10 @@
 </head>
 <body id="bk2" onload="pageSetup()">
   <!-- Specials -->
-    <div id="special"><a id="arrow" href="javascript:void(0)" class="closebtn" onclick="closeSpecials()">
-        <img src="css/img/arrowspecials.png"></a><a onclick="specialAnchor()">
+    <a id="arrow" href="javascript:void(0)" class="closebtn" onclick="closeSpecials()"><div id="special">
+        <img src="css/img/arrowspecials.png"><a onclick="specialAnchor()">
         <h4 id="specialSpan"></h4></a>
-    </div>
+    </div></a>
   <!-- Logo/ Icons -->
   <nav>
       <div id="logo">
@@ -56,7 +56,7 @@
 	            </div>
 	        </div>
 
-          <div id="donutSelection" style="display:none">
+          <div id="donutSelection" style="display:none; position: relative">
 	            <h4>Add A Donut</h4>
                <div id="coffeeTypes">
 	                <label><input type="radio" name="donuts" value="Plain donut" onclick="updateDonutPrice()"><span>Plain $2.5</span></label>
@@ -69,24 +69,20 @@
 	            <input id="donutQuantity" value="1" type="Number" min="1" step="1" placeholder="1" onchange="validateQuantity(this)">
 	          </div><br>
             <!-- White line-->
-              <hr style="border: 0.3px solid lightgray; width: 100%;" />
+              <hr style="border: 0.3px solid lightgray; width: 100%;"/>
 		        <div class="coffeeAdditions">
 	            <label>Cost</label>
 	            <label id="donutPrice" style="float: right; text-align: right">$0.0</label>
 	        </div><br>
 	            <!-- Add to Cart -->
-	            <div class="btn-group">
+	            <div class="btn-group menu-page">
 	                <button type="Submit" onclick="addCoffeeToCart()">Add To Order</button><br>
                   <button type="Submit" id="addMore">Update Coffees</button>
 	            </div>
-
 	        </div>
 
-
-
-
-	        <div id="coffeeSelection2">
-	            <h4>Options</h4>
+            <div id="coffeeSelection2" style="position: relative">
+                <h4>Options</h4>
               <!-- White line-->
                 <hr style="border: 0.4px solid lightgray; width: 100%; opacity:0.8;" />
 	            <div class="coffeeAdditions">
@@ -105,7 +101,6 @@
 	            </select>
 		        </div><br>
 
-
 		        <div class="coffeeAdditions">
 	            <label>Quantity:</label>
 	            <input id="quantity" value="1" type="Number" min="1" step="1" placeholder="1" onchange="validateQuantity(this)">
@@ -117,33 +112,31 @@
 	            <label id="coffeePrice" style="float: right; text-align: right">$0.0</label>
 	        </div><br>
 	            <!-- Add to Cart -->
-	            <div class="btn-group">
+	            <div class="btn-group menu-page">
 	                <button type="Submit" onclick="addCoffeeToCart()">Add To Order</button>
 	            </div>
 	        </div>
 
 	        <!-- Display Order Items -->
-	        <div id="coffeeSelection3">
+	        <div id="coffeeSelection3" style="position: relative">
 	            <h4>Order</h4>
             <div id="orderItems">
-  	        </div><br>
-  		      <div class="coffeeAdditions">
-  		            <label>Order Total</label>
-  			        <label id="displayTotal"style="float: right; text-align: right">$0.0</label>
-  			    </div>
-  			    <div class="coffeeAdditions">
-  		          <label>Remaining Balance</label>
-  			        <label id="userBalance"style="float: right; text-align: right">$0.0</label>
-  			    </div><br>
-  		      <div class="btn-group">
-  		            <button id="confirmOrder" type="Submit" onclick="switchToDonuts()">Confirm Coffees</button>
+            </div><br>
+              <div class="coffeeAdditions">
+                    <label>Order Total</label>
+                    <label id="displayTotal"style="float: right; text-align: right">$0.0</label>
+                </div>
+                <div class="coffeeAdditions">
+                  <label>Remaining Balance</label>
+                    <label id="userBalance"style="float: right; text-align: right">$0.0</label>
+                </div><br>
+              <div class="btn-group menu-page">
+                    <button id="confirmOrder" type="Submit" onclick="switchToDonuts()">Next</button><br>
                   <button  id="btn3" type="button" onclick="cancelOrder()" style="margin-top: 5px">Cancel</button>
   		      </div>
   	      </div>
 	    </div>
 	</div>
-   <div class="container2">
-   </div>
 
   <!--    Footer  -->
   <div class="container2">

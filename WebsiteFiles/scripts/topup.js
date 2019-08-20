@@ -32,7 +32,7 @@ function checkDetails(){
         topupButton();
       }
     else{
-      alert("Your bank details are not filled out correctly")
+      alert("your bank details are not filled out correctly")
     }
 }
 
@@ -52,12 +52,12 @@ function topupButton(){
     users.updateUser(current, 'currentUser');
     console.log(session.get('currentUser'));
     location.reload();
-    alert("Thank you for topping up, your current balance is: " + ssss);
+    alert("thanks for topping up, your current balance is: " + ssss);
   }
   //catchs if the input isn't a valid number
   else
   {
-    alert("You need to input a valid number larger than 0");
+    alert("you need to input a valid number larger than 0");
   }
 
 }
