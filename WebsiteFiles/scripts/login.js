@@ -73,6 +73,12 @@ $('#pwd').click(function(){
  $('.signup').hide();
 });
 
+// manager login
+$('#manager').click(function(){
+  $(this).hide();
+  $('.login').show();
+});
+
 
 // View Menu
 function openMenu() {

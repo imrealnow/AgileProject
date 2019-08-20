@@ -648,6 +648,9 @@ footer{
   text-align: center;
   font-size: 12px;
 }
+footer a{
+  opacity: 0.8;
+}
 span{
   display: block;
 }
