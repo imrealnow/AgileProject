@@ -281,8 +281,14 @@ $('#anchor').click(function(){
   alert('You have triggered the special logic.')
 });
 
-// Close Specials
-function closeSpecials() {
-  var sp = document.getElementById("special");
-  sp.remove();
-}
+$('#arrow').click(function(){
+   $(this).css("display", "none");
+   $('#special').css("display", "none");
+   $('#specialsOpen').css("display", "inline");
+});
+
+$('#specialsOpen').click(function(){
+   $(this).css("display", "none");
+   $('#special').css("display", "block");
+   $('#arrow').css("display", "block");
+});
