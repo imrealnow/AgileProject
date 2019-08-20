@@ -92,7 +92,7 @@ function getSelectedDonut()
   var donutSelections = document.getElementsByName('donuts');
   for(i = 0; i < donutSelections.length; i++) {
       if(donutSelections[i].checked)
-        return donutSelections[i].value + " donut";
+        return donutSelections[i].value;
   }
 }
 
@@ -107,7 +107,7 @@ function updateCoffeePrice()
 
 function updateDonutPrice()
 {
-  if(getSelectedDonut="Plain")
+  if(getSelectedDonut="Plain donut")
     donutPrice = 2.5 * donutQuantity.value;
   else
     donutPrice = 3.5 * donutQuantity.value;
@@ -204,43 +204,40 @@ function confirmOrder()
   var cost = order.getTotalPrice();
   var coffeeOrderNum = 0;
   var waitTime = 15;
-  order.confirmOrder();
-  userBalance.innerHTML = "$" + session.get("currentUser").Balance;
-  var orderString = "";
-
-  // Make sure order only if coffee in cart/ enough funds
-  if(currentOrder.Items.length < 1)
+  if(order.confirmOrder())
   {
-    alert("Please add some items to your cart");
-    return;
-  }
-  for(i = 0; i < currentOrder.Items.length; i++)
-  {
-    var el = document.createElement("div");
-    var button = document.createElement("button");
-    var additions = "";
-    if(currentOrder.Items[i].Additions.length > 1)
-    {
-      additions = " with " + currentOrder.Items[i].Additions[0] + " and " + currentOrder.Items[i].Additions[1];
-    }
-    else if(currentOrder.Items[i].Additions.length > 0)
-    {
-      additions = " with  " + currentOrder.Items[i].Additions[0];
-    }
-    coffeeOrderNum = Number(coffeeOrderNum) + Number(currentOrder.Items[i].Quantity);
-    orderString = orderString + currentOrder.Items[i].Quantity +" x " + currentOrder.Items[i].Size + " " + currentOrder.Items[i].Type + additions + "\n";
+    userBalance.innerHTML = "$" + session.get("currentUser").Balance;
+    var orderString = "";
 
-    if(coffeeOrderNum>10) {
-      waitTime = 20;
+    // Make sure order only if coffee in cart/ enough funds
+    if(currentOrder.Items.length < 1)
+    {
+      alert("Please add some items to your cart");
+      return;
     }
+    for(i = 0; i < currentOrder.Items.length; i++)
+    {
+      var el = document.createElement("div");
+      var button = document.createElement("button");
+      var additions = "";
+      if(currentOrder.Items[i].Additions.length > 1)
+      {
+        additions = " with" + currentOrder.Items[i].Additions[0] + " and " + currentOrder.Items[i].Additions[1];
+      }
+      else if(currentOrder.Items[i].Additions.length > 0)
+      {
+        additions = " with  " + currentOrder.Items[i].Additions[0];
+      }
+      coffeeOrderNum = Number(coffeeOrderNum) + Number(currentOrder.Items[i].Quantity);
+      orderString = orderString + currentOrder.Items[i].Quantity +" x " + currentOrder.Items[i].Size + " " + currentOrder.Items[i].Type + additions + "\n";
 
+      if(coffeeOrderNum>10) {
+        waitTime = 20;
+      }
+    }
     updateOrderList();
-    if (session.get("currentUser").Balance>= cost){
-      location.replace("orderHistory.html");
-    }
-  }
-  if (session.get("currentUser").Balance>= cost){
     alert("You have ordered:\n" + orderString + "\nWait time:" + waitTime + " minutes");
+    location.replace("orderHistory.html");
   }
 }
 

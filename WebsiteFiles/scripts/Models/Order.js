@@ -104,29 +104,30 @@ Example Order:
         if(this.getTotalPrice() > currentUser.Balance)
         {
             alert("Not enough funds to make this purchase");
-            return;
+            return false;
         }
         else
         {
             currentUser.Balance = currentUser.Balance - this.getTotalPrice();
             currentUser.CoffeesBought = +currentUser.CoffeesBought + +this.getTotalCoffees();
+            var date = new Date();
+            var minutes = date.getMinutes();
+            if(minutes.length == 1)
+                minutes = "0" + minutes;
+            var dateString = date.getDate() +"/" + date.getMonth() + "/" + date.getFullYear() +"-" + date.getHours() +":" + date.getMinutes();
+            currentOrder.Date = dateString;
+            currentOrder.TotalPrice = this.getTotalPrice();
+            currentUser.OrderHistory.push(currentOrder);
+            currentOrder = {
+                    Date: "",
+                    TotalPrice: 0.0,
+                    Completed: false,
+                    Items: []
+                };
+            this.session.set("currentUser", currentUser);
+            this.session.set("currentOrder", currentOrder);
+            return true;
         }
-        var date = new Date();
-        var minutes = date.getMinutes();
-        if(minutes.length == 1)
-            minutes = "0" + minutes;
-        var dateString = date.getDate() +"/" + date.getMonth() + "/" + date.getFullYear() +"-" + date.getHours() +":" + date.getMinutes();
-        currentOrder.Date = dateString;
-        currentOrder.TotalPrice = this.getTotalPrice();
-        currentUser.OrderHistory.push(currentOrder);
-        currentOrder = {
-                Date: "",
-                TotalPrice: 0.0,
-                Completed: false,
-                Items: []
-            };
-        this.session.set("currentUser", currentUser);
-        this.session.set("currentOrder", currentOrder);
     }
 
     getCoffeeById(id)
