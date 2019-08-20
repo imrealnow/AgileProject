@@ -754,8 +754,12 @@ td, th {
     position:relative;
     margin-top: 2%;
   }
+  #main{
+    width:95%;
+  }
   #coffeeSelection, #coffeeSelection2, #coffeeSelection3,  #donutSelection{
-    width: 350px;
+    min-width: 400px;
+    margin:0 1% 0 1%;
   }
   .container2{
     display:flex;
