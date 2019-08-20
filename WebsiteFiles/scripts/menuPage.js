@@ -277,9 +277,10 @@ function updateOrderList()
 }
 
 // Specials
-function specialAnchor(){
+$('#anchor').click(function(){
   alert('You have triggered the special logic.')
-}
+});
+
 // Close Specials
 function closeSpecials() {
   var sp = document.getElementById("special");
