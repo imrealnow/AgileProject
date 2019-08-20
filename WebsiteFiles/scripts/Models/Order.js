@@ -73,7 +73,7 @@ Example Order:
         {
             for(i = 0; i < currentOrder.Items.length; i++)
             {
-                totalCoffees = totalCoffees + currentOrder.Items[i].Quantity;
+                totalCoffees = totalCoffees + Number(currentOrder.Items[i].Quantity);
             }
             return totalCoffees;
         }
