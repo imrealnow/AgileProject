@@ -56,7 +56,7 @@
 	            </div>
 	        </div>
 
-          <div id="donutSelection" style="display:none">
+          <div id="donutSelection" style="display:none; position: relative">
 	            <h4>Add A Donut</h4>
                <div id="coffeeTypes">
 	                <label><input type="radio" name="donuts" value="Plain donut" onclick="updateDonutPrice()"><span>Plain $2.5</span></label>
@@ -75,7 +75,7 @@
 	            <label id="donutPrice" style="float: right; text-align: right">$0.0</label>
 	        </div><br>
 	            <!-- Add to Cart -->
-	            <div class="btn-group">
+	            <div class="btn-group menu-page">
 	                <button type="Submit" onclick="addCoffeeToCart()">Add To Order</button><br>
                   <button type="Submit" id="addMore">Update Coffees</button>
 	            </div>
@@ -85,7 +85,7 @@
 
 
 
-	        <div id="coffeeSelection2">
+	        <div id="coffeeSelection2"  style="position: relative">
 	            <h4>Options</h4>
               <!-- White line-->
                 <hr style="border: 0.4px solid lightgray; width: 100%; opacity:0.8;" />
@@ -117,13 +117,13 @@
 	            <label id="coffeePrice" style="float: right; text-align: right">$0.0</label>
 	        </div><br>
 	            <!-- Add to Cart -->
-	            <div class="btn-group">
+	            <div class="btn-group menu-page">
 	                <button type="Submit" onclick="addCoffeeToCart()">Add To Order</button>
 	            </div>
 	        </div>
 
 	        <!-- Display Order Items -->
-	        <div id="coffeeSelection3">
+	        <div id="coffeeSelection3" style="position: relative">
 	            <h4>Order</h4>
             <div id="orderItems">
   	        </div><br>
@@ -135,7 +135,7 @@
   		          <label>Remaining Balance</label>
   			        <label id="userBalance"style="float: right; text-align: right">$0.0</label>
   			    </div><br>
-  		      <div class="btn-group">
+  		      <div class="btn-group menu-page">
   		            <button id="confirmOrder" type="Submit" onclick="switchToDonuts()">Confirm Coffees</button>
                   <button  id="btn3" type="button" onclick="cancelOrder()" style="margin-top: 5px">Cancel</button>
   		      </div>
