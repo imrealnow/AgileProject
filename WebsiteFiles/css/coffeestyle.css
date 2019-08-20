@@ -548,6 +548,16 @@ background-color: rgba(177, 149, 132, 0.7);**/
 #btn3:hover{
   color: lightgray;
 }
+#confirmOrder{
+  background-color:white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border:none;
+  color:rgba(177, 148, 132);
+  border-radius:1.5px;
+}
+#confirmOrder:hover{
+  color: lightgray;
+}
 /**  background: #e6c59a;**/
 #containernav button{
   border: none;

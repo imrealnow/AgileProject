@@ -47,32 +47,32 @@
 	        <div id="coffeeSelection">
 	            <h4>Coffee</h4>
                <div id="coffeeTypes">
-	                <label><input type="radio" name="toggle" value="Black Coffee"><span>Black Coffee</span></label>
-	                <label><input type="radio" name="toggle" value="Flat White"><span>Flat White</span></label>
-	                <label><input type="radio" name="toggle" value="Cappuccino"><span>Cappuccino</span></label>
-	                <label><input type="radio" name="toggle" value="Hot Chocolate"><span>Hot Chocolate</span></label>
-	                <label><input type="radio" name="toggle" value="Mochaccino"><span>Mochaccino</span></label>
-	                <label><input type="radio" name="toggle" value="Latte"><span>Latte</span></label>
+	                <label><input type="radio" name="coffees" value="Black Coffee"><span>Black Coffee</span></label>
+	                <label><input type="radio" name="coffees" value="Flat White"><span>Flat White</span></label>
+	                <label><input type="radio" name="coffees" value="Cappuccino"><span>Cappuccino</span></label>
+	                <label><input type="radio" name="coffees" value="Hot Chocolate"><span>Hot Chocolate</span></label>
+	                <label><input type="radio" name="coffees" value="Mochaccino"><span>Mochaccino</span></label>
+	                <label><input type="radio" name="coffees" value="Latte"><span>Latte</span></label>
 	            </div>
 	        </div>
 
           <div id="donutSelection" style="display:none">
 	            <h4>Add A Donut</h4>
                <div id="coffeeTypes">
-	                <label><input type="radio" name="toggle" value="Plain"><span>Plain</span></label>
-                  <label><input type="radio" name="toggle" value="Chocolate"><span>Chocolate</span></label>
-	                <label><input type="radio" name="toggle" value="Strawberry"><span>Strawberry</span></label>
+	                <label><input type="radio" name="donuts" value="Plain donut" onclick="updateDonutPrice()"><span>Plain $2.5</span></label>
+                  <label><input type="radio" name="donuts" value="Chocolate donut" onclick="updateDonutPrice()"><span>Chocolate $3.5</span></label>
+	                <label><input type="radio" name="donuts" value="Strawberry donut" onclick="updateDonutPrice()"><span>Strawberry $3.5</span></label>
 	            </div>
               <hr style="border: 0.4px solid lightgray; width: 100%; opacity:0.8;" /><br>
 		        <div class="coffeeAdditions">
 	            <label>Quantity:</label>
-	            <input id="quantity" value="1" type="Number" min="1" step="1" placeholder="1" onchange="validateQuantity(this)">
+	            <input id="donutQuantity" value="1" type="Number" min="1" step="1" placeholder="1" onchange="validateQuantity(this)">
 	          </div><br>
             <!-- White line-->
               <hr style="border: 0.3px solid lightgray; width: 100%;" />
 		        <div class="coffeeAdditions">
 	            <label>Cost</label>
-	            <label id="price" style="float: right; text-align: right">$0.0</label>
+	            <label id="donutPrice" style="float: right; text-align: right">$0.0</label>
 	        </div><br>
 	            <!-- Add to Cart -->
 	            <div class="btn-group">
@@ -98,7 +98,7 @@
   		            <input id="milk" value="true" type="checkbox">
   		        </div><br>
   		        <div class="coffeeAdditions">
-			        <select class="coffeeSize" id="coffeeSize" style="margin-left: -3px" onchange="updatePrice()">
+			        <select class="coffeeSize" id="coffeeSize" style="margin-left: -3px" onchange="updateCoffeePrice()">
                   <option value="" disabled selected><p>Size</p></option>
 	                <option value="Regular">Regular - $4.5</option>
 	                <option value="Small">Small - $3.0</option>
@@ -114,7 +114,7 @@
               <hr style="border: 0.3px solid lightgray; width: 100%;" />
 		        <div class="coffeeAdditions">
 	            <label>Cost</label>
-	            <label id="price" style="float: right; text-align: right">$0.0</label>
+	            <label id="coffeePrice" style="float: right; text-align: right">$0.0</label>
 	        </div><br>
 	            <!-- Add to Cart -->
 	            <div class="btn-group">
@@ -136,7 +136,7 @@
   			        <label id="userBalance"style="float: right; text-align: right">$0.0</label>
   			    </div><br>
   		      <div class="btn-group">
-  		            <button id="btn3" type="Submit" onclick="switchToDonuts()">Confirm Order</button>
+  		            <button id="confirmOrder" type="Submit" onclick="switchToDonuts()">Confirm Coffees</button>
                   <button  id="btn3" type="button" onclick="cancelOrder()" style="margin-top: 5px">Cancel</button>
   		      </div>
   	      </div>
