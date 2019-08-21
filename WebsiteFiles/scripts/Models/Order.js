@@ -74,7 +74,7 @@ Example Order:
             for(i = 0; i < currentOrder.Items.length; i++)
             {
                 var itemType = currentOrder.Items[i].Type;
-                if(itemType != "Plain donut" && itemType != "Strawberry donut" && itemType != "Chocolate donut")
+                if(itemType != "Plain doughnut" && itemType != "Strawberry doughnut" && itemType != "Chocolate doughnut")
                     totalCoffees = totalCoffees + Number(currentOrder.Items[i].Quantity);
             }
             return totalCoffees;
