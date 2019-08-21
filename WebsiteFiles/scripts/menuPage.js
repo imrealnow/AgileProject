@@ -26,15 +26,21 @@ var currentSpecial = "Free cookie with every 99 coffees purchased today only"
 var specialSpan = document.getElementById('specialSpan');
 var elem = document.getElementById("specialSpan");
 var mediaSize = window.innerWidth;
+
 var currentUser = session.get('currentUser');
 var orderHistoryLength =  currentUser.OrderHistory.length;
+var movingCount= 0;
+
+
 
 specialSpan.innerHTML = currentSpecial;
 function movingSpecial() {
-  elem.style.position = "absolute";
-  elem.style.left = 40 + "px";
-  var pos = 0;
-  if (id != null){
+  if (movingCount ==0 ){
+    movingCount = 1;
+    elem.style.position = "absolute";
+    elem.style.left = 40 + "px";
+    var pos = 0;
+    if (id != null){
     clearInerval('id');
   }
   var id = setInterval(frame, 15);
@@ -45,6 +51,7 @@ function movingSpecial() {
          pos=0;
        }
      }
+   }
 
 }
 
@@ -167,7 +174,7 @@ function cancelOrder()
             };
   session.set('currentOrder', blankOrder);
   updateOrderList();
-  updatePrice();
+  totalCostLabel.innerHTML = "$" + order.getTotalPrice();
 }
 
 // Donut Selection
@@ -245,6 +252,9 @@ function confirmOrder()
       updateOrderList();
       orderHistoryLength = orderHistoryLength + 1;
       alert("You have ordered:\n" + orderString + "\nWait time:" + waitTime + " minutes" +"\nOrder Number: " + orderHistoryLength);
+
+      location.reload();
+
       //location.replace("orderHistory.html");
     }
   }
