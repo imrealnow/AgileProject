@@ -443,12 +443,13 @@ background-color: rgba(177, 149, 132, 0.7);**/
   background-color: rgba(255, 255, 255, 0.2);
 }
 #coffeeTypes label input {
-    position:absolute;
-    top:-20px;
+  display: none;
+  position:absolute;
+  top:-20px;
 }
 #coffeeTypes input:checked + span {
-    background-color:#404040;
-    color:#F7F7F7;
+  background-color:#404040;
+  color:#F7F7F7;
 }
 #options{
   text-align: center;
