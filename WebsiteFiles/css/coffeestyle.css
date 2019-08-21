@@ -32,8 +32,12 @@ background-size: cover;
 #orderh img{
   width:20%;
 }
+#vid{
+  background-image: none;
+}
 /* Video */
 #video {
+  visibility: visible;
   opacity: 0.7;
   position:fixed;
   right: 0;
@@ -759,7 +763,8 @@ td, th {
   }
   #coffeeSelection, #coffeeSelection2, #coffeeSelection3,  #donutSelection{
     min-width: 400px;
-    margin:0 1% 0 1%;
+    margin-top:1%;
+    margin-bottom:1%;
   }
   .container2{
     display:flex;
@@ -789,6 +794,16 @@ td, th {
   }
   .btn-group{
     width:90%;
+  }
+  #vid{
+    background-image: url(img/CoffeeVidmobile1.jpg);
+    background-repeat:no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  #video {
+    visibility: hidden;
   }
 }
 @media only screen and (max-width: 750px) {
