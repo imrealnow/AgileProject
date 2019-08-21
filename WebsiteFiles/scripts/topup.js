@@ -1,3 +1,4 @@
+
 //the purpose here is to have a page where the user can top up to buy coffees on the site
 const users = new User();
 const session = new Session();
@@ -73,3 +74,4 @@ function topupButton(){
 
 
 }
+
