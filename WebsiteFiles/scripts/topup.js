@@ -1,3 +1,4 @@
+
 //the purpose here is to have a page where the user can top up to buy coffees on the site
 const users = new User();
 const session = new Session();
@@ -26,6 +27,10 @@ function checkDetails(){
   var bankDate = document.getElementById("bankDate").value;
   var numbers = /^[0-9]+$/;
   var today = new Date();
+
+  //alert("today:"+today+"bankDate: "+ bank)
+  if (!isNaN(Date.parse(bankDate))){
+    }
   //alert("today:"+today+"bankDate: "+ bankDate);
   if (!isNaN(Date.parse(bankDate))){
   }
@@ -69,3 +74,4 @@ function topupButton(){
 
 
 }
+

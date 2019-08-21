@@ -26,7 +26,11 @@ var currentSpecial = "Free cookie with every 99 coffees purchased today only"
 var specialSpan = document.getElementById('specialSpan');
 var elem = document.getElementById("specialSpan");
 var mediaSize = window.innerWidth;
+
+var currentUser = session.get('currentUser');
+var orderHistoryLength =  currentUser.OrderHistory.length;
 var movingCount= 0;
+
 
 
 specialSpan.innerHTML = currentSpecial;
@@ -246,8 +250,11 @@ function confirmOrder()
         }
       }
       updateOrderList();
-      alert("You have ordered:\n" + orderString + "\nWait time:" + waitTime + " minutes");
+      orderHistoryLength = orderHistoryLength + 1;
+      alert("You have ordered:\n" + orderString + "\nWait time:" + waitTime + " minutes" +"\nOrder Number: " + orderHistoryLength);
+
       location.reload();
+
       //location.replace("orderHistory.html");
     }
   }
