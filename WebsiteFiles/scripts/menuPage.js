@@ -207,40 +207,44 @@ function confirmOrder()
   var cost = order.getTotalPrice();
   var coffeeOrderNum = 0;
   var waitTime = 15;
-  if(order.confirmOrder())
+  // Make sure order only if coffee in cart/ enough funds
+  if(currentOrder.Items.length < 1)
   {
-    userBalance.innerHTML = "$" + session.get("currentUser").Balance;
-    var orderString = "";
-
-    // Make sure order only if coffee in cart/ enough funds
-    if(currentOrder.Items.length < 1)
+    alert("Please add some items to your cart");
+    return;
+  }
+  else
+  {
+    if(order.confirmOrder())
     {
-      alert("Please add some items to your cart");
-      return;
-    }
-    for(i = 0; i < currentOrder.Items.length; i++)
-    {
-      var el = document.createElement("div");
-      var button = document.createElement("button");
-      var additions = "";
-      if(currentOrder.Items[i].Additions.length > 1)
-      {
-        additions = " with" + currentOrder.Items[i].Additions[0] + " and " + currentOrder.Items[i].Additions[1];
-      }
-      else if(currentOrder.Items[i].Additions.length > 0)
-      {
-        additions = " with  " + currentOrder.Items[i].Additions[0];
-      }
-      coffeeOrderNum = Number(coffeeOrderNum) + Number(currentOrder.Items[i].Quantity);
-      orderString = orderString + currentOrder.Items[i].Quantity +" x " + currentOrder.Items[i].Size + " " + currentOrder.Items[i].Type + additions + "\n";
+      userBalance.innerHTML = "$" + session.get("currentUser").Balance;
+      var orderString = "";
 
-      if(coffeeOrderNum>10) {
-        waitTime = 20;
+      
+      for(i = 0; i < currentOrder.Items.length; i++)
+      {
+        var el = document.createElement("div");
+        var button = document.createElement("button");
+        var additions = "";
+        if(currentOrder.Items[i].Additions.length > 1)
+        {
+          additions = " with" + currentOrder.Items[i].Additions[0] + " and " + currentOrder.Items[i].Additions[1];
+        }
+        else if(currentOrder.Items[i].Additions.length > 0)
+        {
+          additions = " with  " + currentOrder.Items[i].Additions[0];
+        }
+        coffeeOrderNum = Number(coffeeOrderNum) + Number(currentOrder.Items[i].Quantity);
+        orderString = orderString + currentOrder.Items[i].Quantity +" x " + currentOrder.Items[i].Size + " " + currentOrder.Items[i].Type + additions + "\n";
+
+        if(coffeeOrderNum>10) {
+          waitTime = 20;
+        }
       }
+      updateOrderList();
+      alert("You have ordered:\n" + orderString + "\nWait time:" + waitTime + " minutes");
+      //location.replace("orderHistory.html");
     }
-    updateOrderList();
-    alert("You have ordered:\n" + orderString + "\nWait time:" + waitTime + " minutes");
-    //location.replace("orderHistory.html");
   }
 }
 
