@@ -213,15 +213,18 @@ nav h3{
 
 .login, .signup, .forgotpwd input{
   color: white;
+  font-size: 20px;
 }
 .login, .signup, .forgotpwd label{
   font-family: 'omega_sansregular';
 }
 .login input[type=text]::placeholder, input[type=password]::placeholder{
   color:#010a12;
+  font-size: 20px;
 }
 .signup input[type=text]::placeholder, input[type=email]::placeholder, input[type=password]::placeholder{
   color:#010a12;
+  font-size: 20px;
 }
 /***************************  CONTAINERS */
 #viewMenu {
@@ -310,11 +313,13 @@ background-color: #0A152E;**/
 .signup input[type=text], input[type=password], input[type=email]{
   width: 300px;
   height: 35px;
+  font-size: 20px;
   background-color: rgba(255, 255, 255, 0.7);
 }
 .login input[type=text], input[type=password]{
   width: 300px;
   height: 35px;
+  font-size: 20px;
   background-color: rgba(255, 255, 255, 0.7);
 }
 .coffeeAdditions{
