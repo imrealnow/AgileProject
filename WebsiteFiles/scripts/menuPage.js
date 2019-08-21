@@ -170,8 +170,7 @@ function cancelOrder()
             };
   session.set('currentOrder', blankOrder);
   updateOrderList();
-  updateCoffeePrice();
-  updateDonutPrice();
+  totalCostLabel.innerHTML = "$" + order.getTotalPrice();
 }
 
 // Donut Selection
