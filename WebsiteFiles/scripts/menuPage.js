@@ -224,7 +224,7 @@ function confirmOrder()
       userBalance.innerHTML = "$" + session.get("currentUser").Balance;
       var orderString = "";
 
-      
+
       for(i = 0; i < currentOrder.Items.length; i++)
       {
         var el = document.createElement("div");
@@ -247,6 +247,7 @@ function confirmOrder()
       }
       updateOrderList();
       alert("You have ordered:\n" + orderString + "\nWait time:" + waitTime + " minutes");
+      location.reload();
       //location.replace("orderHistory.html");
     }
   }
