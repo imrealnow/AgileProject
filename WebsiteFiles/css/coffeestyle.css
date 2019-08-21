@@ -727,6 +727,7 @@ td, th {
 }
 #arrow{
   z-index:4;
+  display:block;
 }
 #specialsOpen{
   display: none;
@@ -812,7 +813,9 @@ td, th {
   }
 }
 @media only screen and (max-width: 750px) {
-
+  #arrow{
+    display:none;
+  }
   .coffeeAdditions label{
     font-size: 14px;
   }
