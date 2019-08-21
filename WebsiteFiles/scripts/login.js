@@ -54,10 +54,17 @@ function signupButton() {
     errors.innerHTML = "User already exists";
   }
   else {
+    if(validateEmail(email.value))
+    {
       var newUser = users.createUser(username.value, password.value, email.value);
       session.set("currentUser", newUser);
       //this redirects to another page
       document.location.replace("index.html");
+    }
+    else
+    {
+      errors.innerHTML = "Invalid email address";
+    }
   }
 };
 
@@ -94,4 +101,9 @@ function orderNow(){
     document.getElementById("ordernow").style.visibility = "visible";
     document.getElementById("line").style.visibility = "hidden";
     document.getElementById("on").style.color = "lightgray";
+}
+
+function validateEmail(email) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
 }
