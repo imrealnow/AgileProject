@@ -23,8 +23,19 @@ function checkDetails(){
 
   var bankDetails = document.getElementById("bankDetails").value;
   var bankCCV = document.getElementById("bankCCV").value;
+  var bankDate = document.getElementById("bankDate").value;
   var numbers = /^[0-9]+$/;
-
+  var today = new Date();
+  alert("today:"+today+"bankDate: "+ bank)
+  if (!isNaN(Date.parse(bankDate))){
+    if(bankDate < today){
+      alert("hi");
+    }
+  }
+  else{
+    alert("Please enter a valid expiry date.");
+    return;
+  }
   if (bankChoice != null && bankDetails.length == 16 &&
      bankDetails.match(numbers) && bankCCV.length == 3 &&
      bankCCV.match(numbers))
@@ -39,7 +50,6 @@ function checkDetails(){
 function topupButton(){
   //gets the value of the typed into the field
   var amount = +document.getElementById("topupAmount").value;
-
 
   if (amount > 0)
   {
@@ -59,5 +69,6 @@ function topupButton(){
   {
     alert("You need to input a valid number larger than 0");
   }
+
 
 }

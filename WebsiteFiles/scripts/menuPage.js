@@ -26,7 +26,8 @@ var currentSpecial = "Free cookie with every 99 coffees purchased today only"
 var specialSpan = document.getElementById('specialSpan');
 var elem = document.getElementById("specialSpan");
 var mediaSize = window.innerWidth;
-
+var currentUser = session.get('currentUser');
+var orderHistoryLength =  currentUser.OrderHistory.length;
 
 specialSpan.innerHTML = currentSpecial;
 function movingSpecial() {
@@ -220,7 +221,7 @@ function confirmOrder()
       userBalance.innerHTML = "$" + session.get("currentUser").Balance;
       var orderString = "";
 
-      
+
       for(i = 0; i < currentOrder.Items.length; i++)
       {
         var el = document.createElement("div");
@@ -242,7 +243,8 @@ function confirmOrder()
         }
       }
       updateOrderList();
-      alert("You have ordered:\n" + orderString + "\nWait time:" + waitTime + " minutes");
+      orderHistoryLength = orderHistoryLength + 1;
+      alert("You have ordered:\n" + orderString + "\nWait time:" + waitTime + " minutes" +"\nOrder Number: " + orderHistoryLength);
       //location.replace("orderHistory.html");
     }
   }
