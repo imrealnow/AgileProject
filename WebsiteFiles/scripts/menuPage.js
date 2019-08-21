@@ -166,7 +166,8 @@ function cancelOrder()
             };
   session.set('currentOrder', blankOrder);
   updateOrderList();
-  updatePrice();
+  updateCoffeePrice();
+  updateDonutPrice();
 }
 
 // Donut Selection
