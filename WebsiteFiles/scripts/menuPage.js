@@ -26,14 +26,17 @@ var currentSpecial = "Free cookie with every 99 coffees purchased today only"
 var specialSpan = document.getElementById('specialSpan');
 var elem = document.getElementById("specialSpan");
 var mediaSize = window.innerWidth;
+var movingCount= 0;
 
 
 specialSpan.innerHTML = currentSpecial;
 function movingSpecial() {
-  elem.style.position = "absolute";
-  elem.style.left = 40 + "px";
-  var pos = 0;
-  if (id != null){
+  if (movingCount ==0 ){
+    movingCount = 1;
+    elem.style.position = "absolute";
+    elem.style.left = 40 + "px";
+    var pos = 0;
+    if (id != null){
     clearInerval('id');
   }
   var id = setInterval(frame, 15);
@@ -44,6 +47,7 @@ function movingSpecial() {
          pos=0;
        }
      }
+   }
 
 }
 
